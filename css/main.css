@@ -1,0 +1,171 @@
+.site__header {
+    background-color: #09070a;
+    padding: 1rem 14rem;
+}
+
+.site__nav {
+    display: flex;
+    padding-top: 8.2rem 
+}
+
+.nav__logo__link {
+    width: 15%;
+    margin-right: auto;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+.nav__logo {
+    width: 100%;
+}
+
+.nav__list__wrapper {
+    display: flex;
+    margin-right: 2.8rem;
+}
+
+.nav__list__item {
+    font-size: 2rem;
+    font-weight: 600;
+    line-height: 1.5;
+    letter-spacing: normal;
+    text-align: left;
+}
+
+.nav__list__link {
+    padding: 2rem;
+}
+
+.nav__list__link:link, .nav__list__link:visited {
+    cursor: pointer;
+    color: #ffffff;
+}
+
+.nav__list__link:hover, .nav__list__link:active {
+    background-image: linear-gradient(174deg, #09070a 3%, #0A134E 97%);
+}
+
+.nav__list__item:not(:last-child) {
+    margin-right: 2rem;
+}
+
+.nav__list__item__group  {
+    display: none;
+}
+
+.nav__hr {
+    border-color:#333;
+    margin-top: 2rem;
+}
+
+.site__main {
+    display: flex;
+}
+
+.site__section__wrapper{
+    width: 100%;
+    display: flex;
+}
+
+.site__sections {
+    padding: 21.4rem 0 27.6rem 22.6rem;
+    background-repeat: no-repeat;
+    background-position: center;
+    object-fit: cover;
+    color: #ffffff;
+    letter-spacing: normal;
+    text-align: left;
+    width: 100%;
+}
+
+.site__section__first {
+
+    background: linear-gradient(147deg, #09070a 39%, rgba(9, 7, 10, 0.25) 72%), -webkit-image-set( url("../assets/mast-background.jpg") 1x, url("../assets/mast-background@2x.jpg") 2x, url("../assets/mast-background@3x.jpg") 3x);
+    background-image: linear-gradient(147deg, #09070a 39%, rgba(9, 7, 10, 0.25) 72%) , url("../assets/mast-background.jpg");
+}
+
+.site__section__second {
+    display: none;
+
+    background: linear-gradient(147deg, #09070a 39%, rgba(9, 7, 10, 0.25) 72%), -webkit-image-set( url("../assets/mast-background-2.jpg") 1x, url("../assets/mast-background-2@2x.jpg") 2x, url("../assets/mast-background-2@3x.jpg") 3x);
+    background-image: linear-gradient(147deg, #09070a 39%, rgba(9, 7, 10, 0.25) 72%), url("../assets/mast-background-2.jpg");
+}
+
+.site__section__third {
+    display: none;
+    background: linear-gradient(147deg, #09070a 39%, rgba(9, 7, 10, 0.25) 72%), -webkit-image-set( url("../assets/mast-background-3.jpg") 1x, url("../assets/mast-background-3@2x.jpg") 2x, url("../assets/mast-background-3@3x.jpg") 3x);
+    background-image: linear-gradient(147deg, #09070a 39%, rgba(9, 7, 10, 0.25) 72%), url("../assets/mast-background-3.jpg");
+}
+
+.sections__heading {
+    font-size: 5rem;
+    font-weight: bold;
+    line-height: 1.52;
+}
+
+.sections__text {
+    font-family: Lato, sans-serif;
+    font-size: 2.5rem;
+    font-weight: 900;
+    line-height: 1.36;
+    opacity: 0.7;
+    width: 77.8rem;
+    padding: 3rem 0;
+}
+
+.sections__sub-heading {
+    font-size: 2rem;
+    font-weight: 900;
+    line-height: 1.35;
+    padding-bottom: 3rem;
+}
+
+.sections__button-group {
+    width: 18rem;
+    height: 4.3rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.sections__learn {
+    font-family: Lato, sans-serif;
+    font-size: 1.8rem;
+    font-weight: 500;
+    line-height: 1.39;
+    letter-spacing: 1.44px;
+}
+
+.section__paginator {
+    position: absolute;
+    top: 36%;
+    right: 5%;
+    display: flex;
+    flex-direction: column;
+}
+
+.paginator__counter {
+    color: #ffffff;
+    font-size: 1.8rem;
+}
+
+.paginator__counter__end {
+    opacity: 0.5;
+}
+
+.paginator__progress {
+    height: 35rem;
+    border: 1px solid rgba(100%, 100%, 100%, 0.3);
+    border-radius: 10px;
+    background-color: rgba(100%,100%,100%, 0.3);
+    width: 20%;
+    align-self: center;
+    margin: 2rem 0;
+}
+
+.paginator__current-progress {
+    height: 30%;
+    background-color: #ffffff;
+    opacity: 1;
+    border-radius: 10px 10px 0 0;
+}
