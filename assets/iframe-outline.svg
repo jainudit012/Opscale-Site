@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="30.8" height="28" viewBox="0 0 30.8 28">
+    <defs>
+        <style>
+            .cls-1{fill:#fff}
+        </style>
+    </defs>
+    <path id="iframe-outline" d="M12.9 11.1l2.1 2.1-4.2 4.2 4.2 4.2-2.1 2.1-6.3-6.3 6.3-6.3m7 12.6l-2.1-2.1 4.2-4.2-4.2-4.2 2.1-2.1 6.3 6.3-6.3 6.3M29 2H3.8A2.8 2.8 0 0 0 1 4.8v22.4A2.8 2.8 0 0 0 3.8 30H29a2.8 2.8 0 0 0 2.8-2.8V4.8A2.8 2.8 0 0 0 29 2m0 25.2H3.8V7.6H29z" class="cls-1" transform="translate(-1 -2)"/>
+</svg>
