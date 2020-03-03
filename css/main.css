@@ -496,3 +496,60 @@
     background-color:#151515;
     opacity:.302
 }
+
+.site__info-hww {
+    padding: 14rem;
+    margin-bottom: 3rem;
+    background-color: #131415;
+}
+
+.hww__heading {
+    margin: 1.8rem 0 12rem 8.6rem;
+    font-size: 5rem;
+    font-weight: bold;
+    line-height: 1.52;
+    color: #ffffff;
+}
+
+.hww__card-wrapper {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.hww__card {
+    width: 16.4%;
+    border-radius: 20px;
+    background-color: rgba(249, 251, 250, 0.2);
+    padding: 7.7rem 5rem 10.4rem 3.9rem; 
+    display: flex;
+    flex-direction: column;
+}
+
+.hww__card__img {
+    background-color: #f4f4f4;
+    width: 12.2rem;
+    height: 12.2rem;
+    border-radius: 50%;
+}
+
+.hww__card__info {
+    font-size: 2.5rem;
+    font-weight: 600;
+    line-height: 1.52;
+    color: #ffffff;
+    margin-top: 6.3rem;
+}
+
+.hww__card-pill {
+    opacity: 0.4;
+    background-color: #ffffff;
+}
+
+.hww__card__text {
+    font-family: Lato, sans-serif;
+    font-size: 2rem;
+    font-weight: 900;
+    line-height: 1.35;
+    color: #ffffff;
+}
