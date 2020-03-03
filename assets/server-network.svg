@@ -1,8 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30">
-    <defs>
-        <style>
-            .cls-1{fill:#283fd9}
-        </style>
-    </defs>
-    <path id="server-network" d="M18.5 27H20a1.5 1.5 0 0 1 1.5 1.5H32v3H21.5A1.5 1.5 0 0 1 20 33h-6a1.5 1.5 0 0 1-1.5-1.5H2v-3h10.5A1.5 1.5 0 0 1 14 27h1.5v-3H5a1.5 1.5 0 0 1-1.5-1.5v-6A1.5 1.5 0 0 1 5 15h24a1.5 1.5 0 0 1 1.5 1.5v6A1.5 1.5 0 0 1 29 24H18.5v3M5 3h24a1.5 1.5 0 0 1 1.5 1.5v6A1.5 1.5 0 0 1 29 12H5a1.5 1.5 0 0 1-1.5-1.5v-6A1.5 1.5 0 0 1 5 3m7.5 6H14V6h-1.5v3m0 12H14v-3h-1.5v3m-6-15v3h3V6h-3m0 12v3h3v-3z" class="cls-1" transform="translate(-2 -3)"/>
-</svg>
