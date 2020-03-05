@@ -1,6 +1,7 @@
 .site__header {
     background-color: #09070a;
     padding: 1rem 14rem;
+    height: 20vh;
 }
 
 .site__nav {
@@ -58,6 +59,7 @@
 .site__main {
     display: flex;
     position: relative;
+    height: 80.5vh;
 }
 
 .site__section__wrapper{
