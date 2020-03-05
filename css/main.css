@@ -677,3 +677,118 @@
     margin: 0 22.6rem 0 7.1rem;
     text-align: right;
 }
+
+.site__info-ii {
+    padding: 26.3rem 22.6rem 19.4rem 22.6rem;
+}
+
+.ii__heading {
+    font-size: 5rem;
+    font-weight: bold;
+    color: #151515;
+    margin-bottom: 5.5rem;
+}
+
+.ii__nav {
+    display: flex;
+    width: 100%;
+    margin-bottom: 12.5rem;
+}
+
+.ii__nav__list {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.ii__nav__list-item {
+    font-family: Lato, sans-serif;
+    line-height: 1.35;
+    color: rgba(19, 20, 21, 0.6);
+    font-size: 2rem;
+}
+
+.ii__nav__list-item--selected {
+    color: rgba(19, 20, 21, 1);
+}
+
+.ii__nav-item__pill {
+    margin-top: 0.85rem;
+    width: 3.1rem;
+    height: 0.6rem;
+    border-radius: 8px;
+    background-color: #283fd9;
+}
+
+.ii__card__wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-column-gap: 12.2rem;
+    grid-row-gap: 10.25rem;
+}
+
+.ii__card {
+    font-family: Lato, sans-serif;
+}
+
+.ii__card--selected {
+    border-bottom: 5px solid #283FD9;
+}
+
+.ii__card__header {
+    width: 100%;
+    margin-bottom: 2.1rem;
+}
+
+.ii__card__header-image {
+    width: 100%;
+    border-radius: 5% 5% 0 0;
+}
+
+.ii__card__read-time {
+    font-size: 1.6rem;
+    font-weight: 500;
+    line-height: 1.38;
+    color: rgba(19, 20, 21, 0.45);
+}
+
+.ii__card__heading {
+    font-size: 2rem;
+    font-weight: 500;
+    line-height: 1.35;
+    color: #131415;
+    margin-top: 3.6rem;
+}
+
+.ii__card__text {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.38;
+    color: rgba(19, 20, 21, 0.6);
+    margin: 1.2rem 0;
+    height: 12.1rem;
+}
+
+.ii__card__btn {
+    height: 2.3rem;
+    margin-bottom: 3.85rem;
+}
+
+.ii__card__btn-text {
+    vertical-align: middle;
+    height: inherit;
+    display: inline-block;
+    font-size: 1.6rem;
+    font-weight: 500;
+    color: rgba(21, 21, 21, 0.7);
+    
+}
+
+.ii__card--selected .ii__card__btn-text {
+    color: #283fd9;
+    font-weight: 600;
+}
+
+.ii__card__btn-svg {
+    fill: #283fd9;
+}
