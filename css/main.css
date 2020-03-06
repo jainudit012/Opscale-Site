@@ -1120,3 +1120,87 @@ For showing pill on card on HOVER
 .mot__cards__paginator-right {
     border-radius: 0 5px 5px 0;
 }
+
+.site__info-tod {
+    display: flex;
+    flex-direction: column;
+    padding: 0 22.6rem 23.1rem 22.6rem;
+    position: relative;
+}
+
+.tod__heading {
+    font-size: 11rem;
+    font-weight: bold;
+    color: rgba(20, 20, 20, 0.15);
+}
+
+.tod__sub-heading {
+    font-size: 5rem;
+    font-weight: bold;
+    color: #151515;
+    margin-top: 5rem;
+}
+
+.tod__text {
+    margin-top: 2.6rem;
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: rgba(19, 20, 21, 0.6);
+}
+
+.tod__form {
+    display: flex;
+    flex-direction: column;
+    margin-top: 7.7rem;
+}
+
+.tod__input-group {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.tod__input {
+    width: 49%;
+    border-radius: 9px;
+    border: 1px solid rgba(19, 20, 21, 0.4);
+    padding: 2.5rem 2rem;
+    font-size: 2rem;
+}
+
+.tod__textarea {
+    width: 100%;
+    margin-top: 3rem;
+    padding: 2.5rem 2rem;
+    border-radius: 9px;
+    border: 1px solid rgba(19, 20, 21, 0.4);
+    font-size: 2rem;
+}
+
+.tod__form__btn {
+    margin-top: 5rem;
+    background-color: #fff;
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: #131415;
+    width: fit-content;
+    padding: 3.2rem 9.5rem;
+    align-self: center;
+    border: 1px solid #151515;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.tod__floating-icon {
+    position: absolute;
+    top: 80%;
+    right: 10%;
+    background-color: #283FD9;
+    padding: 3rem;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.tod__floating-icon-svg {
+    fill: #fff;
+}
