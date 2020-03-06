@@ -221,6 +221,10 @@
     margin-bottom: 6.3rem;
 }
 
+.site__info-wwd__card {
+    cursor: pointer;
+}
+
 .card__img__box {
     border: solid 3px #283fd9;
     padding: 2rem;
@@ -234,6 +238,12 @@
     background-color: #283fd9;
 }
 
+/* 
+For HOVER on card to trigger svg bg change
+.site__info-wwd__card:hover .card__img__box {
+    background-color: #283fd9;
+} */
+
 .card__img {
     width: 3rem;
     height: 3rem;
@@ -243,6 +253,13 @@
 .card__selected .card__img{
     fill: #fff;
 }
+
+
+/* 
+For HOVER on card to trigger svg color change
+.site__info-wwd__card:hover .card__img {
+    fill: #fff;
+} */
 
 .card__heading {
     font-size: 2.5rem;
@@ -254,7 +271,6 @@
 .card__pill {
     width: 3.1rem;
     height: 0.6rem;
-    object-fit: contain;
     border-radius: 8px;
     background-color: #151515;
     opacity: 0.2;
@@ -265,6 +281,13 @@
     opacity: 1;
     background-color: #283fd9;
 }
+
+/* 
+For HOVER on card to trigger pill color change
+.site__info-wwd__card:hover .card__pill {
+    opacity: 1;
+    background-color: #283fd9;
+} */
 
 .card__footer {
     opacity: 0.6;
@@ -307,11 +330,9 @@
 }
 
 .site__info-rp__fixed__filter-item {
-    margin-bottom: 5.5rem;
-}
-
-.fixed__filter-item-selected {
-    margin-bottom: 3.5rem;
+    margin-bottom: 2.5rem;
+    height: 5rem;
+    cursor: pointer;
 }
 
 .site__info-rp__fixed__filter-item-description {
@@ -328,16 +349,30 @@
     height: 6px;
     background-color: #283fd9;
     border-radius: 5px;
+    display: none;
 }
 
 .filter-item__selected {
     opacity: 1;
 }
 
+/* 
+For changing text color of item on HOVER
+.site__info-rp__fixed__filter-item:hover .site__info-rp__fixed__filter-item-description {
+    opacity: 1;
+} */
+
 .filter__pill-selected {
     margin-top: 1.05rem;
     display: inline-block;
 }
+
+/* 
+For displaying Pill on HOVER on item
+.site__info-rp__fixed__filter-item:hover .site__info-rp__fixed__filter__pill {
+    margin-top: 1.05rem;
+    display: inline-block;
+} */
 
 .site__info-rp__fixed__filter-paginator-box {
     display: flex;
@@ -346,6 +381,7 @@
 
 .site__info-rp__fixed__filter-paginator {
     fill: #283fd9;
+    cursor: pointer;
 }
 
 .disabled-paginator-fixed {
@@ -463,7 +499,7 @@
     left: 57.5%;
     display: flex;
 }
-
+/**/
 .site__info-rp__panels-paginator-box {
     background-color: #283FD9;
     padding: 1.2rem 1.2rem 0.6rem 1.2rem;
@@ -679,7 +715,7 @@
 }
 
 .site__info-ii {
-    padding: 26.3rem 22.6rem 19.4rem 22.6rem;
+    padding: 18.2rem 22.6rem;
 }
 
 .ii__heading {
@@ -706,19 +742,37 @@
     line-height: 1.35;
     color: rgba(19, 20, 21, 0.6);
     font-size: 2rem;
+    cursor: pointer;
 }
 
 .ii__nav__list-item--selected {
     color: rgba(19, 20, 21, 1);
 }
 
+/* 
+For changing text color on nav item HOVER
+.ii__nav__list-item:hover {
+    color: rgba(19, 20, 21, 1);
+} */
+
 .ii__nav-item__pill {
     margin-top: 0.85rem;
-    width: 3.1rem;
+    width: 2.7rem;
     height: 0.6rem;
     border-radius: 8px;
     background-color: #283fd9;
+    display: none;
 }
+
+.ii__nav__list-item--selected .ii__nav-item__pill {
+    display: inline-block;
+}
+
+/* 
+For displaying pill on nav item HOVER
+.ii__nav__list-item:hover .ii__nav-item__pill {
+    display: inline-block;
+} */
 
 .ii__card__wrapper {
     display: grid;
@@ -729,11 +783,18 @@
 
 .ii__card {
     font-family: Lato, sans-serif;
+    cursor: pointer;
 }
 
 .ii__card--selected {
     border-bottom: 5px solid #283FD9;
 }
+
+/*
+For adding border to card on HOVER 
+.ii__card:hover {
+    border-bottom: 5px solid #283FD9;
+} */
 
 .ii__card__header {
     width: 100%;
@@ -770,7 +831,8 @@
 }
 
 .ii__card__btn {
-    height: 2.3rem;
+    display: flex;
+    align-items: flex-end;
     margin-bottom: 3.85rem;
 }
 
@@ -789,6 +851,272 @@
     font-weight: 600;
 }
 
+/* 
+For changing card footer color on HOVER
+.ii__card:hover .ii__card__btn-text {
+    color: #283fd9;
+    font-weight: 600;
+} */
+
 .ii__card__btn-svg {
     fill: #283fd9;
+    display: none;
+}
+
+.ii__card--selected .ii__card__btn-svg {
+    display: inline;
+}
+
+/* 
+For displaying arrow in card footer on HOVER
+.ii__card:hover .ii__card__btn-svg {
+    display: inline;
+} */
+
+.site__info-wcu {
+    background-color: #eef2f3;
+    padding: 12rem 12rem 20rem 12rem;
+}
+
+.wcu__heading {
+    font-size: 5rem;
+    font-weight: bold;
+    color: #151515;
+    text-align: center;
+    margin-bottom: 15.6rem;
+}
+
+.wcu__container {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.wcu__card {
+    width: 30%;
+    background-color: #fff;
+    padding: 10.5rem 8.2rem;
+    border-radius: 5%;
+    cursor: pointer;
+}
+
+.wcu__card__heading {
+    margin-top: 3rem;
+    font-size: 2.5rem;
+    font-weight: 500;
+    color: #131415;
+}
+
+.wcu__card__pill {
+    width: 3.1rem;
+    height: 0.6rem;
+    border-radius: 8px;
+    background-color: rgba(21, 21, 21, 0.2);
+    margin: 2rem 0;
+}
+
+.wcu__card--selected {
+    transform: scale(1.2)
+}
+
+/* 
+For scale card on HOVER
+.wcu__card:hover {
+    transform: scale(1.2)
+} */
+
+.wcu__card--selected .wcu__card__pill {
+    background-color: #283fd9;
+}
+
+/* 
+For showing pill on card on HOVER
+.wcu__card:hover .wcu__card__pill {
+    background-color: #283fd9;
+} */
+
+.wcu__card__text {
+    font-family: Lato, sans-serif;
+    font-size: 2rem;
+    font-weight: 500;
+    line-height: 1.35;
+    color: rgba(19, 20, 21, 0.6);
+}
+
+.site__info-mot {
+    padding: 18.2rem  0 18.2rem 22.6rem;
+    display: flex;
+    width: 100%;
+}
+
+.mot__left-info {
+    width: 45%;
+}
+
+.mot__info__heading {
+    font-size: 50px;
+    font-weight: bold;
+    color: #151515;
+    margin-top: 10.5rem;
+}
+
+.mot__info__wrapper {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    height: 70%;
+}
+
+.mot__info__text {
+    font-family: Lato, sans-serif;
+    font-size: 2rem;
+    font-weight: 500;
+    color: rgba(19, 20, 21, 0.6);
+    line-height: 1.35;
+    width: 65%;
+    margin-top: 5.9rem;
+}
+
+.mot__info__btn {
+    margin-top: 2rem;
+    display: flex;
+    align-items: baseline;
+}
+
+.mot__info__sub-heading {
+    margin-top: auto;
+    font-size: 30px;
+    font-weight: bold;
+    line-height: 1.53;
+    color: rgba(21, 21, 21, 0.4);
+}
+
+.mot__info__btn-text {
+    color: #283fd9;
+    font-size: 1.6rem;
+    font-weight: 600;
+}
+
+.mot__info__btn-svg {
+    fill: #283fd9;
+}
+
+.mot__cards__container {
+    width: 55%;
+    position: relative;
+}
+
+.mot__cards__wrapper {
+    display: flex;
+    width: 100%;
+}
+
+.mot__cards {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    border-bottom: 5px solid hsl(232, 70%, 50%, 0.2);
+}
+
+.mot__cards--front {
+    border-bottom: 5px solid hsl(232, 70%, 50%, 1);
+}
+
+.mot__cards--back {
+    position: relative;
+}
+
+.mot__disabled__card--overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255,255,255,0.6);
+}
+
+.mot__cards__header {
+    width: 100%;
+    border-radius: 5% 5% 0 0;
+    display: flex;
+    height: 45%;
+}
+
+.mot__cards__image {
+    width: 100%;
+}
+
+.mot__card--user-name {
+    font-size: 25px;
+    font-weight: 600;
+    color: #131415;
+    margin-top: 5.3rem;
+}
+
+.mot__card--user-designation {
+    font-size: 1.6rem;
+    font-weight: 500;
+    color: #151515;
+}
+
+.mot__card__pill {
+    width: 3.1rem;
+    height: 0.6rem;
+    border-radius: 8px;
+    background-color: #283fd9;
+    opacity: 0.2;
+    margin: 1.22rem 0 2.58rem 0;
+}
+
+.mot__cards--front .mot__card__pill {
+    opacity: 1;
+}
+
+.mot__card--user-info {
+    font-family: Lato, sans-serif;
+    font-size: 2rem;
+    font-weight: 500;
+    line-height: 1.35;
+    color: rgba(19, 20, 21, 0.6);
+    margin: 3.25rem 0 3.6rem 0;
+    width: 90%;
+}
+
+.mot__cards__footer {
+    display: flex;
+    margin-bottom: 4.1rem;
+}
+
+.mot__cards__footer--link {
+    cursor: pointer;
+    margin-right: 5rem;
+}
+
+.mot__cards__paginator--wrapper {
+    position: absolute;
+    top: 38%;
+    left: 44%;
+    display: flex;
+}
+
+.mot__cards__paginator--box {
+    background-color: #283FD9;
+    padding: 1.2rem 1.2rem 0.6rem 1.2rem;
+    cursor: pointer;
+}
+
+.mot__cards__paginator {
+    fill: #fff;
+}
+
+.mot__disabled-paginator {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.mot__cards__paginator-left {
+    border-radius: 5px 0 0 5px;
+}
+
+.mot__cards__paginator-right {
+    border-radius: 0 5px 5px 0;
 }
