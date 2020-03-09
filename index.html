@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/base.css">
     <link rel="stylesheet" href="./css/main.css">
+    <script src="./scripts/mastScroller.js" async></script>
     <title>OPSCALE</title>
 </head>
 <body>
@@ -665,10 +666,10 @@
         <p class="tod__text">Let's Talk</p>
         <form class="tod__form" id="tod__form">
             <div class="tod__input-group">
-                <input type="text" class="tod__input" name="name" id="name" placeholder="Name">
-                <input type="email" class="tod__input" name="email" id="email" placeholder="Email">
+                <input type="text" class="tod__input" name="name" id="name" placeholder="Name" aria-label="name">
+                <input type="email" class="tod__input" name="email" id="email" placeholder="Email" aria-label="email">
             </div>
-            <textarea class="tod__textarea" name="subject" id="subject" cols="30" rows="5" placeholder="Subject"></textarea>
+            <textarea class="tod__textarea" name="subject" id="subject" cols="30" rows="5" placeholder="Subject" aria-label="subject"></textarea>
             <button class="tod__form__btn" type="button" id="tod__btn">Submit</button>
         </form>
         <div class="tod__floating-icon">
@@ -787,5 +788,5 @@
         <p class="footer__copyright__text">&copy; 2020 OPSCALE TECHNOLOGIES (OPC) PRIVATE LIMITED, INDIA</p>
     </footer>
 </body>
-<script src="./scripts/mastScroller.js" type="text/javascript"></script>
+
 </html>
