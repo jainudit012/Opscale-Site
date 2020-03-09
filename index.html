@@ -40,49 +40,51 @@
     </header>
     <main class="site__main">
         <div class="site__section__wrapper">
-            <section class="site__sections site__section__first" style="background-size: cover;">
+            <section id="mast-1" class="site__sections site__section__first" style="background-size: cover;">
                 <h1 class="sections__heading">We Deliver Expert Market Leaders</h1>
                 <p class="sections__text">Founder-bootstrapped to multi-million dollaer investments, we have helped startups of all shapes and sizes to become market leaders.</p>
                 <h5 class="sections__sub-heading">We Build an MVP in 4 Weeks</h5>
                 <div class="sections__button-group">
-                    <a class="sections__button-group__link" href="#">
+                    <a class="sections__button-group__link" href="#wwd__section">
                         <img src="./assets/downArrow.svg" alt="More" class="sections__arrow-down">
                         <span class="sections__learn">Learn More</span>
                     </a>
                 </div>
             </section>
-            <section class="site__sections site__section__second hidden" style="background-size: cover;">
+            <section id="mast-2" class="site__sections site__section__second hideabs" style="background-size: cover;">
                 <h1 class="sections__heading">We Deliver Exceptional Engineering Solutions</h1>
                 <p class="sections__text">Founder-bootstrapped to multi-million dollaer investments, we have helped startups of all shapes and sizes to become market leaders.</p>
                 <h5 class="sections__sub-heading">We Build an MVP in 4 Weeks</h5>
                 <div class="sections__button-group">
-                    <a class="sections__button-group__link" href="#">
+                    <a class="sections__button-group__link" href="#wwd__section">
                         <img src="./assets/downArrow.svg" alt="More" class="sections__arrow-down">
                         <span class="sections__learn">Learn More</span>
                     </a>
                 </div>
             </section>
-            <section class="site__sections site__section__third hidden" style="background-size: cover;">
+            <section id="mast-3" class="site__sections site__section__third hideabs" style="background-size: cover;">
                 <h1 class="sections__heading">We Deliver Expertise in Innovation</h1>
                 <p class="sections__text">Founder-bootstrapped to multi-million dollaer investments, we have helped startups of all shapes and sizes to become market leaders.</p>
                 <h5 class="sections__sub-heading">We Build an MVP in 4 Weeks</h5>
                 <div class="sections__button-group">
-                    <a class="sections__button-group__link" href="#">
+                    <a class="sections__button-group__link" href="#wwd__section">
                         <img src="./assets/downArrow.svg" alt="More" class="sections__arrow-down">
                         <span class="sections__learn">Learn More</span>
                     </a>
                 </div>
             </section>
         </div>
-        <div class="section__paginator">
-            <div class="paginator__counter paginator__counter__start">01</div>
-            <div class="paginator__progress">
-                <div class="paginator__current-progress"></div>
+        <div class="section__paginator" id="section__paginator">
+            <div class="paginator__counter" id="start__count">01</div>
+            <div class="paginator__progress-wrapper" id="paginator__progress-wrapper">
+                <div class="paginator__current-progress paginator__progress" id="paginator__progress-start"></div>
+                <div class="paginator__progress" id="paginator__progress-mid"></div>
+                <div class="paginator__progress" id="paginator__progress-end"></div>
             </div>
-            <div class="paginator__counter paginator__counter__end">03</div>
+            <div class="paginator__counter paginator__greyed" id="end__count">03</div>
         </div>
     </main>
-    <section class="site__info-wwd">
+    <section class="site__info-wwd" id="wwd__section">
         <div class="site__info-wwd__heading-wrapper">
             <h1 class="site__info-wwd__heading">What We Do</h1>
             <p class="site__info-wwd__text">From lean startup techniques to scaling your developer operations and application performance for globally connected orld, our specialized teams lead the product design, development &amp; operations process for high growth companies</p>
@@ -785,5 +787,5 @@
         <p class="footer__copyright__text">&copy; 2020 OPSCALE TECHNOLOGIES (OPC) PRIVATE LIMITED, INDIA</p>
     </footer>
 </body>
-<!-- <script src="./scripts/mastScroller.js" type="text/javascript"></script> -->
+<script src="./scripts/mastScroller.js" type="text/javascript"></script>
 </html>
