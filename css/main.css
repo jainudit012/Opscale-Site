@@ -827,6 +827,12 @@ For displaying pill on nav item HOVER
     font-family: Lato, sans-serif;
     cursor: pointer;
     border-bottom: 5px solid transparent;
+    animation: fadeIn 500ms;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
 }
 
 .ii__card--selected {
