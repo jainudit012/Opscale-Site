@@ -54,7 +54,7 @@
     backdrop-filter: blur(30px);
     border: solid 2px rgba(40, 63, 217, 0.15);
     top: 100%;
-    left: -2%;
+    left: -3px;
     background-image: linear-gradient(174deg, #09070a 3%, #0A134E 97%);
     border-radius: 0 0 15px 15px;
 }
