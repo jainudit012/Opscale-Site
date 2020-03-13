@@ -4,9 +4,6 @@ const listWrapper = document.getElementById('rp__list')
 const panelsWrapper = document.getElementById('rp__panels__wrapper')
 const sectionWrapper = document.getElementById('rp__section')
 
-const nextButton = document.getElementById('rp__panel-fwd')
-const backButton = document.getElementById('rp__panel-bck')
-
 try{
     const filterItemData = loadElementsToArray('rp__filter-', listWrapper)
     const panelData = loadElementsToArray('rp__panels-', panelsWrapper)
