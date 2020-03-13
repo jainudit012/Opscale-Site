@@ -1,5 +1,4 @@
 const maxFilterItemsInList = 5
-const maxPanels = 1
 const listWrapper = document.getElementById('rp__list')
 const panelsWrapper = document.getElementById('rp__panels__wrapper')
 const sectionWrapper = document.getElementById('rp__section')
