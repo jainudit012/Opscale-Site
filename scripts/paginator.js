@@ -52,6 +52,7 @@ function otherPaginate(dataArray, classConfig, wrapper) {
                 dataArray = e.detail.data
                 addClass(backButton, classConfig.disabledPaginationClass)
                 if(dataArray.length > 1){
+                    removeClass(nextButton, 'hidden')
                     removeClass(nextButton, classConfig.disabledPaginationClass)
                 }else{
                     addClass(nextButton, classConfig.disabledPaginationClass)
