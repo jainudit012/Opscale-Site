@@ -685,6 +685,7 @@
     grid-template-rows: 85% 5% 10%;
     grid-template-columns: 10fr 6rem 6rem 1fr;
     position: relative;
+    overflow-x: hidden;
 }
 
 .ss__flipper-panel {
@@ -693,8 +694,9 @@
     background-color: #151515;
     padding: 0 0 14.8rem 22.6rem;
     border-radius: 0 0 20px 0;
-    transform: translateX(-100%);
-    transition: all 450ms ease-out;
+    transform: translateX(40%);
+    z-index: -1;
+    transition: all 500ms ease-in-out;
 }
 
 .ss__flipper__front {
