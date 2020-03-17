@@ -40,14 +40,17 @@ try{
                     })
                 }else filteredItems = panelData.items
 
-                removeClassFromMultiple(filteredItems, 'hidden')
-                addClassToMultiple(hiddenItems, 'hidden')
                 removeClassFromMultiple(panelData.items, 'site__info-rp__panels__front')
                 removeClassFromMultiple(panelData.items, 'site__info-rp__panels__next')
-                removeClassFromMultiple(filteredItems.slice(0,2), 'site__info-rp__panels__back')
+                removeClassFromMultiple(panelData.items, 'site__info-rp__panels__back')
+                removeClassFromMultiple(panelData.items, 'hidden')
+                removeClassFromMultiple(panelData.items, 'slideOut')
+
+                addClassToMultiple(hiddenItems, 'hidden')
+                
                 addClass(filteredItems[0], 'site__info-rp__panels__front')
-                addClassToMultiple(filteredItems.slice(2), 'site__info-rp__panels__back')
                 addClass(filteredItems[1], 'site__info-rp__panels__next')
+                addClassToMultiple(filteredItems.slice(2), 'site__info-rp__panels__back')
 
                 filteredData = filteredItems
 
