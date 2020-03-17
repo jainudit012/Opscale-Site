@@ -890,6 +890,7 @@ For displaying pill on nav item HOVER
     grid-template-columns: 1fr 1fr 1fr;
     grid-column-gap: 12.2rem;
     grid-row-gap: 10.25rem;
+    position: relative;
 }
 
 .ii__card {
@@ -1003,6 +1004,8 @@ For displaying pill on nav item HOVER
     font-weight: 900;
     text-align: center;
     margin-top: -3rem;
+    animation: fadeIn 500ms;
+    transition: all 200ms ease-in;
 }
 
 .site__info-wcu {
