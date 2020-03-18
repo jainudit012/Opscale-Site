@@ -1138,15 +1138,14 @@ For displaying pill on nav item HOVER
 .mot__cards {
     display: grid;
     grid-template-rows: 45% 55%;
-    flex-direction: column;
-    border-bottom: 5px solid hsl(232, 70%, 50%, 0.2);
+    border-bottom: 5px solid rgba(38, 62, 217, 0.2);
     grid-column: 2/-1;
     grid-row: 1/-1;
     transition: all 450ms ease-out;
 }
 
 .mot__cards--front {
-    border-bottom: 5px solid hsl(232, 70%, 50%, 1);
+    border-bottom: 5px solid rgba(38, 62, 217, 1);
     transform: translateX(-100%);
 }
 
