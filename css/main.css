@@ -87,6 +87,7 @@
     display: grid;
     grid-template-columns: 12fr 35px 1fr;
     overflow: hidden;
+    margin-bottom: 10rem;
 }
 
 .site__section__wrapper{
@@ -203,7 +204,7 @@
 }
 
 .site__info-wwd {
-    padding: 18.2rem 22.6rem;
+    padding: 8.2rem 22.6rem;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -599,7 +600,7 @@
 }
 
 .hww__heading {
-    margin: 1.8rem 0 12rem 8.6rem;
+    margin: 0 0 12rem 8.6rem;
     font-size: 5rem;
     font-weight: bold;
     line-height: 1.52;
@@ -619,6 +620,7 @@
     padding: 7.7rem 5rem 10.4rem 3.9rem; 
     display: flex;
     flex-direction: column;
+    margin: 0
 }
 
 .hww__card__img {

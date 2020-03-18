@@ -22,13 +22,15 @@
 }
 
 .about__info {
-    padding: 16.4rem 22.6rem 0 22.6rem;
+    padding: 8.4rem 22.6rem 0 22.6rem;
     color: #131415;
 }
 
 .about__info__mission-box {
     display: flex;
     width: 100%;
+    margin-bottom: 8.2rem;
+    padding-top: 8rem;
 }
 
 .about__info__mission {
@@ -60,11 +62,11 @@
 }
 
 .about__info--culture {
-    margin-top: 14.2rem;
     text-align: end;
     font-size: 5rem;
     font-weight: bold;
     margin-bottom: 6.9rem;
+    padding-top: 6rem;
 }
 
 .about__info--culture-text {
@@ -79,8 +81,7 @@
 .about__info__cards-box {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    margin: 14.2rem 0;
-    padding: 0 10rem;
+    padding: 14.2rem 10rem 10.2rem 10rem;
     grid-column-gap: 25rem;
 }
 
@@ -109,8 +110,7 @@
 
 .about__mot {
     color: #131415;
-    margin-top: 2rem;
-    padding-bottom: 10rem;
+    padding: 6rem 0 16rem 0;
 }
 
 .about__mot--heading {
@@ -154,7 +154,7 @@
 
 .about__join {
     color: #131415;
-    padding: 14.2rem 22.6rem 14rem 22.6rem;
+    padding: 8.2rem 22.6rem 14rem 22.6rem;
 }
 
 .about__join--heading {
