@@ -134,3 +134,11 @@ function loadFromQuery(){
 
     return splitQuery(searchQuery)
 }
+
+function changeHashToQuery(queryName, defaultState){
+    const searchHash = window.location.hash
+
+    window.history.replaceState(null, '' , 
+        `?${queryName}=${ searchHash.length === 0 ? defaultState : searchHash.replace(`#${queryName}=`, '')}`
+    )
+}
