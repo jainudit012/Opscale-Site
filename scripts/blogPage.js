@@ -14,6 +14,36 @@ try{
         }
     }
 
+    function splitQuery(inputQuery){
+        const queries = {}
+
+        if(inputQuery.indexOf('&') !== -1){
+            inputQuery.split('&').forEach(query => {
+                queries[query.split('=')[0]] = query.split('=')[1]
+            })
+        }else {
+            queries[inputQuery.split('=')[0]] = inputQuery.split('=')[1]
+        }
+
+        return queries
+    }
+
+    function changeHashToQuery(queryName, defaultState){
+        const searchHash = window.location.hash
+
+        window.history.replaceState(null, '' , 
+            `?${queryName}=${ searchHash.length === 0 ? defaultState : searchHash.replace(`#${queryName}=`, '')}`
+        )
+    }
+
+    function loadFromQuery(){
+        let searchQuery = window.location.search.replace('?', '')
+
+        window.scrollTo(0 , 0)
+
+        return splitQuery(searchQuery)
+    }
+
     function loadBlogsFromHashChange(){
         changeHashToQuery('type', 'all')
         loadBlogsFromQuery()
