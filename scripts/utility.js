@@ -112,3 +112,25 @@ function toggleClassOnDataSelect(nodeData, dataSetValue, selectedValue, toggleCl
         else removeClass(node, toggleClassName)
     })
 }
+
+function splitQuery(inputQuery){
+    const queries = {}
+
+    if(inputQuery.indexOf('&') !== -1){
+        inputQuery.split('&').forEach(query => {
+            queries[query.split('=')[0]] = query.split('=')[1]
+        })
+    }else {
+        queries[inputQuery.split('=')[0]] = inputQuery.split('=')[1]
+    }
+
+    return queries
+}
+
+function loadFromQuery(){
+    let searchQuery = window.location.search.replace('?', '')
+
+    window.scrollTo(0 , 0)
+
+    return splitQuery(searchQuery)
+}
