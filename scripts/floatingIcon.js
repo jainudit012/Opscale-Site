@@ -26,7 +26,6 @@ try{
     
     switch(window.location.pathname){
         case '/about.html' : {
-            console.log('yes')
             mastHeadSection = document.getElementById('about__main')
             floatingIconObserver.observe(mastHeadSection)
             break;
