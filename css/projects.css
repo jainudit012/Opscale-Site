@@ -231,6 +231,7 @@
     background-color: #283FD9;
     padding: 1.2rem 1.2rem 0.6rem 1.2rem;
     cursor: pointer;
+    transition: background-color 300ms ease-out;
 }
 
 .paginator__box-left {
@@ -371,6 +372,7 @@
     grid-column: 2/-1;
     grid-row: 2/3;
     display: flex;
+    z-index: 1;
 }
 
 .project__cards__wrapper {
@@ -380,14 +382,19 @@
     overflow-x: hidden;
     grid-row: 1/-1;
     grid-column-gap: 120px; /* NOTE: Does not sets value; targetting as inline style through js*/
+    position: relative;
 }
 
 .project__card {
     grid-row: 1/-1;
-    cursor: pointer;
     padding-bottom: 3rem;
     cursor: pointer;
     text-decoration: none;
+    transform: translateX(100%);
+}
+
+.project__card--front {
+    transform: translateX(0);
 }
 
 .project__card-header-img {
