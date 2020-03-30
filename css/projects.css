@@ -386,6 +386,8 @@
     grid-row: 1/-1;
     cursor: pointer;
     padding-bottom: 3rem;
+    cursor: pointer;
+    text-decoration: none;
 }
 
 .project__card-header-img {

@@ -20,6 +20,14 @@ try{
             toggleClassOnDataSelect(projectDetailData.items, 'projectnumber', projectQuery['projNo'], 'block')
         }
     }
+
+    function loadProjectsFromHashChange(){
+        let projectPageHash = window.location.hash
+        if(projectPageHash.indexOf('more' === 0)){
+            changeHashToQuery('projNo', '1')
+            loadQueriedProjectDetail()
+        }
+    }
     
     loadQueriedProjectDetail()
 
@@ -58,6 +66,8 @@ try{
             }
         })
     }
+
+    window.addEventListener('hashchange', loadProjectsFromHashChange)
 }catch(ex){
     console.log(ex)
 }
