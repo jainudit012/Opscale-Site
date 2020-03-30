@@ -65,6 +65,15 @@ try{
                 card.children[0].style.width = `${(totalVisibleWidth / 3) - ((2/3)*gridColumnGap)}px` //  this will change on adding media query
             }
         })
+        const classConfig = {
+            frontClass: 'project__card--front',
+            disabledPaginationClass: 'projects-disabled-paginator',
+            nextBtnId: 'project-fwd',
+            backBtnId: 'project-bck',
+            slideAnimationClass: 'slideOut'
+        }
+
+        carousel(3, classConfig, projectCardData.items)
     }
 
     window.addEventListener('hashchange', loadProjectsFromHashChange)
