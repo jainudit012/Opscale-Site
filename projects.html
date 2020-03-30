@@ -13,6 +13,7 @@
     <script src="./scripts/utility.js" defer></script>
     <script src="./scripts/floatingIcon.js" defer></script>
     <script src="./scripts/paginator.js" defer></script>
+    <script src="./scripts/carousel.js" defer></script>
     <script src="./scripts/projectsPage.js" defer></script>
 </head>
 <body>
@@ -1808,7 +1809,7 @@
         </div>
         <div class="project__cards__section">
           <div class="project__cards__wrapper" id="project__cards__wrapper">
-            <a class="project__card" id="project__card-1" href="#projNo=1">
+            <a class="project__card project__card--front" id="project__card-1" href="#projNo=1">
               <img src="./assets/phone.jpg" srcset="./assets/phone.jpg 1x, ./assets/phone@2x.jpg 2x, ./assets/phone@3x.jpg 3x" alt="phone" class="project__card-header-img">
               <div class="project__card-body">
                 <div class="project__card-info">
@@ -1832,7 +1833,7 @@
                 </footer>
               </div>
             </a>
-            <a class="project__card" id="project__card-2" href="#projNo=2">
+            <a class="project__card project__card--front" id="project__card-2" href="#projNo=2">
               <img src="./assets/watch.jpg" srcset="./assets/watch.jpg 1x, ./assets/watch@2x.jpg 2x, ./assets/watch@3x.jpg 3x" alt="watch" class="project__card-header-img">
               <div class="project__card-body">
                 <div class="project__card-info">
@@ -1856,7 +1857,7 @@
                 </footer>
               </div>
             </a>
-            <a class="project__card" id="project__card-3" href="#projNo=3">
+            <a class="project__card project__card--front" id="project__card-3" href="#projNo=3">
               <img src="./assets/watch.jpg" srcset="./assets/watch.jpg 1x, ./assets/watch@2x.jpg 2x, ./assets/watch@3x.jpg 3x" alt="watch" class="project__card-header-img">
               <div class="project__card-body">
                 <div class="project__card-info">
@@ -1904,13 +1905,174 @@
                 </footer>
               </div>
             </a>
-            <div class="project__card" id="project__card-5"></div>
-            <div class="project__card" id="project__card-6"></div>
-            <div class="project__card" id="project__card-7"></div>
-            <div class="project__card" id="project__card-8"></div>
-            <div class="project__card" id="project__card-9"></div>
-            <div class="project__card" id="project__card-10"></div>
-            <div class="project__card" id="project__card-11"></div>
+            <a class="project__card" id="project__card-5" href="#projNo=5">
+              <img src="./assets/watch.jpg" srcset="./assets/watch.jpg 1x, ./assets/watch@2x.jpg 2x, ./assets/watch@3x.jpg 3x" alt="watch" class="project__card-header-img">
+              <div class="project__card-body">
+                <div class="project__card-info">
+                  <span class="project__card-info-num">05</span>
+                  <div class="project__card-info-box">
+                    <div class="project__card-info-client">Client Name</div>
+                    <div class="project__card-info-industry">Industry</div>
+                  </div>
+                </div>
+                <h6 class="project__card-heading">Project Heading</h6>
+                <p class="project__card-text">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using </p>
+                <footer class="project__card-footer">
+                  <div class="project__card-btn">
+                      <div class="project__card-btn-text">Read more</div>
+                      <span class="project__card-btn-svg-wrapper">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="33.384" height="1.48rem" viewBox="0 0 33.384 25.521" class="project__card-btn-svg">
+                              <path id="prefix__Thin_Arrow-4" d="M40.857 30.913L29.919 41.894a1.755 1.755 0 11-2.46-2.5l7.951-7.954H9.757a1.757 1.757 0 110-3.514H35.41l-7.995-7.995a1.77 1.77 0 112.5-2.5l10.942 10.978a1.75 1.75 0 010 2.504z" data-name="Thin Arrow" transform="translate(-8 -16.9)"/>
+                          </svg>
+                      </span>
+                  </div>
+                </footer>
+              </div>
+            </a>
+            <a class="project__card" id="project__card-6" href="#projNo=6">
+              <img src="./assets/watch.jpg" srcset="./assets/watch.jpg 1x, ./assets/watch@2x.jpg 2x, ./assets/watch@3x.jpg 3x" alt="watch" class="project__card-header-img">
+              <div class="project__card-body">
+                <div class="project__card-info">
+                  <span class="project__card-info-num">06</span>
+                  <div class="project__card-info-box">
+                    <div class="project__card-info-client">Client Name</div>
+                    <div class="project__card-info-industry">Industry</div>
+                  </div>
+                </div>
+                <h6 class="project__card-heading">Project Heading</h6>
+                <p class="project__card-text">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using </p>
+                <footer class="project__card-footer">
+                  <div class="project__card-btn">
+                      <div class="project__card-btn-text">Read more</div>
+                      <span class="project__card-btn-svg-wrapper">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="33.384" height="1.48rem" viewBox="0 0 33.384 25.521" class="project__card-btn-svg">
+                              <path id="prefix__Thin_Arrow-4" d="M40.857 30.913L29.919 41.894a1.755 1.755 0 11-2.46-2.5l7.951-7.954H9.757a1.757 1.757 0 110-3.514H35.41l-7.995-7.995a1.77 1.77 0 112.5-2.5l10.942 10.978a1.75 1.75 0 010 2.504z" data-name="Thin Arrow" transform="translate(-8 -16.9)"/>
+                          </svg>
+                      </span>
+                  </div>
+                </footer>
+              </div>
+            </a>
+            <a class="project__card" id="project__card-7" href="#projNo=7">
+              <img src="./assets/watch.jpg" srcset="./assets/watch.jpg 1x, ./assets/watch@2x.jpg 2x, ./assets/watch@3x.jpg 3x" alt="watch" class="project__card-header-img">
+              <div class="project__card-body">
+                <div class="project__card-info">
+                  <span class="project__card-info-num">07</span>
+                  <div class="project__card-info-box">
+                    <div class="project__card-info-client">Client Name</div>
+                    <div class="project__card-info-industry">Industry</div>
+                  </div>
+                </div>
+                <h6 class="project__card-heading">Project Heading</h6>
+                <p class="project__card-text">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using </p>
+                <footer class="project__card-footer">
+                  <div class="project__card-btn">
+                      <div class="project__card-btn-text">Read more</div>
+                      <span class="project__card-btn-svg-wrapper">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="33.384" height="1.48rem" viewBox="0 0 33.384 25.521" class="project__card-btn-svg">
+                              <path id="prefix__Thin_Arrow-4" d="M40.857 30.913L29.919 41.894a1.755 1.755 0 11-2.46-2.5l7.951-7.954H9.757a1.757 1.757 0 110-3.514H35.41l-7.995-7.995a1.77 1.77 0 112.5-2.5l10.942 10.978a1.75 1.75 0 010 2.504z" data-name="Thin Arrow" transform="translate(-8 -16.9)"/>
+                          </svg>
+                      </span>
+                  </div>
+                </footer>
+              </div>
+            </a>
+            <a class="project__card" id="project__card-8" href="#projNo=8">
+              <img src="./assets/watch.jpg" srcset="./assets/watch.jpg 1x, ./assets/watch@2x.jpg 2x, ./assets/watch@3x.jpg 3x" alt="watch" class="project__card-header-img">
+              <div class="project__card-body">
+                <div class="project__card-info">
+                  <span class="project__card-info-num">08</span>
+                  <div class="project__card-info-box">
+                    <div class="project__card-info-client">Client Name</div>
+                    <div class="project__card-info-industry">Industry</div>
+                  </div>
+                </div>
+                <h6 class="project__card-heading">Project Heading</h6>
+                <p class="project__card-text">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using </p>
+                <footer class="project__card-footer">
+                  <div class="project__card-btn">
+                      <div class="project__card-btn-text">Read more</div>
+                      <span class="project__card-btn-svg-wrapper">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="33.384" height="1.48rem" viewBox="0 0 33.384 25.521" class="project__card-btn-svg">
+                              <path id="prefix__Thin_Arrow-4" d="M40.857 30.913L29.919 41.894a1.755 1.755 0 11-2.46-2.5l7.951-7.954H9.757a1.757 1.757 0 110-3.514H35.41l-7.995-7.995a1.77 1.77 0 112.5-2.5l10.942 10.978a1.75 1.75 0 010 2.504z" data-name="Thin Arrow" transform="translate(-8 -16.9)"/>
+                          </svg>
+                      </span>
+                  </div>
+                </footer>
+              </div>
+            </a>
+            <a class="project__card" id="project__card-9" href="#projNo=9">
+              <img src="./assets/watch.jpg" srcset="./assets/watch.jpg 1x, ./assets/watch@2x.jpg 2x, ./assets/watch@3x.jpg 3x" alt="watch" class="project__card-header-img">
+              <div class="project__card-body">
+                <div class="project__card-info">
+                  <span class="project__card-info-num">09</span>
+                  <div class="project__card-info-box">
+                    <div class="project__card-info-client">Client Name</div>
+                    <div class="project__card-info-industry">Industry</div>
+                  </div>
+                </div>
+                <h6 class="project__card-heading">Project Heading</h6>
+                <p class="project__card-text">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using </p>
+                <footer class="project__card-footer">
+                  <div class="project__card-btn">
+                      <div class="project__card-btn-text">Read more</div>
+                      <span class="project__card-btn-svg-wrapper">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="33.384" height="1.48rem" viewBox="0 0 33.384 25.521" class="project__card-btn-svg">
+                              <path id="prefix__Thin_Arrow-4" d="M40.857 30.913L29.919 41.894a1.755 1.755 0 11-2.46-2.5l7.951-7.954H9.757a1.757 1.757 0 110-3.514H35.41l-7.995-7.995a1.77 1.77 0 112.5-2.5l10.942 10.978a1.75 1.75 0 010 2.504z" data-name="Thin Arrow" transform="translate(-8 -16.9)"/>
+                          </svg>
+                      </span>
+                  </div>
+                </footer>
+              </div>
+            </a>
+            <a class="project__card" id="project__card-10" href="#projNo=10">
+              <img src="./assets/watch.jpg" srcset="./assets/watch.jpg 1x, ./assets/watch@2x.jpg 2x, ./assets/watch@3x.jpg 3x" alt="watch" class="project__card-header-img">
+              <div class="project__card-body">
+                <div class="project__card-info">
+                  <span class="project__card-info-num">10</span>
+                  <div class="project__card-info-box">
+                    <div class="project__card-info-client">Client Name</div>
+                    <div class="project__card-info-industry">Industry</div>
+                  </div>
+                </div>
+                <h6 class="project__card-heading">Project Heading</h6>
+                <p class="project__card-text">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using </p>
+                <footer class="project__card-footer">
+                  <div class="project__card-btn">
+                      <div class="project__card-btn-text">Read more</div>
+                      <span class="project__card-btn-svg-wrapper">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="33.384" height="1.48rem" viewBox="0 0 33.384 25.521" class="project__card-btn-svg">
+                              <path id="prefix__Thin_Arrow-4" d="M40.857 30.913L29.919 41.894a1.755 1.755 0 11-2.46-2.5l7.951-7.954H9.757a1.757 1.757 0 110-3.514H35.41l-7.995-7.995a1.77 1.77 0 112.5-2.5l10.942 10.978a1.75 1.75 0 010 2.504z" data-name="Thin Arrow" transform="translate(-8 -16.9)"/>
+                          </svg>
+                      </span>
+                  </div>
+                </footer>
+              </div>
+            </a>
+            <a class="project__card" id="project__card-11" href="#projNo=11">
+              <img src="./assets/watch.jpg" srcset="./assets/watch.jpg 1x, ./assets/watch@2x.jpg 2x, ./assets/watch@3x.jpg 3x" alt="watch" class="project__card-header-img">
+              <div class="project__card-body">
+                <div class="project__card-info">
+                  <span class="project__card-info-num">11</span>
+                  <div class="project__card-info-box">
+                    <div class="project__card-info-client">Client Name</div>
+                    <div class="project__card-info-industry">Industry</div>
+                  </div>
+                </div>
+                <h6 class="project__card-heading">Project Heading</h6>
+                <p class="project__card-text">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using </p>
+                <footer class="project__card-footer">
+                  <div class="project__card-btn">
+                      <div class="project__card-btn-text">Read more</div>
+                      <span class="project__card-btn-svg-wrapper">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="33.384" height="1.48rem" viewBox="0 0 33.384 25.521" class="project__card-btn-svg">
+                              <path id="prefix__Thin_Arrow-4" d="M40.857 30.913L29.919 41.894a1.755 1.755 0 11-2.46-2.5l7.951-7.954H9.757a1.757 1.757 0 110-3.514H35.41l-7.995-7.995a1.77 1.77 0 112.5-2.5l10.942 10.978a1.75 1.75 0 010 2.504z" data-name="Thin Arrow" transform="translate(-8 -16.9)"/>
+                          </svg>
+                      </span>
+                  </div>
+                </footer>
+              </div>
+            </a>
           </div>
           <div class="project__cards-paginator-wrapper">
             <div class="paginator__box paginator__box-left projects-disabled-paginator" id="project-bck">
