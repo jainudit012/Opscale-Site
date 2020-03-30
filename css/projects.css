@@ -15,6 +15,14 @@
     background-size: cover;
 }
 
+#project-2 .project__mast__wrapper, #project-3 .project__mast__wrapper ,  #project-4 .project__mast__wrapper, #project-5 .project__mast__wrapper , #project-6 .project__mast__wrapper,
+#project-7 .project__mast__wrapper, #project-8 .project__mast__wrapper, #project-9 .project__mast__wrapper, #project-10 .project__mast__wrapper, #project-11 .project__mast__wrapper {
+    background-image: linear-gradient(62deg, rgba(9, 7, 10, 0.85) 43%, rgba(224, 228, 238, 0.1) 120%), url('../assets/watch.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
 .project__name__box {
     display: flex;
     flex-direction: column;
