@@ -12,7 +12,6 @@
 }
 
 .nav__logo__link {
-    width: 15%;
     margin-right: auto;
     cursor: pointer;
 }
@@ -923,6 +922,7 @@ For displaying pill on nav item HOVER
 }
 
 .ii__card__heading {
+    font-family: Poppins, sans-serif;
     font-size: 2rem;
     font-weight: 500;
     line-height: 1.35;
