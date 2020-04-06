@@ -961,7 +961,6 @@ For displaying pill on nav item HOVER
     color: #283fd9;
 }
 
-
 /* For changing card button color on HOVER */
 .ii__card:hover .ii__card__btn-text {
     color: #283fd9;
@@ -975,7 +974,6 @@ For displaying pill on nav item HOVER
 .ii__card--selected .ii__card__btn-svg {
     fill: #283fd9;
 }
-
 
 /* For changing color of arrow in card footer on HOVER */
 .ii__card:hover .ii__card__btn-svg {
