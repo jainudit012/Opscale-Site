@@ -1445,10 +1445,19 @@ For displaying pill on nav item HOVER
     border-radius: 5px;
     padding: 1rem 1.2rem 0.5rem 1.2rem;
     margin-left: auto;
+    cursor: pointer;
 }
 
 .contact__footer--icon {
     fill: rgba(255,255,255,0.6);
+}
+
+.contact__footer--box:hover {
+    border: 1px solid rgba(255,255,255,0.8);
+}
+
+.contact__footer--box:hover .contact__footer--icon {
+    fill: rgba(255,255,255,0.8);
 }
 
 .footer__copyright {
