@@ -1062,7 +1062,7 @@ For displaying pill on nav item HOVER
 }
 
 .site__info-mot {
-    padding: 18.2rem  0 18.2rem 22.6rem;
+    padding: 18.2rem  0 12.2rem 22.6rem;
     display: flex;
     width: 100%;
 }
@@ -1265,7 +1265,7 @@ For displaying pill on nav item HOVER
 .site__info-tod {
     display: flex;
     flex-direction: column;
-    padding: 0 22.6rem 23.1rem 22.6rem;
+    padding: 6rem 22.6rem 23.1rem 22.6rem;
     position: relative;
 }
 
