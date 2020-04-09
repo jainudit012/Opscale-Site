@@ -84,7 +84,7 @@
 
 .site__main {
     display: grid;
-    grid-template-columns: 12fr 35px 1fr;
+    grid-template-columns: 12fr 35px 22.6rem;
     overflow: hidden;
     margin-bottom: 10rem;
 }
@@ -1471,4 +1471,103 @@ For displaying pill on nav item HOVER
   padding-top: 9rem;
   border-top: 1px solid rgba(255, 255, 255, 0.1);
   color: rgba(255, 255, 255, 0.4);
+}
+
+@media (max-width:1700px) {
+    .sections__heading {
+        font-size: 4rem;
+    }
+}
+
+@media (max-width:1500px) {
+    .site__main {
+        grid-template-columns: 12fr 35px 17.6rem;
+    }
+
+    .site__sections {
+        padding: 16.4rem 0 27.6rem 17.6rem;
+    }
+
+    .nav__list__item {
+        font-size: 1.8rem;
+    }
+
+    .nav__list__link {
+        padding: 2.5rem 1.75rem;;
+    }
+
+    .nav__list__item__group__item .nav__list__link {
+        padding: 2.5rem;
+    }
+
+    .nav__list__item__group__item {
+        font-size: 1.5rem;
+    }
+
+}
+
+@media (max-width:1300px) {
+    .site__header {
+        padding: 7.24rem 12rem 0 12rem;
+    }
+
+    .site__main {
+        grid-template-columns: 12fr 35px 13.6rem;
+    }
+
+    .site__sections {
+        padding: 12.4rem 0 27.6rem 13.6rem;
+    }
+
+    .section__paginator {
+        transform: translateY(15%);
+    }
+
+    .nav__list__link {
+        padding: 2rem 1.25rem;;
+    }
+
+    .nav__list__item__group__item .nav__list__link {
+        padding: 2rem;
+    }
+}
+
+@media (max-width:1200px) {
+    .sections__heading {
+        font-size: 3.5rem;
+    }
+
+    .sections__text {
+        font-size: 1.8rem;
+    }
+
+    .sections__sub-heading {
+        font-size: 1.5rem;
+    }
+
+    .nav__list__wrapper {
+        width: 65%;
+    }
+}
+
+@media (max-width:1100px) {
+    .site__header {
+        padding: 6.24rem 10rem 0 10rem;
+    }
+
+    .site__main {
+        grid-template-columns: 12fr 35px 11.6rem;
+    }
+
+    .site__sections {
+        padding: 10.4rem 0 27.6rem 11.6rem;
+    }
+
+    .nav__list__link {
+        padding: 1.8rem 1rem;;
+    }
+
+    .nav__list__item__group__item .nav__list__link {
+        padding: 1.75rem;
+    }
 }
