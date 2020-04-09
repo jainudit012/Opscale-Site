@@ -1491,19 +1491,28 @@ For displaying pill on nav item HOVER
     .ss__panels__header {
         padding-top: 6rem;
     }
+
+    .site__info-tod {
+        padding: 6rem 20.6rem 23.1rem 20.6rem;
+    }
 }
 
 @media (max-width:1800px) {
     .mot__left-info {
         width: 40%;
     }
+
     .mot__cards__container {
         width: 60%;
+    }
+
+    .tod__heading {
+        font-size: 10rem;
     }
 }
 
 @media (max-width:1700px) {
-    .sections__heading, .site__info-wwd__heading, .ss__info__text-heading, .ii__heading, .wcu__heading, .mot__info__heading {
+    .sections__heading, .site__info-wwd__heading, .ss__info__text-heading, .ii__heading, .wcu__heading, .mot__info__heading, .tod__sub-heading {
         font-size: 4rem;
     }
 
@@ -1609,6 +1618,14 @@ For displaying pill on nav item HOVER
     .mot__cards__container {
         width: 65%;
     }
+
+    .site__info-tod {
+        padding: 6rem 18.6rem 20.1rem 18.6rem;
+    }
+
+    .tod__heading {
+        font-size: 9rem;
+    }
 }
 
 @media (max-width:1500px) {
@@ -1692,6 +1709,18 @@ For displaying pill on nav item HOVER
     .site__info-mot {
         padding: 12.2rem 0 6.2rem 14.6rem;
     }
+
+    .tod__heading {
+        font-size: 9rem;
+    }
+
+    .site__info-tod {
+        padding: 6rem 16.6rem 16.1rem 16.6rem;
+    }
+
+    .tod__form__btn {
+        padding: 2.2rem 7.5rem;
+    }
 }
 
 @media (max-width:1400px) {
@@ -1726,6 +1755,14 @@ For displaying pill on nav item HOVER
 
     .mot__cards__image {
         max-width: 45rem;
+    }
+
+    .tod__heading {
+        font-size: 8rem;
+    }
+
+    .site__info-tod {
+        padding: 6rem 15.6rem 16.1rem 15.6rem;
     }
 }
 
@@ -1838,7 +1875,7 @@ For displaying pill on nav item HOVER
 }
 
 @media (max-width:1200px) {
-    .sections__heading , .site__info-rp__fixed__heading, .ss__info__text-heading, .ii__heading, .wcu__heading {
+    .sections__heading , .site__info-rp__fixed__heading, .ss__info__text-heading, .ii__heading, .wcu__heading, .tod__sub-heading {
         font-size: 3.5rem;
     }
 
@@ -1952,6 +1989,22 @@ For displaying pill on nav item HOVER
     .mot__info__sub-heading {
         font-size: 2.5rem;
     }
+
+    .tod__heading {
+        font-size: 7rem;
+    }
+
+    .site__info-tod {
+        padding: 6rem 10.6rem 12.1rem 10.6rem;
+    }
+
+    .tod__text {
+        font-size: 2rem;
+    }
+
+    .tod__form {
+        margin-top: 4.7rem;
+    }
 }
 
 @media (max-width:1100px) {
@@ -2021,5 +2074,9 @@ For displaying pill on nav item HOVER
 
     .mot__cards__image {
         max-width: 40.5rem;
+    }
+
+    .site__info-tod {
+        padding: 6rem 10.6rem 10.1rem 10.6rem;
     }
 }
