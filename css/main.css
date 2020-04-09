@@ -601,7 +601,8 @@
 }
 
 .hww__heading {
-    margin: 0 0 12rem 8.6rem;
+    margin-bottom:12rem;
+    padding-left: 8.6rem;
     font-size: 5rem;
     font-weight: bold;
     line-height: 1.52;
@@ -1524,6 +1525,24 @@ For displaying pill on nav item HOVER
     .site__info-rp__panels__description {
         margin: 40.6rem 10.8rem 16.4rem 10rem;
     }
+
+    .site__info-hww {
+        padding: 12rem;
+    }
+
+    .hww__heading {
+        font-size: 4.5rem;
+    }
+}
+
+@media (max-width:1600px) {
+    .hww__heading {
+        margin-bottom: 8rem;
+    }
+
+    .hww__card {
+        padding: 5rem;
+    }
 }
 
 @media (max-width:1500px) {
@@ -1565,6 +1584,25 @@ For displaying pill on nav item HOVER
 
     .site__info-rp__panels__description {
         margin: 36.6rem 10.8rem 12.4rem 10rem;
+    }
+
+    .site__info-hww {
+        padding: 10rem;
+    }
+}
+
+@media (max-width:1400px) {
+    .hww__card__img {
+        width: 9.2rem;
+        height: 9.2rem;
+    }
+
+    .hww__card__text {
+        font-size: 1.8rem;
+    }
+
+    .hww__card__info {
+        margin-top: 4.3rem;
     }
 }
 
@@ -1632,6 +1670,19 @@ For displaying pill on nav item HOVER
     .site__info-rp__panels__description-btn {
         padding: 1.25rem 3rem;
     }
+
+    .site__info-hww {
+        padding: 8rem;
+    }
+
+    .hww__heading {
+        margin-bottom: 6rem;
+        font-size: 3.5rem;
+    }
+
+    .hww__card {
+        padding: 3.5rem;
+    }
 }
 
 @media (max-width:1200px) {
@@ -1661,6 +1712,23 @@ For displaying pill on nav item HOVER
 
     .site__info-rp__panels__wrapper {
         grid-template-columns: 2.25fr 6rem 6rem 0.65fr;
+    }
+
+    .site__info-hww {
+        padding: 6rem 7rem;
+    }
+
+    .hww__card__img {
+        width: 8.2rem;
+        height: 8.2rem;
+    }
+
+    .hww__card__info {
+        font-size: 2rem;
+    }
+
+    .hww__card__text {
+        font-size: 1.7rem;
     }
 }
 
@@ -1699,5 +1767,9 @@ For displaying pill on nav item HOVER
 
     .card__img__box {
         padding: 1.25rem;
+    }
+
+    .hww__card {
+        padding: 2.75rem;
     }
 }
