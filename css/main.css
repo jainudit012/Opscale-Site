@@ -247,14 +247,14 @@
 
 .site__info-wwd__card__wrapper {
     width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-column-gap: 5rem;
     margin-top: 13rem;
 }
 
 .card {
-    width: 23%;
+    width: 100%;
     padding: 2.8rem;
     border-radius: 5px;
     box-shadow: 0 2px 12px 0 rgba(21, 21, 21, 0.05);
@@ -1474,8 +1474,28 @@ For displaying pill on nav item HOVER
 }
 
 @media (max-width:1700px) {
-    .sections__heading {
+    .sections__heading, .site__info-wwd__heading {
         font-size: 4rem;
+    }
+
+    .site__info-wwd__text {
+        font-size: 1.8rem;
+    }
+
+    .site__info-wwd__text-extra {
+        font-size: 2.25rem;
+    }
+
+    .site__info-wwd__text-quotes {
+        width: 11.5rem;
+    }
+
+    .card__heading {
+        font-size: 2.25rem;
+    }
+
+    .card__img__box {
+        padding: 1.75rem;
     }
 }
 
@@ -1504,6 +1524,14 @@ For displaying pill on nav item HOVER
         font-size: 1.5rem;
     }
 
+    .site__info-wwd {
+        padding: 6.2rem 18.6rem;
+    }
+
+    .site__info-wwd__card__wrapper {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
 }
 
 @media (max-width:1300px) {
@@ -1529,6 +1557,14 @@ For displaying pill on nav item HOVER
 
     .nav__list__item__group__item .nav__list__link {
         padding: 2rem;
+    }
+
+    .site__info-wwd {
+        padding: 4.2rem 14.6rem;
+    }
+
+    .site__info-wwd__text-quotes {
+        width: 10rem;
     }
 }
 
@@ -1569,5 +1605,21 @@ For displaying pill on nav item HOVER
 
     .nav__list__item__group__item .nav__list__link {
         padding: 1.75rem;
+    }
+
+    .site__info-wwd {
+        padding: 4.2rem 12.6rem;
+    }
+
+    .site__info-wwd__text-quotes {
+        width: 9rem;
+    }
+
+    .card {
+        padding: 2rem;
+    }
+
+    .card__img__box {
+        padding: 1.25rem;
     }
 }
