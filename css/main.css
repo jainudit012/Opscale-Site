@@ -1495,7 +1495,7 @@ For displaying pill on nav item HOVER
 }
 
 @media (max-width:1700px) {
-    .sections__heading, .site__info-wwd__heading, .ss__info__text-heading, .ii__heading {
+    .sections__heading, .site__info-wwd__heading, .ss__info__text-heading, .ii__heading, .wcu__heading {
         font-size: 4rem;
     }
 
@@ -1561,6 +1561,14 @@ For displaying pill on nav item HOVER
 
     .ii__nav {
         margin-bottom: 10.5rem;
+    }
+
+    .wcu__heading {
+        margin-bottom: 12.6rem;
+    }
+
+    .wcu__card {
+        padding: 8.5rem 6.2rem;
     }
 }
 
@@ -1647,6 +1655,18 @@ For displaying pill on nav item HOVER
     .ii__card__wrapper {
         grid-column-gap: 8.2rem;
     }
+
+    .site__info-wcu {
+        padding: 10rem 10rem 16rem 10rem;
+    }
+
+    .wcu__heading {
+        margin-bottom: 9.6rem;
+    }
+
+    .wcu__card {
+        padding: 7rem 5rem;
+    }
 }
 
 @media (max-width:1400px) {
@@ -1669,6 +1689,10 @@ For displaying pill on nav item HOVER
 
     .ii__nav {
         margin-bottom: 8.5rem;
+    }
+
+    .wcu__card {
+        padding: 6rem 4rem;
     }
 }
 
@@ -1745,6 +1769,19 @@ For displaying pill on nav item HOVER
     .hww__card {
         padding: 3.5rem;
     }
+
+    .wcu__heading {
+        margin-bottom: 7.6rem;
+    }
+
+    .site__info-wcu {
+        padding: 8rem 8rem 14rem 8rem;
+    }
+
+    .wcu__card__svg {
+        transform: scale(0.85);
+    }
+
 }
 
 @media (max-width:1200px) {
@@ -1829,6 +1866,26 @@ For displaying pill on nav item HOVER
     .ii__card__heading {
         font-size: 1.8rem;
     }
+
+    .wcu__card {
+        padding: 5rem 3rem;
+    }
+
+    .wcu__card__svg {
+        transform: scale(0.75);
+    }
+
+    .wcu__heading {
+        font-size: 3.5rem;
+    }
+
+    .wcu__card__heading {
+        font-size: 2rem;
+    }
+
+    .wcu__card__text {
+        font-size: 1.8rem;
+    }
 }
 
 @media (max-width:1100px) {
@@ -1878,5 +1935,13 @@ For displaying pill on nav item HOVER
 
     .ii__nav {
         margin-bottom: 6.5rem;
+    }
+
+    .wcu__card__svg {
+        transform: scale(0.7);
+    }
+
+    .wcu__card {
+        padding: 4rem 2.5rem;
     }
 }
