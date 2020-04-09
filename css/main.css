@@ -942,7 +942,7 @@ For displaying pill on nav item HOVER
 }
 
 .ii__card__text {
-    font-size: 16px;
+    font-size: 1.6rem;
     font-weight: 500;
     line-height: 1.38;
     color: rgba(19, 20, 21, 0.6);
@@ -1495,7 +1495,7 @@ For displaying pill on nav item HOVER
 }
 
 @media (max-width:1700px) {
-    .sections__heading, .site__info-wwd__heading, .ss__info__text-heading {
+    .sections__heading, .site__info-wwd__heading, .ss__info__text-heading, .ii__heading {
         font-size: 4rem;
     }
 
@@ -1553,6 +1553,14 @@ For displaying pill on nav item HOVER
 
     .ss__info__text {
         padding: 16.45rem 18.6rem 0 7.1rem;
+    }
+
+    .site__info-ii {
+        padding: 14.2rem 18.6rem;
+    }
+
+    .ii__nav {
+        margin-bottom: 10.5rem;
     }
 }
 
@@ -1635,6 +1643,10 @@ For displaying pill on nav item HOVER
     .ss__info__heading {
         font-size: 2.5rem;
     }
+
+    .ii__card__wrapper {
+        grid-column-gap: 8.2rem;
+    }
 }
 
 @media (max-width:1400px) {
@@ -1649,6 +1661,14 @@ For displaying pill on nav item HOVER
 
     .hww__card__info {
         margin-top: 4.3rem;
+    }
+
+    .site__info-ii {
+        padding: 12.2rem 14rem;
+    }
+
+    .ii__nav {
+        margin-bottom: 8.5rem;
     }
 }
 
@@ -1799,7 +1819,15 @@ For displaying pill on nav item HOVER
     }
 
     .ss__info__text-heading {
-        font-size: 3rem
+        font-size: 3.5rem
+    }
+
+    .ii__heading {
+        font-size: 3.5rem
+    }
+
+    .ii__card__heading {
+        font-size: 1.8rem;
     }
 }
 
@@ -1842,5 +1870,13 @@ For displaying pill on nav item HOVER
 
     .hww__card {
         padding: 2.75rem;
+    }
+
+    .site__info-ii {
+        padding: 10.2rem 10rem;
+    }
+
+    .ii__nav {
+        margin-bottom: 6.5rem;
     }
 }
