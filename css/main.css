@@ -1082,7 +1082,7 @@ For displaying pill on nav item HOVER
 }
 
 .mot__info__heading {
-    font-size: 50px;
+    font-size: 5rem;
     font-weight: bold;
     color: #151515;
     margin-top: 10.5rem;
@@ -1114,7 +1114,7 @@ For displaying pill on nav item HOVER
 
 .mot__info__sub-heading {
     margin-top: auto;
-    font-size: 30px;
+    font-size: 3rem;
     font-weight: bold;
     line-height: 1.53;
     color: rgba(21, 21, 21, 0.4);
@@ -1194,7 +1194,7 @@ For displaying pill on nav item HOVER
 }
 
 .mot__card--user-name {
-    font-size: 25px;
+    font-size: 2.5rem;
     font-weight: 600;
     color: #131415;
     margin-top: 5.3rem;
@@ -1226,8 +1226,7 @@ For displaying pill on nav item HOVER
     font-weight: 500;
     line-height: 1.35;
     color: rgba(19, 20, 21, 0.6);
-    margin: 3.25rem 0 3.6rem 0;
-    width: 90%;
+    padding: 3.25rem 2rem 3.6rem 0;
 }
 
 .mot__cards__footer {
@@ -1494,8 +1493,17 @@ For displaying pill on nav item HOVER
     }
 }
 
+@media (max-width:1800px) {
+    .mot__left-info {
+        width: 40%;
+    }
+    .mot__cards__container {
+        width: 60%;
+    }
+}
+
 @media (max-width:1700px) {
-    .sections__heading, .site__info-wwd__heading, .ss__info__text-heading, .ii__heading, .wcu__heading {
+    .sections__heading, .site__info-wwd__heading, .ss__info__text-heading, .ii__heading, .wcu__heading, .mot__info__heading {
         font-size: 4rem;
     }
 
@@ -1570,6 +1578,11 @@ For displaying pill on nav item HOVER
     .wcu__card {
         padding: 8.5rem 6.2rem;
     }
+
+    .site__info-mot {
+        padding: 12.2rem 0 6.2rem 16.6rem;
+    }
+
 }
 
 @media (max-width:1600px) {
@@ -1587,6 +1600,14 @@ For displaying pill on nav item HOVER
 
     .ss__info__text {
         padding: 16.45rem 14.6rem 0 7.1rem;
+    }
+
+    .mot__left-info {
+        width: 35%;
+    }
+
+    .mot__cards__container {
+        width: 65%;
     }
 }
 
@@ -1667,6 +1688,10 @@ For displaying pill on nav item HOVER
     .wcu__card {
         padding: 7rem 5rem;
     }
+
+    .site__info-mot {
+        padding: 12.2rem 0 6.2rem 14.6rem;
+    }
 }
 
 @media (max-width:1400px) {
@@ -1693,6 +1718,14 @@ For displaying pill on nav item HOVER
 
     .wcu__card {
         padding: 6rem 4rem;
+    }
+
+    .site__info-mot {
+        padding: 9.2rem 0 2.2rem 10.6rem;
+    }
+
+    .mot__cards__image {
+        max-width: 45rem;
     }
 }
 
@@ -1782,10 +1815,26 @@ For displaying pill on nav item HOVER
         transform: scale(0.85);
     }
 
+    .mot__cards__image {
+        max-width: 43.5rem;
+    }
+
+    .mot__cards__footer {
+        margin-bottom: 0;
+    }
+
+    .mot__cards__footer--link {
+        margin-right: 3rem;
+    }
+
+    .mot__cards__footer--icon {
+        transform: scale(0.9);
+    }
+
 }
 
 @media (max-width:1200px) {
-    .sections__heading {
+    .sections__heading , .site__info-rp__fixed__heading, .ss__info__text-heading, .ii__heading, .wcu__heading {
         font-size: 3.5rem;
     }
 
@@ -1799,10 +1848,6 @@ For displaying pill on nav item HOVER
 
     .nav__list__wrapper {
         width: 65%;
-    }
-
-    .site__info-rp__fixed__heading {
-        font-size: 3.5rem;
     }
 
     .site__info-rp__fixed__text {
@@ -1855,14 +1900,6 @@ For displaying pill on nav item HOVER
         font-size: 1.8rem;
     }
 
-    .ss__info__text-heading {
-        font-size: 3.5rem
-    }
-
-    .ii__heading {
-        font-size: 3.5rem
-    }
-
     .ii__card__heading {
         font-size: 1.8rem;
     }
@@ -1875,16 +1912,41 @@ For displaying pill on nav item HOVER
         transform: scale(0.75);
     }
 
-    .wcu__heading {
-        font-size: 3.5rem;
-    }
-
     .wcu__card__heading {
         font-size: 2rem;
     }
 
     .wcu__card__text {
         font-size: 1.8rem;
+    }
+
+    .mot__left-info {
+        width: 33%;
+    }
+
+    .mot__cards__container {
+        width: 67%;
+    }
+
+    .mot__info__heading {
+        font-size: 3.5rem;
+        margin-top: 8.5rem;
+    }
+
+    .mot__cards__image {
+        max-width: 41.5rem;
+    }
+
+    .site__info-mot {
+        padding: 7.2rem 0 2.2rem 8.6rem;
+    }
+
+    .mot__info__text, .mot__card--user-info {
+        font-size: 1.8rem;
+    }
+
+    .mot__info__sub-heading {
+        font-size: 2.5rem;
     }
 }
 
@@ -1943,5 +2005,17 @@ For displaying pill on nav item HOVER
 
     .wcu__card {
         padding: 4rem 2.5rem;
+    }
+
+    .mot__cards__container {
+        width: 70%;
+    }
+
+    .mot__left-info {
+        width: 30%;
+    }
+
+    .mot__cards__image {
+        max-width: 40.5rem;
     }
 }
