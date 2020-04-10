@@ -333,6 +333,9 @@
         max-height: 34rem;
     }
 
+    .about__join {
+        padding: 6.2rem 0 10rem 0;
+    }
 }
 
 @media (max-width: 1300px) {
@@ -382,6 +385,7 @@
 
     .about__join {
         width: 80%;
+        padding: 4.2rem 0 8rem 0;
     }
 
     .about__join--info {
@@ -439,4 +443,8 @@
     .about__mot__cards-box {
         grid-column-gap: 3.35rem;
     }
+
+    .about__join {
+        padding: 3.2rem 0 6rem 0;
+    } 
 }
