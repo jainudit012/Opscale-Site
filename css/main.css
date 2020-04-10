@@ -1887,7 +1887,7 @@ For displaying pill on nav item HOVER
     }
 
     .mot__cards__footer--icon {
-        transform: scale(0.9);
+        transform: scale(0.85);
     }
 
     .mot__card--user-info {
