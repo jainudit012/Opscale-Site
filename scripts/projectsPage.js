@@ -41,9 +41,9 @@ try{
     if(projectDetailData.valid){
         loadQueriedProjectDetail(projectDetailData.items)
 
-        let i
-        for(i=0;i<projectDetailData.items.length;i++){
-            projectStoriesArray.push(document.getElementById(`stories-project-${i+1}`))
+        let kk
+        for(kk=0;kk<projectDetailData.items.length;kk++){
+            projectStoriesArray.push(document.getElementById(`stories-project-${kk+1}`))
         }
 
         projectStoriesArray.forEach((storyWrapper, index) => {
