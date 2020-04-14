@@ -27,7 +27,7 @@ function loadQueriedProjectDetail(projects){
 
 function loadProjectsFromHashChange(projects){
     let projectPageHash = window.location.hash
-    if(projectPageHash.indexOf('more' === 0)){
+    if(projectPageHash.indexOf('more') === -1){
         changeHashToQuery('projNo', '1')
         loadQueriedProjectDetail(projects)
     }
@@ -41,6 +41,7 @@ try{
     if(projectDetailData.valid){
         loadQueriedProjectDetail(projectDetailData.items)
 
+        let i
         for(i=0;i<projectDetailData.items.length;i++){
             projectStoriesArray.push(document.getElementById(`stories-project-${i+1}`))
         }

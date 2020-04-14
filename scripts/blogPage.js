@@ -66,7 +66,7 @@ try{
         if(allBlogData.valid){
             loadBlogsFromQuery(allBlogData.items, noBlogElement, blogArticleData.items)
 
-            window.addEventListener('hashchange', () => loadBlogsFromHashChange(allBlogData.items, blogArticleData.items))
+            window.addEventListener('hashchange', () => loadBlogsFromHashChange(allBlogData.items, noBlogElement, blogArticleData.items))
         }
     }
 

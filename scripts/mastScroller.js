@@ -4,6 +4,7 @@ const endNumber = document.getElementById('end__count')
 const numMastHeads = 3
 
 const mastHeads = []
+let i
 for(i=0;i<numMastHeads;i++){
     mastHeads.push(document.getElementById(`mast-${i+1}`))
 }

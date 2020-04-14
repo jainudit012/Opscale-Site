@@ -23,6 +23,7 @@ const blogArticlesWrapper = document.getElementById('blog__data')
 
 const floatingIcon = document.getElementById('floating__icon')
 
+let i
 for(i=0;i<numBlogFilters;i++) {
     blogFilterTabData.push(document.getElementById(`blog__filter-${i+1}`))
 }
