@@ -1,0 +1,30 @@
+{
+  "name": "opscale-site",
+  "version": "1.0.0",
+  "description": "Opscale Website",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "minify-css": "npx postcss ./css/*.css -d dest/css",
+    "babel": "npx babel scripts --out-dir dest/scripts --presets=@babel/env,minify",
+    "build": "npm run minify-css && npm run babel && cp -r ./dest/* ../jainudit012.github.io/."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jainudit012/Opscale-Site.git"
+  },
+  "author": "Udit Jain",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jainudit012/Opscale-Site/issues"
+  },
+  "homepage": "https://github.com/jainudit012/Opscale-Site#readme",
+  "devDependencies": {
+    "@babel/cli": "^7.8.4",
+    "@babel/core": "^7.9.0",
+    "@babel/preset-env": "^7.9.5",
+    "autoprefixer": "^9.7.6",
+    "babel-preset-minify": "^0.5.1",
+    "cssnano": "^4.1.10"
+  }
+}
