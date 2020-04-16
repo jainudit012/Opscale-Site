@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "minify-css": "npx postcss ./css/*.css -d dest/css",
-    "babel": "npx babel scripts --out-dir dest/scripts --presets=@babel/env,minify",
+    "autoprefix": "npx postcss ./css/*.css autoprefixer -d dest/css/",
+    "babel": "npx babel scripts --out-dir dest/scripts --presets=minify",
     "build": "npm run minify-css && npm run babel && cp -r ./dest/* ../jainudit012.github.io/."
   },
   "repository": {
