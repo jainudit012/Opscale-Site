@@ -57,11 +57,10 @@ try{
 
     const blogArticleData = loadElementsToArray('blog-', blogArticlesWrapper)
 
-    let ll
     if(blogArticleData.valid){
-        for(ll=0;ll<blogArticleData.items.length;ll++){
-            optionToggleMenus.push(document.getElementById(`options-blog-${ll+1}-1`))
-            optionToggleMenus.push(document.getElementById(`options-blog-${ll+1}-2`))
+        for(let i=0;i<blogArticleData.items.length;i++){
+            optionToggleMenus.push(document.getElementById(`options-blog-${i+1}-1`))
+            optionToggleMenus.push(document.getElementById(`options-blog-${i+1}-2`))
         }
 
         if(allBlogData.valid){

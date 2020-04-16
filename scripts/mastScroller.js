@@ -4,14 +4,13 @@ const endNumber = document.getElementById('end__count')
 const numMastHeads = 3
 
 const mastHeads = []
-let jj
-for(jj=0;jj<numMastHeads;jj++){
-    mastHeads.push(document.getElementById(`mast-${jj+1}`))
+for(let i=0;i<numMastHeads;i++){
+    mastHeads.push(document.getElementById(`mast-${i+1}`))
 }
 
 const mastPaginators = []
-for(jj=0;jj<numMastHeads;jj++){
-    mastPaginators.push(document.getElementById(`paginator__progress-${jj+1}`))
+for(let i=0;i<numMastHeads;i++){
+    mastPaginators.push(document.getElementById(`paginator__progress-${i+1}`))
 }
 
 let mastSelected
