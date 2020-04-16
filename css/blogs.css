@@ -157,6 +157,11 @@
     margin: 0 1rem;
     fill: #fff;
     stroke:black;
+    cursor: pointer;
+}
+
+.blog__options-icon {
+    cursor: pointer;
 }
 
 .options-slideOut {
