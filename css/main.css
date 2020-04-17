@@ -169,9 +169,7 @@
 }
 
 .sections__button-group {
-    width: 18rem;
-    height: 4.3rem;
-    
+    display: flex;
 }
 
 .sections__button-group__link {
@@ -181,6 +179,10 @@
     align-items: center;
     justify-content: space-between;
     text-decoration: none;
+}
+
+.sections__arrow-down {
+    margin-right: 2rem;
 }
 
 .sections__learn {
@@ -228,6 +230,15 @@
 
 .paginator__current-progress {
     opacity: 1;
+}
+
+.mobile-paginator__progress-wrapper {
+    display: none;
+}
+
+.mobile-paginator-disabled {
+    pointer-events: none;
+    opacity: 0.5;
 }
 
 .site__info-wwd {
@@ -2148,6 +2159,10 @@ For displaying pill on nav item HOVER
     body { overflow-x:  hidden; }
     /* To be removed: overflow*/
 
+    .site__header {
+        padding: 6.24rem 8rem 0 8rem;
+    }
+
     .site__nav {
         align-items: center;
     }
@@ -2166,8 +2181,7 @@ For displaying pill on nav item HOVER
 
     .sidenav__toggle__icon {
         fill: #283fd9;
-        stroke:rgba(255, 255, 255, 0.2);
-        stroke-width: 2px;
+        transform: scale(1.1)
     }
     
     .nav__list__wrapper {
@@ -2246,7 +2260,7 @@ For displaying pill on nav item HOVER
     }
 
     .nav__expandlist__toggle:checked ~ .nav__expandlist__label .nav__expandlist__icon {
-        transform: rotateZ(-90deg)
+        transform: rotateZ(270deg)
     }
 
     .nav__expandlist__toggle:checked ~ .nav__list__item__group {
@@ -2255,6 +2269,56 @@ For displaying pill on nav item HOVER
         transform: translate(0,0);
         visibility: visible;
         width: 100%;
+    }
+
+    .site__sections {
+        padding: 10.4rem 0 14.6rem 8rem;
+    }
+
+    .sections__heading {
+        font-size: 2.75rem;
+    }
+
+    .sections__text {
+        width: 75%;
+    }
+
+    .sections__arrow-down {
+        transform: scale(0.8)
+    }
+
+    .sections__learn {
+        font-size: 1.5rem;
+    }
+
+    .section__paginator {
+        align-items: center;
+    }
+
+    .paginator__progress-wrapper {
+        display: none;
+    }
+
+    .mobile-paginator__progress-wrapper {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .mobile-paginator {
+        filter: invert(1);
+        display: flex;
+    }
+
+    .mobile-paginator:first-child {
+        margin-bottom: 10rem;
+    }
+
+    .mobile-paginator-up {
+        transform: rotateZ(270deg)
+    }
+
+    .mobile-paginator-down {
+        transform: rotateZ(90deg)
     }
 }
 
