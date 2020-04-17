@@ -13,7 +13,10 @@ for(let i=0;i<numMastHeads;i++){
     mastPaginators.push(document.getElementById(`paginator__progress-${i+1}`))
 }
 
-let mastSelected
+const mobilePagainatorUp = document.getElementById('mobile-paginator-1')
+const mobilePagainatorDown = document.getElementById('mobile-paginator-2')
+
+let mastSelected = 1
 
 const mastAutoSelector = () => {
     switch(mastSelected){
@@ -42,8 +45,27 @@ mastPaginators.forEach(paginator => {
     
         startNumber.innerHTML = `0${paginatorNum}`
 
-        addClass(mastPaginators[paginatorNum-1], 'paginator__current-progress')
-        removeClassFromMultiple(mastPaginators.filter((_, index)=> index!==(paginatorNum-1)), 'paginator__current-progress')
+        if(window.innerWidth > 800 && window.outerWidth > 800){
+            addClass(mastPaginators[paginatorNum-1], 'paginator__current-progress')
+            removeClassFromMultiple(mastPaginators.filter((_, index)=> index!==(paginatorNum-1)), 'paginator__current-progress')
+        }else {
+            switch (paginatorNum){
+                case 2 : {
+                    removeClass(mobilePagainatorUp, 'mobile-paginator-disabled')
+                    removeClass(mobilePagainatorDown, 'mobile-paginator-disabled')
+                    break
+                }
+                case 3 : {
+                    removeClass(mobilePagainatorUp, 'mobile-paginator-disabled')
+                    addClass(mobilePagainatorDown, 'mobile-paginator-disabled')
+                    break
+                }
+                default : {
+                    addClass(mobilePagainatorUp, 'mobile-paginator-disabled')
+                    removeClass(mobilePagainatorDown, 'mobile-paginator-disabled')
+                }
+            }
+        }
 
         removeClass(mastHeads[paginatorNum-1], 'hideabs')
         addClassToMultiple(mastHeads.filter((_, index)=> index!==(paginatorNum-1)), 'hideabs')
@@ -56,4 +78,28 @@ mastPaginators.forEach(paginator => {
             addClass(startNumber, 'paginator__greyed')
         }
     })
+})
+
+mobilePagainatorUp.addEventListener('click', ()=> {
+    switch(mastSelected){
+        case 3: {
+            mastPaginators[1].click()
+            break
+        }
+        default: {
+            mastPaginators[0].click()
+        }
+    }
+})
+
+mobilePagainatorDown.addEventListener('click', ()=>{
+    switch(mastSelected){
+        case 1: {
+            mastPaginators[1].click()
+            break
+        }
+        default: {
+            mastPaginators[2].click()
+        }
+    }
 })
