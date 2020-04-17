@@ -15,12 +15,12 @@ try{
     
         window.addEventListener('scroll', () => {
             let currentScrollPos = window.pageYOffset;
-            if (prevScrollpos > currentScrollPos) {
+            if (prevScrollpos === 0 ||  prevScrollpos > currentScrollPos) {
                 siteHeader.style.top = "0";
             } else {
                 siteHeader.style.top = "-300px";
             }
-            prevScrollpos = currentScrollPos;
+            prevScrollpos = currentScrollPos < 0 ? 0 : currentScrollPos;
         })
     }
 
