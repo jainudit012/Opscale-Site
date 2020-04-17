@@ -20,12 +20,18 @@
     height: 15rem;
 }
 
-.sidenav__toggle__input, .sidenav__toggle__label, .site__nav__overlay, .nav__expandlist__toggle, .nav__expandlist__label {
+.sidenav__toggle__input, .site__nav__overlay, .nav__expandlist__toggle, .nav__expandlist__label {
     display: none;
+}
+
+.sidenav__toggle__label {
+    display: none;
+    cursor: pointer;
 }
 
 .nav__expandlist__icon {
     display: none;
+    cursor: pointer;
     transition: transform 300ms ease-out;
 }
 
@@ -124,7 +130,7 @@
 }
 
 .site__sections {
-    padding: 21.4rem 0 27.6rem 22.6rem;
+    padding: 30.4rem 0 27.6rem 22.6rem;
     color: #ffffff;
     width: 100%;
     height: 100%;
@@ -1682,7 +1688,7 @@ For displaying pill on nav item HOVER
     }
 
     .site__sections {
-        padding: 16.4rem 0 25.6rem 17.6rem;
+        padding: 25.4rem 0 25.6rem 17.6rem;
     }
 
     .nav__list__item {
@@ -1833,7 +1839,7 @@ For displaying pill on nav item HOVER
     }
 
     .site__sections {
-        padding: 12.4rem 0 16.4rem 13.6rem;
+        padding: 21.4rem 0 16.4rem 13.6rem;
     }
 
     .nav__list__link {
@@ -2082,7 +2088,7 @@ For displaying pill on nav item HOVER
     }
 
     .site__sections {
-        padding: 10.4rem 0 27.6rem 11.6rem;
+        padding: 19.4rem 0 27.6rem 11.6rem;
     }
 
     .nav__list__link {
@@ -2193,7 +2199,7 @@ For displaying pill on nav item HOVER
         z-index: 10;
         align-items: center;
         justify-content: space-evenly;
-        width: 80%;
+        width: 60%;
         transition: left 300ms ease-out;
         overflow-y: scroll;
         height: 100%;
@@ -2202,7 +2208,8 @@ For displaying pill on nav item HOVER
     .nav__list__wrapper > .nav__list__item {
         width: 100%;
         display: flex;
-        justify-content: center;
+        justify-content: flex-start;
+        align-items: center;
     }
 
     .nav__list__item {
@@ -2217,8 +2224,13 @@ For displaying pill on nav item HOVER
         font-size: 2.25rem;
     }
 
+    .nav__list__item__group {
+        z-index: 1;
+    }
+
     .nav__list__item__group__item > .nav__list__link {
-        padding: 3.5rem 0;
+        padding: 3.5rem 10rem;
+        text-align: start;
     }
 
     .site__nav__overlay {
@@ -2238,16 +2250,17 @@ For displaying pill on nav item HOVER
     .sidenav__toggle__input:checked ~ .site__nav__overlay { 
         display: block;
         z-index: 8;
+        background-color: rgba(0, 0,0,0.8)
     }
 
     .nav__expandlist__label {
         display: inherit;
+        margin: 0 10rem 0 auto;
     }
 
     .nav__expandlist__icon {
         display: inherit;
         filter: invert(1);
-        margin-left: 5rem;
         transform: rotateZ(90deg)
     }
 
@@ -2272,11 +2285,12 @@ For displaying pill on nav item HOVER
     }
 
     .site__sections {
-        padding: 10.4rem 0 14.6rem 8rem;
+        padding: 16rem 0 14.6rem 8rem;
     }
 
     .sections__heading {
         font-size: 2.75rem;
+        width: 80%;
     }
 
     .sections__text {
@@ -2323,11 +2337,83 @@ For displaying pill on nav item HOVER
 }
 
 @media (max-width:600px){
+    .nav__logo  {
+        transform: scale(0.9)
+    }
 
+    .site__header {
+        padding: 4.24rem 6rem 0 6rem;
+    }
+
+    .nav__list__wrapper {
+        width: 70%;
+    }
+
+    .nav__list__item {
+        font-size: 2rem;
+    }
+
+    .nav__list__item__group__item {
+        font-size: 1.8rem;
+    }
+
+    .nav__list__item > .nav__list__link {
+        padding: 4rem;
+    }
+
+    .nav__list__item__group__item > .nav__list__link {
+        padding: 3rem 6rem;
+    }
+
+    .site__sections {
+        padding: 10rem 0 8.6rem 6rem;
+    }
+
+    .section__paginator { 
+        grid-column: 3/-1;
+    }
+
+    .sections__arrow-down {
+        transform: scale(0.7)
+    }
 }
 
-@media (max-width:425x){
+@media (max-width:425px){
+    .site__header {
+        padding: 4.24rem 5rem 0 5rem;
+    }
 
+    .nav__logo {
+        transform: scale(0.8)
+    }
+
+    .sidenav__toggle__icon {
+        transform: scale(1)
+    }
+
+    .nav__list__wrapper {
+        width: 76%;
+    }
+
+    .nav__list__item > .nav__list__link {
+        padding: 3rem;
+    }
+
+    .nav__list__item__group__item > .nav__list__link {
+        padding: 2.5rem 5rem;
+    }
+
+    .nav__expandlist__label {
+        margin: 0 6rem 0 auto;
+    }
+
+    .site__sections {
+        padding: 8.6rem 0 6.6rem 5rem;
+    }
+
+    .section__paginator { 
+        grid-column: 3/-1;
+    }
 }
 
 @media (max-width:320px){
