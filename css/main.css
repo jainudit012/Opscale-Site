@@ -1,6 +1,10 @@
 .site__header {
     background-color: #09070a;
     padding: 9.24rem 14rem 0 14rem;
+    position: fixed;
+    width: 100%;
+    z-index: 10;
+    transition: top 300ms ease-out;
 }
 
 .site__nav {
@@ -9,6 +13,20 @@
     align-items: baseline;
     border-bottom: 2px solid rgba(255, 255, 255, 0.1);
     padding-bottom: 2.35rem;
+}
+
+.nav__spot {
+    background-color: black;
+    height: 15rem;
+}
+
+.sidenav__toggle__input, .sidenav__toggle__label, .site__nav__overlay, .nav__expandlist__toggle, .nav__expandlist__label {
+    display: none;
+}
+
+.nav__expandlist__icon {
+    display: none;
+    transition: transform 300ms ease-out;
 }
 
 .nav__logo__link {
@@ -35,11 +53,16 @@
     border: 3px solid transparent;
 }
 
+.nav__list__item__expand {
+    display: flex;
+}
+
 .nav__list__link {
     display: block;
     padding: 3.15rem 2rem;
     cursor: pointer;
     color: #ffffff;
+    text-align: center;
 }
 
 .nav__list__item:hover {
@@ -54,6 +77,7 @@
     border-radius: 0 0 15px 15px;
     border: solid 2px rgba(40, 63, 217, 0.15);
     backdrop-filter: blur(30px);
+    margin-bottom: 2rem;
     transition: opacity 250ms ease-in, transform 450ms ease-out;
 }
 
@@ -2113,4 +2137,135 @@ For displaying pill on nav item HOVER
     .footer__copyright {
         padding: 0 10rem 6rem 10rem;
     }
+}
+
+@media (max-width:1000px){
+
+}
+
+@media (max-width:800px){
+    html { overflow-x: hidden; }
+    body { overflow-x:  hidden; }
+    /* To be removed: overflow*/
+
+    .site__nav {
+        align-items: center;
+    }
+
+    .nav__logo__link {
+        margin-left: auto;
+    }
+
+    .sidenav__toggle__label {
+        display: inherit;
+    }
+
+    .sidenav__toggle__label {
+        transition: right 300ms ease-in;
+    }
+
+    .sidenav__toggle__icon {
+        fill: #283fd9;
+        stroke:rgba(255, 255, 255, 0.4);
+    }
+    
+    .nav__list__wrapper {
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left: -100%;
+        flex-direction: column;
+        background-color:#000000;
+        z-index: 10;
+        align-items: center;
+        justify-content: space-evenly;
+        width: 80%;
+        transition: left 300ms ease-out;
+        overflow-y: scroll;
+    }
+
+    .nav__list__wrapper > .nav__list__item {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .nav__list__item {
+        font-size: 2.5rem;
+    }
+
+    .nav__list__item > .nav__list__link {
+        padding: 5rem;
+    }
+
+    .nav__list__item__group__item {
+        font-size: 2.25rem;
+    }
+
+    .nav__list__item__group__item > .nav__list__link {
+        padding: 3.5rem 0;
+    }
+
+    .site__nav__overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: none;
+    }
+
+    .sidenav__toggle__input:checked ~ .nav__list__wrapper {
+        top: 0;
+        bottom: 0;
+        left: 0;
+    }
+
+    .sidenav__toggle__input:checked ~ .site__nav__overlay { 
+        display: block;
+        z-index: 8;
+    }
+
+    .nav__expandlist__label {
+        display: inherit;
+    }
+
+    .nav__expandlist__icon {
+        display: inherit;
+        filter: invert(1);
+        margin-left: 5rem;
+        transform: rotateZ(90deg)
+    }
+
+    .nav__list__item:hover .nav__list__item__group {
+        opacity: 0;
+        visibility: hidden;
+        top: 0;
+        left: 0;
+        transform: translateY(-5%);
+    }
+
+    .nav__expandlist__toggle:checked ~ .nav__expandlist__label .nav__expandlist__icon {
+        transform: rotateZ(-90deg)
+    }
+
+    .nav__expandlist__toggle:checked ~ .nav__list__item__group {
+        opacity: 1;
+        top: 100%;
+        transform: translate(0,0);
+        visibility: visible;
+        width: 100%;
+    }
+}
+
+@media (max-width:600px){
+
+}
+
+@media (max-width:425x){
+
+}
+
+@media (max-width:320px){
+
 }
