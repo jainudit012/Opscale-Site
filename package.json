@@ -8,7 +8,11 @@
     "minify-css": "npx postcss ./css/*.css -d dest/css",
     "autoprefix": "npx postcss ./css/*.css autoprefixer -d dest/css/",
     "babel": "npx babel scripts --out-dir dest/scripts --presets=minify",
-    "build": "npm run minify-css && npm run babel && cp -r ./dest/* ../website/."
+    "build": "npm run minify-css && npm run babel && cp -r ./dest/* ../website/.",
+    "copyAllHtmls": "cp ./*.html ../website/.",
+    "copyAllCss": "cp ./css/*.css ../website/css/.",
+    "copyAllScripts": "cp ./scripts/*.js ../website/scripts/.",
+    "copy": "npm run copyAllHtmls && npm run copyAllCss && npm run copyAllScripts"
   },
   "repository": {
     "type": "git",
