@@ -1,7 +1,5 @@
 const blogSection = document.getElementById('blogs__section')
 
-const optionToggleMenus = []
-
 function loadBlog(query, blogs, blogArticles){
     observer.observe(observerTarget)
 
@@ -57,17 +55,10 @@ try{
 
     const blogArticleData = loadElementsToArray('blog-', blogArticlesWrapper)
 
-    if(blogArticleData.valid){
-        for(let i=0;i<blogArticleData.items.length;i++){
-            optionToggleMenus.push(document.getElementById(`options-blog-${i+1}-1`))
-            optionToggleMenus.push(document.getElementById(`options-blog-${i+1}-2`))
-        }
-
-        if(allBlogData.valid){
-            loadBlogsFromQuery(allBlogData.items, noBlogElement, blogArticleData.items)
-
-            window.addEventListener('hashchange', () => loadBlogsFromHashChange(allBlogData.items, noBlogElement, blogArticleData.items))
-        }
+    if(blogArticleData.valid && allBlogData.valid){
+        loadBlogsFromQuery(allBlogData.items, noBlogElement, blogArticleData.items)
+        
+        window.addEventListener('hashchange', () => loadBlogsFromHashChange(allBlogData.items, noBlogElement, blogArticleData.items))
     }
 
     const searchInputLabel = document.getElementById('blogs__nav__search-label')
@@ -96,17 +87,6 @@ try{
             removeClassFromSvg(searchInputLabel.children[0], 'hide')
         }
     })
-
-    optionToggleMenus.forEach(menu=> {
-        menu.addEventListener('click', ()=>{
-            if(menu.parentNode.children[0].className.indexOf('options-slideOut') !== -1) {
-                removeClass(menu.parentNode.children[0], 'options-slideOut')
-            }else {
-                addClass(menu.parentNode.children[0], 'options-slideOut')
-            }
-        })
-    })
-
 }catch(ex){
     console.log(ex)
 }
