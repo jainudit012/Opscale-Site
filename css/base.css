@@ -118,3 +118,27 @@ html {
         font-size: 55.5%;
     }
 }
+
+@media (max-width:900px) {
+    html{
+        font-size: 53.5%;
+    }
+}
+
+@media (max-width:768px) {
+    html{
+        font-size: 51.5%;
+    }
+}
+
+@media (max-width:425px) {
+    html{
+        font-size: 49.5%;
+    }
+}
+
+@media (max-width:320px) {
+    html{
+        font-size: 47.5%;
+    }
+}
