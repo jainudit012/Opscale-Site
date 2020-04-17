@@ -2166,7 +2166,8 @@ For displaying pill on nav item HOVER
 
     .sidenav__toggle__icon {
         fill: #283fd9;
-        stroke:rgba(255, 255, 255, 0.4);
+        stroke:rgba(255, 255, 255, 0.2);
+        stroke-width: 2px;
     }
     
     .nav__list__wrapper {
