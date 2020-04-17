@@ -2173,7 +2173,6 @@ For displaying pill on nav item HOVER
     .nav__list__wrapper {
         position: fixed;
         top: 0;
-        bottom: 0;
         left: -100%;
         flex-direction: column;
         background-color:#000000;
@@ -2183,6 +2182,7 @@ For displaying pill on nav item HOVER
         width: 80%;
         transition: left 300ms ease-out;
         overflow-y: scroll;
+        height: 100%;
     }
 
     .nav__list__wrapper > .nav__list__item {
@@ -2218,7 +2218,6 @@ For displaying pill on nav item HOVER
 
     .sidenav__toggle__input:checked ~ .nav__list__wrapper {
         top: 0;
-        bottom: 0;
         left: 0;
     }
 
