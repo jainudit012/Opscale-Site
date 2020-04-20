@@ -17,10 +17,10 @@ const mobilePagainatorUp = document.getElementById('mobile-paginator-1')
 const mobilePagainatorDown = document.getElementById('mobile-paginator-2')
 
 let mastSelected = 1
-let autoSelectionCancel = false
+let autoSelectionMobileCancel = false
 
 const mastAutoSelector = () => {
-    autoSelectionCancel = false
+    autoSelectionMobileCancel = false
     switch(mastSelected){
         case 2:
             mastPaginators[2].click()
@@ -41,7 +41,7 @@ mastPaginators.forEach(paginator => {
     paginator.addEventListener('click', e => {
         mastSelected = paginatorNum
         clearInterval(mastSelctorTimer)
-        if(!autoSelectionCancel && !e.isTrusted){
+        if(!autoSelectionMobileCancel && !e.isTrusted){
             mastSelctorTimer = window.setInterval(mastAutoSelector, 7000)
         }
     
@@ -83,7 +83,7 @@ mastPaginators.forEach(paginator => {
 })
 
 mobilePagainatorUp.addEventListener('click', ()=> {
-    autoSelectionCancel = true
+    autoSelectionMobileCancel = true
     switch(mastSelected){
         case 3: {
             mastPaginators[1].click()
@@ -96,7 +96,7 @@ mobilePagainatorUp.addEventListener('click', ()=> {
 })
 
 mobilePagainatorDown.addEventListener('click', ()=>{
-    autoSelectionCancel = true
+    autoSelectionMobileCancel = true
     switch(mastSelected){
         case 1: {
             mastPaginators[1].click()
