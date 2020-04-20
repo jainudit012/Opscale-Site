@@ -2249,7 +2249,9 @@ For displaying pill on nav item HOVER
     }
 
     .nav__list__item > .nav__list__link {
-        padding: 5rem;
+        padding: 5rem 5rem 5rem 8rem;
+        width: 100%;
+        text-align: left;
     }
 
     .nav__list__item__group__item {
@@ -2404,7 +2406,7 @@ For displaying pill on nav item HOVER
     }
 
     .nav__list__wrapper {
-        width: 70%;
+        width: 76%;
     }
 
     .nav__list__item {
@@ -2416,11 +2418,17 @@ For displaying pill on nav item HOVER
     }
 
     .nav__list__item > .nav__list__link {
-        padding: 4rem;
+        padding: 4rem 4rem 4rem 6rem;
+        font-size: 2.5rem;
     }
 
     .nav__list__item__group__item > .nav__list__link {
-        padding: 3rem 6rem;
+        padding: 3rem 3rem 3rem 8rem;
+        font-size: 2.25rem;
+    }
+
+    .nav__expandlist__label {
+        margin: 0 5rem 0 auto;
     }
 
     .site__sections {
@@ -2449,20 +2457,18 @@ For displaying pill on nav item HOVER
         transform: scale(1)
     }
 
-    .nav__list__wrapper {
-        width: 76%;
-    }
-
     .nav__list__item > .nav__list__link {
-        padding: 3rem;
+        padding: 3rem 3rem 3rem 4rem;
+        font-size: 2.25rem;
     }
 
     .nav__list__item__group__item > .nav__list__link {
-        padding: 2.5rem 5rem;
+        padding: 2.5rem 2.5rem 2.5rem 4.5rem;
+        font-size: 2rem;
     }
 
     .nav__expandlist__label {
-        margin: 0 6rem 0 auto;
+        margin: 0 3rem 0 auto;
     }
 
     .site__sections {
