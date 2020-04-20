@@ -2233,7 +2233,7 @@ For displaying pill on nav item HOVER
         justify-content: space-evenly;
         width: 60%;
         transition: left 300ms ease-out;
-        overflow-y: scroll;
+        overflow-y: auto;
         height: 100%;
     }
 
@@ -2275,7 +2275,6 @@ For displaying pill on nav item HOVER
     }
 
     .sidenav__toggle__input:checked ~ .nav__list__wrapper {
-        top: 0;
         left: 0;
     }
 
@@ -2293,7 +2292,8 @@ For displaying pill on nav item HOVER
     .nav__expandlist__icon {
         display: inherit;
         filter: invert(1);
-        transform: rotateZ(90deg)
+        transform: rotateZ(90deg);
+        padding: 2rem;
     }
 
     .nav__list__item:hover .nav__list__item__group {
