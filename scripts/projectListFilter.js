@@ -1,12 +1,21 @@
-const maxFilterItemsInList = 5
+let maxFilterItemsInList = 5
 const listWrapper = document.getElementById('rp__list')
 const panelsWrapper = document.getElementById('rp__panels__wrapper')
 const sectionWrapper = document.getElementById('projects')
+
+function setFilterItems(items, maxItems, toggleClassName){
+    items.forEach((item, index) => {
+        if((index + 1) > maxItems) addClass(item, toggleClassName)
+        else removeClass(item, toggleClassName)
+    })
+}
 
 try{
     const filterItemData = loadElementsToArray('rp__filter-', listWrapper)
     const panelData = loadElementsToArray('rp__panels-', panelsWrapper)
     let filteredData = panelData.items
+
+    let isMobileDevice = isMobile()
 
     const classConfigOfPanels = {
         frontClass: 'site__info-rp__panels__front',
@@ -26,7 +35,11 @@ try{
         backBtnId: 'rp__list-bck'
     }
     
-    if(filterItemData.valid){
+    if(filterItemData.valid && panelData.valid){
+        isMobileDevice ? maxFilterItemsInList = filterItemData.items.length : 5
+
+        setFilterItems(filterItemData.items, maxFilterItemsInList, 'hide-slideOut')
+
         addSelectItemListener(filterItemData.items, 'fixed__filter-item-selected', true)
 
         filterItemData.items.forEach(item =>{
@@ -64,11 +77,28 @@ try{
                 listWrapper.dispatchEvent(new CustomEvent('filteredDataChanged', {detail: {data: filteredData}}))
             })
         })
+
+        paginate(filterItemData.items, maxFilterItemsInList, classConfigOfList)
+    
+        otherPaginate(filteredData, classConfigOfPanels, sectionWrapper)
+
+        window.addEventListener('resize', () => {
+            isMobileDevice = isMobile()
+
+            if(isMobileDevice) {
+                maxFilterItemsInList = filterItemData.items.length
+
+                otherPaginate(
+                    filteredData, 
+                    { ...classConfigOfPanels, nextClass: 'site__info-rp__panels__back'}, 
+                    sectionWrapper)
+            }else {
+                maxFilterItemsInList = 5
+            }
+
+            setFilterItems(filterItemData.items, maxFilterItemsInList, 'hide-slideOut')
+        })
     }
-    paginate(filterItemData.items, maxFilterItemsInList, classConfigOfList)
-
-    otherPaginate(filteredData, classConfigOfPanels, sectionWrapper)
-
 }catch(ex){
     console.log(ex)
 }
