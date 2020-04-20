@@ -146,3 +146,7 @@ function changeHashToQuery(queryName, defaultState){
         `?${queryName}=${ searchHash.length === 0 ? defaultState : searchHash.replace(`#${queryName}=`, '')}`
     )
 }
+
+function isMobile(){
+    return true ? (window.outerWidth < 801 || window.innerWidth < 801): false
+}
