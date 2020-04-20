@@ -7,8 +7,8 @@ try {
         backClass: '',
         nextClass: '',
         disabledPaginationClass: 'mobile-paginator-disabled',
-        nextBtnId: 'wwd__paginator-2',
-        backBtnId: 'wwd__paginator-1',
+        nextBtnId: 'wwd__paginator-fwd',
+        backBtnId: 'wwd__paginator-bck',
         slideAnimationClass: 'slideOut'
     }
 
