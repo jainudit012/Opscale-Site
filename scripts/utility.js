@@ -6,8 +6,10 @@
  * e.g., 'star mt-1'
  */
 function addClass(element, className){
-    const arrOfClassNames = element ? element.className.split(" ") : [className]
-    if(arrOfClassNames.indexOf(className) === -1) element.className += ` ${className}`
+    if(className.length > 0){
+        const arrOfClassNames = element ? element.className.split(" ") : [className]
+        if(arrOfClassNames.indexOf(className) === -1) element.className += ` ${className}`
+    }
 }
 
 /**
@@ -18,8 +20,10 @@ function addClass(element, className){
  * e.g., 'star mt-1'
  */
 function addClassToSvg(element, className){
-    const arrOfClassNames = element ? element.className.baseVal.split(" ") : [className]
-    if(arrOfClassNames.indexOf(className) === -1) element.className.baseVal += ` ${className}`
+    if(className.length > 0){
+        const arrOfClassNames = element ? element.className.baseVal.split(" ") : [className]
+        if(arrOfClassNames.indexOf(className) === -1) element.className.baseVal += ` ${className}`
+    }
 }
 
 /**
@@ -30,7 +34,7 @@ function addClassToSvg(element, className){
  * e.g., 'star mt-1'
  */
 function removeClass(element, className){
-    if(element) element.className = element.className.replace(` ${className}`, "")
+    if(element && className.length > 0) element.className = element.className.replace(` ${className}`, "")
 }
 
 /**
@@ -41,7 +45,7 @@ function removeClass(element, className){
  * e.g., 'star mt-1'
  */
 function removeClassFromSvg(element, className){
-    if(element) element.className.baseVal = element.className.baseVal.replace(` ${className}`, "")
+    if(element && className.length > 0) element.className.baseVal = element.className.baseVal.replace(` ${className}`, "")
 }
 
 /**
