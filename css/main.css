@@ -36,7 +36,6 @@
 }
 
 .nav__logo__link {
-    margin-right: auto;
     cursor: pointer;
 }
 
@@ -102,7 +101,7 @@
     transition: background-color 300ms ease-out;
 }
 
-.nav__list__item__group__item .nav__list__link {
+.nav__list__item__group__item > .nav__list__link {
     padding: 3rem;
 }
 
@@ -1698,7 +1697,7 @@ For displaying pill on nav item HOVER
         padding: 2.5rem 1.75rem;;
     }
 
-    .nav__list__item__group__item .nav__list__link {
+    .nav__list__item__group__item > .nav__list__link {
         padding: 2.5rem;
     }
 
@@ -1707,7 +1706,15 @@ For displaying pill on nav item HOVER
     }
 
     .site__info-wwd {
-        padding: 6.2rem 18.6rem;
+        padding: 6.2rem 17.6rem;
+    }
+
+    .site__info-wwd__heading-wrapper {
+        width: 40%;
+    }
+
+    .site__info-wwd__text-extra-wrapper {
+        width: 50%;
     }
 
     .site__info-wwd__text-quotes {
@@ -1850,12 +1857,12 @@ For displaying pill on nav item HOVER
         padding: 2rem 1.25rem;;
     }
 
-    .nav__list__item__group__item .nav__list__link {
+    .nav__list__item__group__item > .nav__list__link {
         padding: 2rem;
     }
 
     .site__info-wwd {
-        padding: 4.2rem 14.6rem;
+        padding: 4.2rem 13.6rem;
     }
 
     .site__info-wwd__text-quotes {
@@ -2099,12 +2106,12 @@ For displaying pill on nav item HOVER
         padding: 1.8rem 1rem;;
     }
 
-    .nav__list__item__group__item .nav__list__link {
+    .nav__list__item__group__item > .nav__list__link {
         padding: 1.75rem;
     }
 
     .site__info-wwd {
-        padding: 4.2rem 12.6rem;
+        padding: 4.2rem 11.6rem;
     }
 
     .site__info-wwd__text-quotes {
@@ -2161,8 +2168,24 @@ For displaying pill on nav item HOVER
 }
 
 @media (max-width:1000px){
+    .site__header {
+        padding: 6.24rem 8rem 0 8rem;
+    }
+
     .sections__heading {
         width: 80%;
+    }
+
+    .site__info-wwd__heading-wrapper {
+        width: 40%;
+    }
+
+    .site__info-wwd__text-extra-wrapper {
+        width: 58%;
+    }
+
+    .nav__list__item > .nav__list__link {
+        padding: 1.8rem 0;
     }
 }
 
@@ -2338,17 +2361,21 @@ For displaying pill on nav item HOVER
     }
 
     .site__info-wwd {
-        /* padding: 16rem 0 14.6rem 8rem; 
-        
-        .site__sections {
-        padding: 19.4rem 0 27.6rem 11.6rem;
-
-        .site__info-wwd {
-        padding: 4.2rem 12.6rem;
+        padding: 4.2rem 8rem;
+        flex-flow: column nowrap;
     }
-    }*/
 
-    
+    .site__info-wwd__heading-wrapper {
+        margin-bottom: 6rem;
+        width: 100%;
+    }
+
+    .site__info-wwd__text {
+        width: 80%;
+    }
+
+    .site__info-wwd__text-extra {
+        margin-bottom: 6rem;
     }
 }
 
