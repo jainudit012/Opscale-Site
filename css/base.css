@@ -92,7 +92,7 @@ html {
 }
 
 .block {
-    display: block !important;
+    display: inherit !important;
 }
 
 @media (max-width:1700px) {
