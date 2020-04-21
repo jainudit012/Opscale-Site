@@ -371,3 +371,9 @@ div.blog__content::after {
         margin: 1.75rem 1rem;
     }
 }
+
+@media (max-width:500px) {
+    .blogs__nav--pill {
+        width: 2rem;
+    }
+}
