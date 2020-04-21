@@ -6,8 +6,8 @@
  * e.g., 'star mt-1'
  */
 function addClass(element, className){
-    if(className.length > 0){
-        const arrOfClassNames = element ? element.className.split(" ") : [className]
+    if(element && className.length > 0){
+        const arrOfClassNames = element.className.split(" ")
         if(arrOfClassNames.indexOf(className) === -1) element.className += ` ${className}`
     }
 }
@@ -20,8 +20,8 @@ function addClass(element, className){
  * e.g., 'star mt-1'
  */
 function addClassToSvg(element, className){
-    if(className.length > 0){
-        const arrOfClassNames = element ? element.className.baseVal.split(" ") : [className]
+    if(element && className.length > 0){
+        const arrOfClassNames = element.className.baseVal.split(" ")
         if(arrOfClassNames.indexOf(className) === -1) element.className.baseVal += ` ${className}`
     }
 }
