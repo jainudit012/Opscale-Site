@@ -3,6 +3,12 @@ const listWrapper = document.getElementById('rp__list')
 const panelsWrapper = document.getElementById('rp__panels__wrapper')
 const sectionWrapper = document.getElementById('projects')
 
+const projectPaginationFwd = document.getElementById('rp__panel-fwd')
+const projectPaginationBck = document.getElementById('rp__panel-bck')
+
+const mobileProjectPaginationFwd = document.getElementById('rp__panels__mpaginator-fwd')
+const mobileProjectPaginationBck = document.getElementById('rp__panels__mpaginator-bck')
+
 function setFilterItems(items, maxItems, toggleClassName){
     items.forEach((item, index) => {
         if((index + 1) > maxItems) addClass(item, toggleClassName)
@@ -22,6 +28,11 @@ try{
         backClass: 'site__info-rp__panels__back',
         nextClass: 'site__info-rp__panels__next',
         disabledPaginationClass: 'disabled-paginator',
+        mobileDisabledPaginationClass: 'mobile-paginator-disabled',
+        nextBtn: projectPaginationFwd,
+        backBtn: projectPaginationBck,
+        mobileNextBtn: mobileProjectPaginationFwd,
+        mobileBackBtn: mobileProjectPaginationBck,
         nextBtnId: 'rp__panel-fwd',
         backBtnId: 'rp__panel-bck',
         slideAnimationClass: 'slideOut'
@@ -87,17 +98,20 @@ try{
 
             if(isMobileDevice) {
                 maxFilterItemsInList = filterItemData.items.length
-
-                otherPaginate(
-                    filteredData, 
-                    { ...classConfigOfPanels, nextClass: 'site__info-rp__panels__back'}, 
-                    sectionWrapper)
             }else {
                 maxFilterItemsInList = 5
             }
-
             setFilterItems(filterItemData.items, maxFilterItemsInList, 'hide-slideOut')
         })
+
+        mobileProjectPaginationFwd.addEventListener('click', ()=>{
+            projectPaginationFwd.click()
+        })
+
+        mobileProjectPaginationBck.addEventListener('click', ()=>{
+            projectPaginationBck.click()
+        })
+
     }
 }catch(ex){
     console.log(ex)

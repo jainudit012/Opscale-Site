@@ -35,35 +35,39 @@ function paginate(dataArray, numItemsToShow, classConfig) {
 
 function otherPaginate(dataArray, classConfig, wrapper) {
     try{
-        let nextButton = document.getElementById(classConfig.nextBtnId)
-        let backButton = document.getElementById(classConfig.backBtnId)
-
         let counter = 0
 
-        addClass(backButton, classConfig.disabledPaginationClass)
+        addClass(classConfig.backBtn, classConfig.disabledPaginationClass)
+        addClass(classConfig.mobileBackBtn, classConfig.mobileDisabledPaginationClass)
         if(dataArray.length > 1){
-            removeClass(nextButton, 'hidden')
-            removeClass(nextButton, classConfig.disabledPaginationClass)
+            removeClassFromMultiple([classConfig.nextBtn, classConfig.mobileNextBtn], 'hidden')
+            removeClass(classConfig.nextBtn, classConfig.disabledPaginationClass)
+            removeClass(classConfig.mobileNextBtn, classConfig.mobileDisabledPaginationClass)
         }
 
         if(wrapper){
             wrapper.addEventListener('filteredDataChanged', e => {
                 counter = 0
                 dataArray = e.detail.data
-                addClass(backButton, classConfig.disabledPaginationClass)
+                addClass(classConfig.backBtn, classConfig.disabledPaginationClass)
+                addClass(classConfig.mobileBackBtn, classConfig.mobileDisabledPaginationClass)
                 if(dataArray.length > 1){
-                    removeClass(nextButton, 'hidden')
-                    removeClass(nextButton, classConfig.disabledPaginationClass)
+                    removeClassFromMultiple([classConfig.nextBtn, classConfig.mobileNextBtn], 'hidden')
+                    removeClass(classConfig.nextBtn, classConfig.disabledPaginationClass)
+                    removeClass(classConfig.mobileNextBtn, classConfig.mobileDisabledPaginationClass)
                 }else if(dataArray.length === 1){
-                    addClass(nextButton, classConfig.disabledPaginationClass)
+                    addClass(classConfig.nextBtn, classConfig.disabledPaginationClass)
+                    addClass(classConfig.mobileNextBtn, classConfig.mobileDisabledPaginationClass)
                 }else {
-                    addClass(nextButton, classConfig.disabledPaginationClass)
-                    addClass(backButton, classConfig.disabledPaginationClass)
+                    addClass(classConfig.nextBtn, classConfig.disabledPaginationClass)
+                    addClass(classConfig.backBtn, classConfig.disabledPaginationClass)
+                    addClass(classConfig.mobileNextBtn, classConfig.mobileDisabledPaginationClass)
+                    addClass(classConfig.mobileBackBtn, classConfig.mobileDisabledPaginationClass)
                 }
             }, true)
         }
         
-        nextButton.addEventListener('click', ()=>{
+        classConfig.nextBtn.addEventListener('click', ()=>{
             counter++
 
             const currListToDisplay = dataArray.slice(counter, (counter + 1))[0]
@@ -75,19 +79,20 @@ function otherPaginate(dataArray, classConfig, wrapper) {
             removeClass(currListToDisplay, classConfig.backClass)
             removeClass(currListToDisplay, classConfig.nextClass)
             addClass(currListToDisplay, classConfig.frontClass)
-            removeClass(backButton, classConfig.disabledPaginationClass)
-
+            removeClass(classConfig.backBtn, classConfig.disabledPaginationClass)
+            removeClass(classConfig.mobileBackBtn, classConfig.mobileDisabledPaginationClass)
             if(nextSlide && nextSlide.className.indexOf(classConfig.slideAnimationClass) === -1) {
                 addClass(nextSlide, classConfig.nextClass)
                 removeClass(nextSlide, classConfig.backClass)
             }
             if(!nextSlide) {
-                addClass(nextButton, classConfig.disabledPaginationClass)
-                addClass(nextButton, 'hidden')
+                addClass(classConfig.nextBtn, classConfig.disabledPaginationClass)
+                addClass(classConfig.mobileNextBtn, classConfig.mobileDisabledPaginationClass)
+                addClassToMultiple([classConfig.nextBtn, classConfig.mobileNextBtn], 'hidden')
             }
         })
     
-        backButton.addEventListener('click', ()=>{
+        classConfig.backBtn.addEventListener('click', ()=>{
             counter--
 
             const currListToDisplay = dataArray.slice(counter, (counter + 1))[0]
@@ -100,9 +105,13 @@ function otherPaginate(dataArray, classConfig, wrapper) {
             addClass(nextSlide, classConfig.nextClass)
             removeClass(prevListToHide, classConfig.nextClass)
             addClass(prevListToHide, classConfig.backClass)
-            removeClass(nextButton, classConfig.disabledPaginationClass)
-            removeClass(nextButton, 'hidden')
-            if(currListToDisplay.id === dataArray[0].id) addClass(backButton, classConfig.disabledPaginationClass)
+            removeClass(classConfig.nextBtn, classConfig.disabledPaginationClass)
+            removeClass(classConfig.mobileNextBtn, classConfig.mobileDisabledPaginationClass)
+            removeClassFromMultiple([classConfig.nextBtn, classConfig.mobileNextBtn], 'hidden')
+            if(currListToDisplay.id === dataArray[0].id){
+                addClass(classConfig.backBtn, classConfig.disabledPaginationClass)
+                addClass(classConfig.mobileBackBtn, classConfig.mobileDisabledPaginationClass)
+            }
         })
     }catch(ex){
         console.log(ex)

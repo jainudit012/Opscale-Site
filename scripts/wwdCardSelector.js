@@ -1,4 +1,8 @@
 const wwdWrapper = document.getElementById('wwd__card__box')
+
+const wwdNextBtn = document.getElementById('wwd__paginator-fwd')
+const wwdBackBtn = document.getElementById('wwd__paginator-bck')
+
 try {
     const allCardData = loadElementsToArray('wwd__card-', wwdWrapper)
 
@@ -7,6 +11,11 @@ try {
         backClass: '',
         nextClass: '',
         disabledPaginationClass: 'mobile-paginator-disabled',
+        mobileDisabledPaginationClass: 'mobile-paginator-disabled',
+        nextBtn: wwdNextBtn,
+        backBtn: wwdBackBtn,
+        mobileNextBtn: null, // 'cause there is only mobile pagination by default
+        mobileBackBtn: null, // 'cause there is only mobile pagination by default
         nextBtnId: 'wwd__paginator-fwd',
         backBtnId: 'wwd__paginator-bck',
         slideAnimationClass: 'slideOut'

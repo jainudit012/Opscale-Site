@@ -49,12 +49,23 @@ try{
             if(storyWrapper){
                 const storiesData = loadElementsToArray(`project-${index+1}-story-`, storyWrapper)
 
+                const projectNextBtn = document.getElementById(`stories-fwd-project-${index+1}`)
+                const projectBackBtn = document.getElementById(`stories-bck-project-${index+1}`)
+
+                const projectMobileNextBtn = null
+                const projectMobileBackBtn = null
+
                 if(storiesData.valid){
                     const classConfig = {
                         frontClass: 'project__technology__stories-info-front',
                         backClass: '',
                         nextClass: '',
                         disabledPaginationClass: 'projects-disabled-paginator',
+                        mobileDisabledPaginationClass: 'mobile-paginator-disabled',
+                        nextBtn: projectNextBtn,
+                        backBtn: projectBackBtn,
+                        mobileNextBtn: projectMobileNextBtn,
+                        mobileBackBtn: projectMobileBackBtn,
                         nextBtnId: `stories-fwd-project-${index+1}`,
                         backBtnId: `stories-bck-project-${index+1}`,
                         slideAnimationClass: 'slideOut'
