@@ -1000,7 +1000,7 @@ For displaying pill on nav item HOVER
 
 .ii__card__btn {
     display: flex;
-    align-items: flex-end;
+    align-items: center;
     margin-bottom: 3.85rem;
 }
 
@@ -1012,7 +1012,10 @@ For displaying pill on nav item HOVER
     font-weight: 500;
     color: rgba(21, 21, 21, 0.7);
     transition: color 300ms ease-out;
-    
+}
+
+.ii__card__btn-svg-wrapper {
+    display: flex;
 }
 
 .ii__card--selected .ii__card__btn-text {
@@ -2265,6 +2268,16 @@ For displaying pill on nav item HOVER
     .ss__info__heading-box {
         padding-right: 2rem;
     }
+
+    .site__info-ii {
+        width: 85%;
+        padding: 8rem 0 4rem 0;
+        margin: 0 auto;
+    }
+
+    .ii__card__text {
+        height: auto;
+    }
 }
 
 @media (max-width:800px){
@@ -2718,6 +2731,97 @@ For displaying pill on nav item HOVER
     .ss__panels-paginator-wrapper {
         display: none;
     }
+
+    .site__info-ii {
+        padding: 4rem 0;
+    }
+
+    .ii__card__wrapper {
+        grid-row-gap: 3rem;
+    }
+
+    .ii__heading {
+        font-size: 2.5rem;
+    }
+
+    .ii__nav {
+        margin-bottom: 4rem;
+    }
+
+    .ii__nav__list {
+        overflow-x: scroll;
+    }
+
+    .ii__nav__list-item {
+        font-size: 1.8rem;
+        padding-right: 3rem;
+    }
+
+    .ii__nav-item__heading {
+        white-space: nowrap;
+    }
+
+    .ii__card__wrapper {
+        grid-template-columns: 1fr;
+    }
+
+    .ii__card {
+        display: grid;
+        grid-template-columns: 0.5fr 2fr 0.5fr;
+        grid-column-gap: 1rem;
+        grid-template-rows: 0.5fr 1fr;
+    }
+
+    .ii__card--selected {
+        border-bottom: 3px solid #283FD9;
+    }
+    
+    .ii__card:hover {
+        border-bottom: 3px solid #283FD9;
+    }
+
+    .ii__card__header {
+        margin-bottom: 0;
+        grid-column: 1/2;
+        grid-row: 1/-1;
+        min-width: 15rem;
+        align-self: end;
+    }
+
+    .ii__card__read-time {
+        grid-column: 3/-1;
+        grid-row: 1/2;
+        align-self: center;
+        font-size: 1.2rem;
+    }
+
+    .ii__card__heading { 
+        grid-column: 2/3;
+        margin-top: 0;
+        grid-row: 1/2;
+        align-self: center;
+        font-size: 1.6rem;
+        font-weight: bold;
+    }
+
+    .ii__card__text {
+        grid-column: 2/3;
+        grid-row: 2/-1;
+        align-self: start;
+        margin: 0;
+        font-size: 1.4rem;
+    }
+
+    .ii__card__footer {
+        grid-column: 3/-1;
+        grid-row: 2/-1;
+        align-self: center;
+    }
+
+    .ii__card__btn-text {
+        white-space: nowrap;
+        font-size: 1.5rem;
+    }
 }
 
 @media (max-width:650px){
@@ -2735,6 +2839,14 @@ For displaying pill on nav item HOVER
 
     .ss__info__panels-text {
         width: 90%;
+    }
+
+    .ii__card__btn-text {
+        font-size: 1.4rem;
+    }
+
+    .ii__card__btn-svg {
+        transform: scale(0.6);
     }
 }
 
@@ -2855,6 +2967,26 @@ For displaying pill on nav item HOVER
     .ss__panels__header__industry {
         font-size: 1.3rem;
     }
+
+    .ii__nav__list-item {
+        font-size: 1.7rem;
+    }
+
+    .ii__card {
+        padding-bottom: 0.5rem;
+    }
+
+    .ii__card__heading {
+        font-size: 1.4rem;
+    }
+
+    .ii__card__text {
+        font-size: 1.3rem;
+    }
+
+    .ii__card__header {
+        min-width: 12rem;
+    }
 }
 
 @media (max-width:500px){
@@ -2926,6 +3058,27 @@ For displaying pill on nav item HOVER
 
     .ss__info__heading {
         white-space :  initial;
+    }
+
+    .ii__card__wrapper {
+        grid-row-gap: 2rem;
+    }
+
+    .ii__card {
+        grid-template-rows: 0.5fr 1fr;
+    }
+
+    .ii__card__heading {
+        font-size: 1.3rem;
+        align-self: end;
+    }
+
+    .ii__card__read-time {
+        align-self: end;
+    }
+
+    .ii__card__text {
+        margin-top: 0.5rem;
     }
 }
 
@@ -3066,6 +3219,33 @@ For displaying pill on nav item HOVER
 
     .ss__info__panels-text {
         font-size: 1.4rem;
+    }
+
+    .ii__heading {
+        margin-bottom: 4rem;
+    }
+
+    .ii__nav__list-item {
+        font-size: 1.5rem;
+    }
+
+    .ii__card__header {
+        min-width: 10rem;
+        align-self: start;
+    }
+
+    .ii__card__heading, .ii__card__btn-text {
+        font-size: 1.2rem;
+    }
+
+    .ii__card__text, .ii__card__read-time {
+        font-size: 1.1rem;
+    }
+
+    .ii__card__text {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
     }
 }
 @media (max-width:320px){
