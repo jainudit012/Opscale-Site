@@ -1528,6 +1528,10 @@ For displaying pill on nav item HOVER
   color: rgba(255, 255, 255, 0.4);
 }
 
+.mobile-paginator-other {
+    display: none;
+}
+
 @media (max-width:1850px) {
     .site__info-rp__fixed {
         padding: 12rem 15rem;
