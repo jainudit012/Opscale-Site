@@ -4,8 +4,8 @@ const flipperData = loadElementsToArray('ss__panel-', wrapper)
 const ssPanelFwdBtn = document.getElementById('ss__panel-fwd')
 const ssPanelBckBtn = document.getElementById('ss__panel-bck')
 
-const ssPanelMobileFwdBtn = null
-const ssPanelMobileBckBtn = null
+const ssPanelMobileFwdBtn = document.getElementById('ss__mpaginator-fwd')
+const ssPanelMobileBckBtn = document.getElementById('ss__mpaginator-bck')
 
 const classConfig = {
     frontClass: 'ss__flipper__front',
@@ -24,6 +24,14 @@ const classConfig = {
 
 try{
     otherPaginate(flipperData.items, classConfig, null)
+
+    ssPanelMobileFwdBtn.addEventListener('click', ()=>{
+        ssPanelFwdBtn.click()
+    })
+
+    ssPanelMobileBckBtn.addEventListener('click', ()=>{
+        ssPanelBckBtn.click()
+    })
 }catch(ex){
     console.log(ex)
 }
