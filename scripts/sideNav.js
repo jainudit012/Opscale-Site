@@ -15,12 +15,14 @@ try{
     
         window.addEventListener('scroll', () => {
             let currentScrollPos = window.pageYOffset;
-            if (prevScrollpos === 0 ||  prevScrollpos > currentScrollPos) {
-                siteHeader.style.top = "0";
-            } else {
-                siteHeader.style.top = "-300px";
-            }
-            prevScrollpos = currentScrollPos < 0 ? 0 : currentScrollPos;
+            setTimeout(()=> {
+                if (prevScrollpos === 0 ||  prevScrollpos > currentScrollPos) {
+                    siteHeader.style.top = "0";
+                } else {
+                    siteHeader.style.top = "-300px";
+                }
+                prevScrollpos = currentScrollPos < 0 ? 0 : currentScrollPos;
+            }, 300)
         })
     }
 
