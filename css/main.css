@@ -1395,6 +1395,7 @@ For displaying pill on nav item HOVER
 
 .floating-icon {
     position: fixed;
+    display: flex;
     z-index: 5;
     top: 80%;
     right: 10%;
@@ -1695,6 +1696,14 @@ For displaying pill on nav item HOVER
     .tod__heading {
         font-size: 9rem;
     }
+
+    .floating-icon {
+        padding: 2.5rem;
+    }
+
+    .floating-icon-svg {
+        transform: scale(0.9);
+    }
 }
 
 @media (max-width:1500px) {
@@ -1969,6 +1978,14 @@ For displaying pill on nav item HOVER
 
     .contact__footer--icon {
         transform: scale(0.85);
+    }
+
+    .floating-icon {
+        padding: 2rem;
+    }
+
+    .floating-icon-svg {
+        transform: scale(0.75);
     }
 
 }
@@ -2823,6 +2840,14 @@ For displaying pill on nav item HOVER
         white-space: nowrap;
         font-size: 1.5rem;
     }
+
+    .floating-icon {
+        padding: 1.5rem;
+    }
+
+    .floating-icon-svg {
+        transform: scale(0.6);
+    }
 }
 
 @media (max-width:650px){
@@ -3080,6 +3105,14 @@ For displaying pill on nav item HOVER
 
     .ii__card__text {
         margin-top: 0.5rem;
+    }
+
+    .floating-icon {
+        padding: 1rem;
+    }
+
+    .floating-icon-svg {
+        transform: scale(0.5);
     }
 }
 
