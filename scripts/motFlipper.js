@@ -4,8 +4,8 @@ const motFlipperData = loadElementsToArray('mot__card-', motCardsWrapper)
 const motNextBtn = document.getElementById('mot__card-fwd')
 const motPrevBtn = document.getElementById('mot__card-bck')
 
-const mobileMotNextBtn = null
-const mobileMotPrevBtn = null
+const mobileMotNextBtn = document.getElementById('mot__mpaginator-fwd')
+const mobileMotPrevBtn = document.getElementById('mot__mpaginator-bck')
 
 const motClassConfig = {
     frontClass: 'mot__cards--front',
@@ -22,6 +22,15 @@ const motClassConfig = {
 
 try{
     otherPaginate(motFlipperData.items, motClassConfig, null)
+
+    mobileMotNextBtn.addEventListener('click', ()=>{
+        motNextBtn.click()
+    })
+
+    mobileMotPrevBtn.addEventListener('click', ()=>{
+        motPrevBtn.click()
+    })
+
 }catch(ex){
     console.log(ex)
 }
