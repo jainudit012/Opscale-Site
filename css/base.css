@@ -85,9 +85,6 @@ html {
 }
 
 .slideOut {
-    position: absolute;
-    top: 0;
-    left: 0;
     transform: translateX(-201%) !important;
 }
 
