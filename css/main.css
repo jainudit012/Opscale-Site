@@ -2715,8 +2715,19 @@ For displaying pill on nav item HOVER
     }
 
     .site__info-rp__fixed__filter-item {
-        padding-right: 3rem;
-        margin: auto;
+        margin: 0 3rem 0 0;
+        background-color: rgb(221, 221, 221);
+        border-radius: 10px;
+        padding: 1rem 1rem 0 1rem;
+    }
+
+    .fixed__filter-item-selected {
+        border-bottom: 3px solid #283FD9;
+        border-radius: 10px 10px 0 0;
+    }
+
+    .fixed__filter-item-selected .site__info-rp__fixed__filter__pill {
+        display: none;
     }
 
     .site__info-rp__fixed__filter-item-description {
@@ -2884,7 +2895,19 @@ For displaying pill on nav item HOVER
 
     .ii__nav__list-item {
         font-size: 1.8rem;
-        padding-right: 3rem;
+        margin-right: 3rem;
+        background-color: rgb(221, 221, 221);
+        border-radius: 10px;
+        padding: 1rem 1rem 0.75rem 1rem;
+    }
+
+    .ii__nav-item__pill {
+        display: none
+    }
+
+    .ii__nav__list-item--selected {
+        border-bottom: 3px solid #283FD9;
+        border-radius: 10px 10px 0 0;
     }
 
     .ii__nav-item__heading {
@@ -3264,7 +3287,7 @@ For displaying pill on nav item HOVER
     }
 
     .site__info-rp__fixed__filter-item {
-        margin: auto;
+        margin-right: 2rem;
     }
 
     .site__info-rp__panels__wrapper {
@@ -3376,7 +3399,7 @@ For displaying pill on nav item HOVER
         padding: 6rem 3rem 4rem 3rem;
     }
 
-    .card__pill, .site__info-rp__fixed__filter__pill, .ii__nav-item__pill, .mot__card__pill {
+    .card__pill, .mot__card__pill {
         width: 2rem;
     }
 
