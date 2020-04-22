@@ -2371,14 +2371,9 @@ For displaying pill on nav item HOVER
     .mot__cards__paginator {
         transform: scale(0.75);
     }
-
 }
 
 @media (max-width:800px){
-    html { overflow-x: hidden; }
-    body { overflow-x:  hidden; }
-    /* To be removed: overflow*/
-
     .site__header {
         padding: 6.24rem 8rem 0 8rem;
     }
@@ -3039,6 +3034,43 @@ For displaying pill on nav item HOVER
         margin-bottom: 1rem;
     }
 
+    .site__info-tod {
+        padding: 2rem 0 5rem 0;
+    }
+
+    .tod__heading {
+        font-size: 5rem;
+    }
+
+    .site__info-tod > * {
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    .tod__sub-heading {
+        font-size: 2.5rem;
+        margin-top: 4rem;
+    }
+
+    .tod__form {
+        margin-top: 3rem;
+    }
+
+    .tod__input, .tod__textarea {
+        font-size: 1.8rem;
+        padding: 2rem 1.5rem;
+    }
+
+    .tod__textarea {
+        margin-top: 1.5rem;
+    }
+
+    .tod__form__btn {
+        margin-top: 2.5rem;
+        padding: 1.2rem 4.5rem;
+        font-size: 1.8rem;
+    }
+
 }
 
 @media (max-width:650px){
@@ -3356,6 +3388,10 @@ For displaying pill on nav item HOVER
     .mot__cards__container {
         grid-template-columns: 5rem 1fr 5rem;
     }
+
+    .site__info-tod > * {
+        width: 85%;
+    }
 }
 
 @media (max-width:425px){
@@ -3562,7 +3598,22 @@ For displaying pill on nav item HOVER
         width: 95%;
     }
 
-}
-@media (max-width:320px){
+    .tod__heading {
+        font-size: 4.5rem;
+    }
+
+    .tod__sub-heading {
+        margin-top: 2.5rem;
+    }
+
+    .tod__input, .tod__textarea {
+        font-size: 1.7rem;
+        padding: 1.5rem 1.25rem;
+    }
+
+    .tod__form__btn {
+        font-size: 1.7rem;
+        padding: 1rem 3.5rem;
+    }
 
 }
