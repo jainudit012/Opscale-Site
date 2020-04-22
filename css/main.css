@@ -1455,6 +1455,14 @@ For displaying pill on nav item HOVER
     margin-top: 3.3rem;
 }
 
+.footer__company__contacts__list-item:nth-child(2) {
+    transform: translateX(-1px)
+}
+
+.footer__company__contacts__list-item:nth-child(2) .company__contacts__info:last-child {
+    transform: translateX(-5px)
+}
+
 .company__contacts__svg-box {
     margin-right: 5rem;
 }
@@ -1468,7 +1476,7 @@ For displaying pill on nav item HOVER
     font-family: Lato, sans-serif;
     font-size: 2rem;
     font-weight: 500;
-    color: rgba(255, 255, 255, 0.8);
+    color: rgba(255, 255, 255, 0.8) !important;
 }
 
 .footer__site-sections__links__wrapper {
@@ -1511,16 +1519,22 @@ For displaying pill on nav item HOVER
 }
 
 .footer__site-sections__container-social {
-    width: fit-content;
+    width: auto;
 }
 
 .contact__footer--box {
-    width: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     border: 1px solid rgba(255,255,255,0.6);
     border-radius: 5px;
-    padding: 1rem 1.2rem 0.5rem 1.2rem;
+    padding: 2rem;
     margin-left: auto;
     cursor: pointer;
+}
+
+.contact__footer--box > .footer__site-sections__links {
+    display: flex;
 }
 
 .contact__footer--icon {
@@ -2231,6 +2245,18 @@ For displaying pill on nav item HOVER
         padding: 6rem 10.6rem 10.1rem 10.6rem;
     }
 
+    .site__footer-section {
+        padding: 7.7rem 8rem 6.7rem 6rem;
+    }
+
+    .footer__site-sections__links__wrapper {
+        padding: 1rem 0 1rem 2rem;
+    }
+
+    .contact__footer--box {
+        padding: 1rem;
+    }
+
     .footer__copyright {
         padding: 0 10rem 6rem 10rem;
     }
@@ -2370,6 +2396,19 @@ For displaying pill on nav item HOVER
 
     .mot__cards__paginator {
         transform: scale(0.75);
+    }
+
+    .company__contacts__svg-box {
+        margin-right: 2.5rem;
+        transform: scale(0.8)
+    }
+
+    .company__contacts__info {
+        font-size: 1.8rem;
+    }
+
+    .footer__site-sections__links {
+        font-size: 1.7rem;
     }
 }
 
@@ -3071,6 +3110,58 @@ For displaying pill on nav item HOVER
         font-size: 1.8rem;
     }
 
+    .site__footer-section {
+        flex-direction: column;
+        padding: 6rem 0;
+    }
+
+    .footer__company__contacts__img {
+        max-width: 30rem;
+    }
+
+    .footer__company__contacts__list-item {
+        margin-top: 1rem;
+    }
+
+    .footer__site-sections__container:not(:last-child) {
+        display: none;
+    }
+
+    .footer__company__contacts, .footer__site-sections__links__wrapper {
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    .footer__site-sections__links__wrapper {
+        justify-content: initial;
+        padding: 0;
+    }
+
+    .footer__site-sections__container-social {
+        margin-top: 3rem;
+        flex-direction: row;
+        width: 100%;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+
+    .footer__site-sections__container-social .footer__site-sections__item {
+        margin: 0;
+    }
+    
+    .footer__site-sections__container-social .footer__site-sections__item >.footer__site-sections__links {
+        font-size: 2.25rem;
+    }
+
+    .footer__copyright {
+        padding: 0 4rem 4rem 4rem;
+    }
+
+    .footer__copyright__text {
+        padding-top: 4rem;
+        font-size: 1.5rem;
+    }
+
 }
 
 @media (max-width:650px){
@@ -3257,6 +3348,14 @@ For displaying pill on nav item HOVER
 
     .wcu__card__text {
         font-size: 1.3rem;
+    }
+
+    .footer__site-sections__container-social .footer__site-sections__item >.footer__site-sections__links {
+        font-size: 2rem;
+    }
+
+    .contact__footer--box {
+        padding: 0.5rem;
     }
 }
 
@@ -3616,4 +3715,31 @@ For displaying pill on nav item HOVER
         padding: 1rem 3.5rem;
     }
 
+    .site__footer-section {
+        padding: 4rem 0;
+    }
+
+    .footer__company__contacts, .footer__site-sections__links__wrapper {
+        width: 85%;
+    }
+
+    .contact__footer--icon {
+        transform: scale(0.6);
+    }
+
+    .footer__site-sections__container-social .footer__site-sections__item >.footer__site-sections__links {
+        font-size: 1.8rem;
+    }
+
+    .contact__footer--box {
+        padding: 0;
+    }
+
+    .footer__copyright {
+        padding: 0 2rem 2rem 2rem;
+    }
+
+    .footer__copyright__text {
+        padding-top: 2rem;
+    }
 }
