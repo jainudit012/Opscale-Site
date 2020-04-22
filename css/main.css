@@ -1190,7 +1190,7 @@ For displaying pill on nav item HOVER
     width: 55%;
     display: grid;
     grid-template-columns: 1fr 6rem 6rem 1fr;
-    grid-template-rows: 38% 7% 56%;
+    grid-template-rows: 36.65% 7% 56%;
 }
 
 .mot__cards__wrapper {
@@ -1198,16 +1198,17 @@ For displaying pill on nav item HOVER
     grid-row: 1/-1;
     display: grid;
     grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
     position: relative;
     overflow-x: hidden;
 }
 
 .mot__cards {
     display: grid;
-    grid-template-rows: 45% 55%;
+    grid-template-rows: 44% 1fr;
+    grid-row: 1/4;
     border-bottom: 5px solid rgba(38, 62, 217, 0.2);
     grid-column: 2/-1;
-    grid-row: 1/-1;
     transition: all 450ms ease-out;
 }
 
@@ -1247,6 +1248,7 @@ For displaying pill on nav item HOVER
 
 .mot__cards__image {
     height: 100%;
+    width: 100%;
 }
 
 .mot__card--user-name {
@@ -1293,6 +1295,7 @@ For displaying pill on nav item HOVER
 
 .mot__cards__footer--link {
     cursor: pointer;
+    display: flex;
     margin-right: 5rem;
 }
 
@@ -1304,8 +1307,11 @@ For displaying pill on nav item HOVER
 }
 
 .mot__cards__paginator--box {
+    width: 50%;
     background-color: #283FD9;
-    padding: 1.2rem 1.2rem 0.6rem 1.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     cursor: pointer;
     transition: background-color 300ms ease-in;
 }
@@ -1857,8 +1863,8 @@ For displaying pill on nav item HOVER
         padding: 9.2rem 0 2.2rem 10.6rem;
     }
 
-    .mot__cards__image {
-        max-width: 45rem;
+    .mot__cards__container {
+        grid-template-rows: 36% 7% 56%;
     }
 
     .tod__heading {
@@ -1954,15 +1960,11 @@ For displaying pill on nav item HOVER
     }
 
     .wcu__card__img {
-        transform: scale(0.85);
-    }
-
-    .mot__cards__image {
-        max-width: 43.5rem;
+        transform: scale(0.7);
     }
 
     .mot__cards__footer {
-        margin-bottom: 0;
+        margin-bottom: 1rem;
     }
 
     .mot__cards__footer--link {
@@ -2103,15 +2105,12 @@ For displaying pill on nav item HOVER
 
     .mot__cards__container {
         width: 67%;
+        grid-template-rows: 35% 8% 56%;
     }
 
     .mot__info__heading {
         font-size: 3.5rem;
         margin-top: 8.5rem;
-    }
-
-    .mot__cards__image {
-        max-width: 41.5rem;
     }
 
     .site__info-mot {
@@ -2212,12 +2211,20 @@ For displaying pill on nav item HOVER
         width: 70%;
     }
 
-    .mot__left-info {
-        width: 30%;
+    .mot__card--user-info {
+        padding: 1.5rem 1rem 1.8rem 0;
     }
 
-    .mot__cards__image {
-        max-width: 40.5rem;
+    .mot__cards__footer {
+        margin-bottom: 0;
+    }
+
+    .mot__cards__footer--icon {
+        transform: scale(0.7)
+    }
+
+    .mot__left-info {
+        width: 30%;
     }
 
     .site__info-tod {
@@ -2308,6 +2315,63 @@ For displaying pill on nav item HOVER
     .wcu__card__heading {
         margin-top: 1rem;
     }
+
+    .site__info-mot {
+        padding: 6rem 0 4rem 0;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .mot__left-info {
+        margin-left: 6rem;
+    }
+
+    .mot__info__heading {
+        margin-top: 0;
+    }
+
+    .mot__info__text {
+        margin-top: 2rem;
+    }
+
+    .mot__info__sub-heading {
+        margin-top: 5rem;
+    }
+
+    .mot__cards__container {
+        width: 60%;
+    }
+
+    .mot__cards--front {
+        border-bottom: 3px solid rgba(38, 62, 217, 1);
+    }
+
+    .mot__cards__body {
+        overflow-y: hidden;
+        padding-bottom: 1rem;
+    }
+
+    .mot__card--user-name {
+        margin-top: 1.5rem;
+    }
+
+    .mot__card__pill {
+        margin: 1rem 0 1.5rem 0;
+    }
+
+    .mot__card--user-info {
+        font-size: 1.6rem;
+        padding: 1rem 1rem 1.5rem 0;
+    }
+
+    .mot__cards__footer--icon {
+        transform: scale(0.5);
+    }
+
+    .mot__cards__paginator {
+        transform: scale(0.75);
+    }
+
 }
 
 @media (max-width:800px){
