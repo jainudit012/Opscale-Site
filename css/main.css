@@ -2095,6 +2095,7 @@ For displaying pill on nav item HOVER
 
     .ii__card__heading {
         font-size: 1.8rem;
+        margin-top: 1.25rem;
     }
 
     .wcu__card {
@@ -2877,10 +2878,6 @@ For displaying pill on nav item HOVER
         padding: 4rem 0;
     }
 
-    .ii__card__wrapper {
-        grid-row-gap: 3rem;
-    }
-
     .ii__heading {
         font-size: 2.5rem;
     }
@@ -2916,6 +2913,7 @@ For displaying pill on nav item HOVER
 
     .ii__card__wrapper {
         grid-template-columns: 1fr;
+        grid-row-gap: 3rem;
     }
 
     .ii__card {
