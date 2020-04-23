@@ -14,6 +14,8 @@
     <script src="./scripts/utility.js" defer></script>
     <script src="./scripts/sideNav.js" defer></script>
     <script src="./scripts/floatingIcon.js" defer></script>
+    <script src="./scripts/paginator.js" defer></script>
+    <script src="./scripts/motFlipper.js" defer></script>
 </head>
 <body>
     <header class="site__header" id="site__header">
@@ -115,8 +117,8 @@
     <section class="about__mot" id="meet-team">
       <h2 class="about__mot--heading">Meet our Team</h2>
       <p class="about__mot--text">We employ the brightest minds in engineering, science and design.<br> Passionate problem-solvers, experienced specialists and revolutionary thinkers, our team exists to make a real difference.</p>
-      <div class="about__mot__cards-box">
-        <div class="mot__cards about__mot__card" id="about__mot__card-1">
+      <div class="about__mot__cards-box" id="about__mot__cards-box">
+        <div class="mot__cards about__mot__card mot__cards--front" id="about__mot__card-1">
           <header class="mot__cards__header">
               <img src="https://res.cloudinary.com/opscale/image/upload/q_auto/v1586871684/anub_vvo5ay.jpg" srcset="https://res.cloudinary.com/opscale/image/upload/q_auto/v1586871684/anub_vvo5ay.jpg 1x, https://res.cloudinary.com/opscale/image/upload/q_auto/v1586871684/anub_2x_bd3bge.jpg 2x, https://res.cloudinary.com/opscale/image/upload/q_auto/v1586871685/anub_3x_bphijh.jpg 3x" alt="Opscale Team Member" class="mot__cards__image">
           </header>
@@ -155,7 +157,7 @@
               </footer>
           </div>
         </div>
-        <div class="mot__cards about__mot__card" id="about__mot__card-2">
+        <div class="mot__cards about__mot__card mot__cards--back" id="about__mot__card-2">
           <header class="mot__cards__header">
               <img src="https://res.cloudinary.com/opscale/image/upload/q_auto/v1586871689/tm_fhii0z.jpg" srcset="https://res.cloudinary.com/opscale/image/upload/q_auto/v1586871689/tm_fhii0z.jpg 1x, https://res.cloudinary.com/opscale/image/upload/q_auto/v1586871689/tm_2x_sgqnn6.jpg 2x, https://res.cloudinary.com/opscale/image/upload/q_auto/v1586871689/tm_3x_dd5muv.jpg 3x" alt="Opscale Team Member" class="mot__cards__image">
           </header>
@@ -194,7 +196,7 @@
               </footer>
           </div>
         </div>
-        <div class="mot__cards about__mot__card" id="about__mot__card-3">
+        <div class="mot__cards about__mot__card mot__cards--back" id="about__mot__card-3">
           <header class="mot__cards__header">
             <img src="https://res.cloudinary.com/opscale/image/upload/q_auto/v1586871689/tm_fhii0z.jpg" srcset="https://res.cloudinary.com/opscale/image/upload/q_auto/v1586871689/tm_fhii0z.jpg 1x, https://res.cloudinary.com/opscale/image/upload/q_auto/v1586871689/tm_2x_sgqnn6.jpg 2x, https://res.cloudinary.com/opscale/image/upload/q_auto/v1586871689/tm_3x_dd5muv.jpg 3x" alt="Opscale Team Member" class="mot__cards__image">
           </header>
@@ -233,7 +235,7 @@
               </footer>
           </div>
         </div>
-        <div class="mot__cards about__mot__card" id="about__mot__card-4">
+        <div class="mot__cards about__mot__card mot__cards--back" id="about__mot__card-4">
           <header class="mot__cards__header">
             <img src="https://res.cloudinary.com/opscale/image/upload/q_auto/v1586871689/tm_fhii0z.jpg" srcset="https://res.cloudinary.com/opscale/image/upload/q_auto/v1586871689/tm_fhii0z.jpg 1x, https://res.cloudinary.com/opscale/image/upload/q_auto/v1586871689/tm_2x_sgqnn6.jpg 2x, https://res.cloudinary.com/opscale/image/upload/q_auto/v1586871689/tm_3x_dd5muv.jpg 3x" alt="Opscale Team Member" class="mot__cards__image">
           </header>
@@ -272,7 +274,7 @@
               </footer>
           </div>
         </div>
-        <div class="mot__cards about__mot__card" id="about__mot__card-5">
+        <div class="mot__cards about__mot__card mot__cards--back" id="about__mot__card-5">
           <header class="mot__cards__header">
             <img src="https://res.cloudinary.com/opscale/image/upload/q_auto/v1586871689/tm_fhii0z.jpg" srcset="https://res.cloudinary.com/opscale/image/upload/q_auto/v1586871689/tm_fhii0z.jpg 1x, https://res.cloudinary.com/opscale/image/upload/q_auto/v1586871689/tm_2x_sgqnn6.jpg 2x, https://res.cloudinary.com/opscale/image/upload/q_auto/v1586871689/tm_3x_dd5muv.jpg 3x" alt="Opscale Team Member" class="mot__cards__image">
           </header>
@@ -311,7 +313,7 @@
               </footer>
           </div>
         </div>
-        <div class="mot__cards about__mot__card" id="about__mot__card-6">
+        <div class="mot__cards about__mot__card mot__cards--back" id="about__mot__card-6">
           <header class="mot__cards__header">
             <img src="https://res.cloudinary.com/opscale/image/upload/q_auto/v1586871689/tm_fhii0z.jpg" srcset="https://res.cloudinary.com/opscale/image/upload/q_auto/v1586871689/tm_fhii0z.jpg 1x, https://res.cloudinary.com/opscale/image/upload/q_auto/v1586871689/tm_2x_sgqnn6.jpg 2x, https://res.cloudinary.com/opscale/image/upload/q_auto/v1586871689/tm_3x_dd5muv.jpg 3x" alt="Opscale Team Member" class="mot__cards__image">
           </header>
@@ -349,6 +351,12 @@
                   </a>
               </footer>
           </div>
+        </div>
+        <div class="mobile-paginator-other mobile-paginator-left mot__disabled-paginator" id="mot__card-bck">
+            <img src="./assets/arrow_right.svg" alt="left" class="mobile-paginator-other-icon">
+        </div>
+        <div class="mobile-paginator-other mobile-paginator-right" id="mot__card-fwd">
+            <img src="./assets/arrow_right.svg" alt="right" class="mobile-paginator-other-icon">
         </div>
       </div>
     </section>

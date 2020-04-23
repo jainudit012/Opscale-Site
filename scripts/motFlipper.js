@@ -1,11 +1,27 @@
-const motCardsWrapper = document.getElementById('mot__cards__wrapper')
-const motFlipperData = loadElementsToArray('mot__card-', motCardsWrapper)
+let motCardsWrapper 
+let motFlipperData
+let motNextBtn
+let motPrevBtn
+let mobileMotNextBtn
+let mobileMotPrevBtn
 
-const motNextBtn = document.getElementById('mot__card-fwd')
-const motPrevBtn = document.getElementById('mot__card-bck')
+if(window.location.pathname !== '/about.html'){
+    motCardsWrapper = document.getElementById('mot__cards__wrapper')
+    motFlipperData = loadElementsToArray('mot__card-', motCardsWrapper)
 
-const mobileMotNextBtn = document.getElementById('mot__mpaginator-fwd')
-const mobileMotPrevBtn = document.getElementById('mot__mpaginator-bck')
+    motNextBtn = document.getElementById('mot__card-fwd')
+    motPrevBtn = document.getElementById('mot__card-bck')
+
+    mobileMotNextBtn = document.getElementById('mot__mpaginator-fwd')
+    mobileMotPrevBtn = document.getElementById('mot__mpaginator-bck')
+}else {
+    motCardsWrapper = document.getElementById('about__mot__cards-box')
+    motFlipperData = loadElementsToArray('about__mot__card-', motCardsWrapper)
+
+    motNextBtn = document.getElementById('mot__card-fwd')
+    motPrevBtn = document.getElementById('mot__card-bck')
+}
+
 
 const motClassConfig = {
     frontClass: 'mot__cards--front',
@@ -23,13 +39,15 @@ const motClassConfig = {
 try{
     otherPaginate(motFlipperData.items, motClassConfig, null)
 
-    mobileMotNextBtn.addEventListener('click', ()=>{
-        motNextBtn.click()
-    })
-
-    mobileMotPrevBtn.addEventListener('click', ()=>{
-        motPrevBtn.click()
-    })
+    if(window.location.pathname !== '/about.html'){
+        mobileMotNextBtn.addEventListener('click', ()=>{
+            motNextBtn.click()
+        })
+    
+        mobileMotPrevBtn.addEventListener('click', ()=>{
+            motPrevBtn.click()
+        })
+    }
 
 }catch(ex){
     console.log(ex)
