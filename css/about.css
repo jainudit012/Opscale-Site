@@ -54,10 +54,9 @@
 }
 
 .about__info__mission-quotes {
-    width: 13rem;
+    width: 9%;
     height: 100%;
-    margin: 5rem 0 0 2rem;
-    transform: rotateZ(180deg);
+    transform: rotateZ(180deg) translateY(-25%);
 }
 
 .about__info--culture {
@@ -96,6 +95,9 @@
     align-self: end;
     background-color: #F7F7F7;
     padding: 3rem;
+    display: flex;
+    align-items:center;
+    justify-content: center;
 }
 
 .about__info__card--header-img {
@@ -146,16 +148,28 @@
 .about__mot__card {
     grid-row: auto;
     grid-column: auto;
-    border-bottom: 5px solid rgba(21, 21, 21, 0.2);
+    border-bottom: none;
     cursor: pointer;
 }
 
-.about__mot__card:hover {
+.about__mot__card .mot__cards__body {
+    border-bottom: 5px solid transparent;
+}
+
+.about__mot__card:hover .mot__cards__body {
     border-bottom: 5px solid rgba(38, 62, 217, 1);
 }
 
 .about__mot__card:hover .mot__card__pill {
     opacity: 1;
+}
+
+.mot__cards--front {
+    transform: translateX(0);
+}
+
+.mot__cards--back {
+    transform: translateX(0);
 }
 
 .about__join {
@@ -180,6 +194,7 @@
 }
 
 .about__join--btn {
+    display: flex;
     background-color: #fff;
     color: #263ed9;
     border: 1px solid #263ed9;
@@ -223,18 +238,6 @@
     margin-left: auto;
 }
 
-.mot__cards__image {
-    max-width: 44rem;
-    max-height: 44rem;
-}
-
-@media (max-width: 1800px) {
-    .mot__cards__image {
-        max-width: 40rem;
-        max-height: 40rem;
-    }
-}
-
 @media (max-width: 1700px) {
     .about__main-heading, .about__mot--heading {
         font-size: 4rem;
@@ -263,11 +266,6 @@
         padding: 4rem 0 12rem 0;
     }
 
-    .mot__cards__image {
-        max-width: 38rem;
-        max-height: 38rem;
-    }
-
     .about__join--heading {
         font-size: 4rem;
         margin-bottom: 4.9rem;
@@ -283,11 +281,6 @@
 }
 
 @media (max-width: 1600px) {
-    .mot__cards__image {
-        max-width: 36rem;
-        max-height: 36rem;
-    }
-
     .about__join--info {
         font-size: 2.25rem;
         margin: 9.5rem 0 6.1rem 0;
@@ -308,11 +301,8 @@
     }
 
     .about__info__mission-quotes {
-        transform: scale(0.9) rotateZ(180deg);
-    }
-
-    .about__info__card--header-img {
-        transform: scale(0.8)
+        width: 8%;
+        transform: rotateZ(180deg) translateY(-30%);
     }
 
     .about__info__cards-box {
@@ -321,25 +311,25 @@
     }
 
     .about__info__card--header {
+        width: 70%;
         padding: 2rem;
+    }
+
+    .about__info__card--bold {
+        margin-top: 3.3rem;
     }
 
     .about__mot {
         padding: 4rem 0 10rem 0;
     }
-
-    .mot__cards__image {
-        max-width: 34rem;
-        max-height: 34rem;
-    }
-
+    
     .about__join {
         padding: 6.2rem 0 10rem 0;
     }
 }
 
 @media (max-width: 1300px) {
-    .about__main-heading, .about__info__mission-heading, .about__mot--heading {
+    .about__main-heading, .about__info__mission-heading, .about__mot--heading, .about__info--culture {
         font-size: 3.5rem;
     }
 
@@ -374,11 +364,6 @@
         grid-column-gap: 5.35rem;
     }
 
-    .mot__cards__image {
-        max-width: 30rem;
-        max-height: 30rem;
-    }
-
     .mot__cards__footer {
         margin-bottom: 3rem;
     }
@@ -386,6 +371,11 @@
     .about__join {
         width: 80%;
         padding: 4.2rem 0 8rem 0;
+    }
+
+    .about__join--heading {
+        font-size: 3.5rem;
+        margin-bottom: 2rem;
     }
 
     .about__join--info {
@@ -414,12 +404,25 @@
         grid-column-gap: 10%;
     }
 
-    .about__info__card--header-img {
-        transform: scale(0.75)
+    .about__info__card--header {
+        width: 60%;
     }
 
-    .about__info__card--header {
-        padding: 1.5rem;
+    .about__info__card--bold {
+        font-size: 2rem;
+    }
+
+    .about__info__card--text {
+        font-size: 1.5rem;
+    }
+
+    .about__join--box-info-heading {
+        font-size: 2.5rem
+    }
+
+    .about__join--box-info-text {
+        font-size: 1.8rem;
+        margin-top: 1.5rem;
     }
 }
 
@@ -433,7 +436,8 @@
     }
 
     .about__info__mission-quotes {
-        transform: scale(0.8) rotateZ(180deg);
+        width: 6%;
+        transform: rotateZ(180deg) translateY(-80%);
     }
 
     .about__mot {
@@ -446,5 +450,160 @@
 
     .about__join {
         padding: 3.2rem 0 6rem 0;
-    } 
+    }
+
+    .about__join--btn {
+        padding: 1.2rem 3rem;
+    }
+
+    .about__join--info {
+        margin: 4rem 0 1rem 0;
+    }
+
+    .about__join--box {
+        padding: 1.5rem 0;
+    }
+}
+
+@media (max-width:900px){
+    .about__mot__cards-box {
+        width: 85%;
+        grid-column-gap: 2.5rem;
+    }
+}
+
+@media (max-width: 800px){
+    .about__main {
+        padding: 10.9rem 0 18.8rem 8rem
+    }
+
+    .about__main-heading, .about__info__mission-heading, .about__mot--heading, .about__info--culture , .about__join--heading {
+        font-size: 2.75rem;
+    }
+
+    .about__info__mission, .about__info--culture-text {
+        width: 90%;
+    }
+
+    .about__main-text {
+        font-size: 1.7rem;
+    }
+
+    .about__info {
+        padding: 0;
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    .about__info__mission-box {
+        margin-bottom: 2.2rem;
+        padding-top: 5rem;
+    }
+
+    .about__info__mission-heading {
+        margin-bottom: 3rem;
+    }
+
+    .about__info__mission-text, .about__info--culture-text {
+        font-size: 1.7rem;
+    }
+
+    .about__info--culture {
+        padding-top: 0;
+        margin-bottom: 2rem;
+    }
+
+    .about__info__cards-box {
+        width: 100%;
+        padding: 4.2rem 0;
+        grid-column-gap: 5%;
+    }
+
+    .about__mot {
+        padding: 2rem 0 4rem 0;
+    }
+
+    .about__mot--text {
+        width: 70%;
+    }
+
+    .about__mot__cards-box {
+        grid-template-columns: 10rem 1fr 10rem;
+        grid-template-rows: 1fr;
+        grid-column-gap: 1rem;
+        overflow-x: hidden;
+        margin-top: 3rem;
+    }
+
+    .about__mot__card {
+        grid-row: 1/-1;
+        grid-column: 2/3;
+        grid-template-rows: 44% 56%;
+    }
+
+    .mot__cards--front {
+        transform: translateX(0);
+    }
+
+    .mot__cards--back {
+        transform: translateX(150%);
+    }
+
+    .mot__disabled-paginator {
+        opacity: 0.5;
+        background-color: none;
+    }
+
+    .about__join {
+        padding: 2rem 0 4rem 0;
+    }
+
+    .about__join--text {
+        width: 90%;
+    }
+}
+
+@media (max-width:600px){
+    .about__info__mission-quotes {
+        transform: rotateZ(180deg) translateY(-125%);
+    }
+
+    .about__info__card--header {
+        padding: 1.5rem;
+        width: 70%;
+    }
+}
+
+@media (max-width:500px){
+    .about__mot__cards-box {
+        grid-template-columns: 5rem 1fr 5rem;
+    }
+
+    .about__join--box-info-text {
+        width: 90%;
+    }
+}
+
+@media (max-width:425px){
+    .about__main {
+        padding: 8.9rem 0 10.8rem 3.5rem;
+    }
+
+    .about__main-text {
+        width: 70%;
+    }
+
+    .about__info__mission-quotes {
+        transform: rotateZ(180deg) translateY(-150%);
+    }
+
+    .about__mot__cards-box {
+        width: 100%;
+        padding: 0 3rem;
+    }
+
+    .about__join , .about__info{
+        width: 85%;
+    }
+
 }
