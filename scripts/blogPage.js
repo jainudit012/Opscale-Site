@@ -67,8 +67,10 @@ try{
 
     if(toggleSearchInput){
         searchInputLabel.children[0].addEventListener('click', ()=>{
-            addClassToSvg(searchInputLabel.children[0], 'hide')
-            removeClass(searchInputLabel.children[1], 'hideabs')
+            if(window.outerWidth > 1200 || window.innerWidth > 1200){
+                addClassToSvg(searchInputLabel.children[0], 'hide')
+                removeClass(searchInputLabel.children[1], 'hideabs')
+            }
         })
         toggleSearchInput = false
     }
