@@ -147,3 +147,98 @@
         padding: 2.2rem 12.6rem 8.2rem 12.6rem;
     }
 }
+
+@media (max-width:1000px) {
+    .industry__main {
+        padding: 12.4rem 0 10.6rem 10.6rem;
+    }
+
+    .industry__overview {
+        padding: 9.1rem 10.6rem 6rem 10.6rem;
+    }
+
+    .industry__card__wrapper {
+        padding: 1.2rem 10.6rem 4.2rem 10.6rem;
+    }
+}
+
+@media (max-width:800px) {
+    .industry__main {
+        padding: 8.4rem 0 8.6rem 8.6rem;
+    }
+
+    .industry__main--heading, .industry__overview__text-heading, .industry__card--heading {
+        font-size: 2.75rem;
+        margin-bottom: 2rem;
+    }
+
+    .industry__overview {
+        width: 80%;
+        margin: 0 auto;
+        padding: 4rem 0;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .industry__overview__text-wrapper {
+        width: 100%;
+    }
+
+    .industry__overview__text-info {
+        font-size: 1.5rem;
+    }
+
+    .industry__overview-img {
+        width: 50%;
+    }
+
+    .industry__card__wrapper {
+        width: 80%;
+        margin: 0 auto;
+        padding: 0 0 4rem 0;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .site__info-wwd__card__wrapper {
+        transform: translateY(0);
+        margin-top: 4rem;
+        width: 100%;
+    }
+}
+
+@media (max-width:600px){
+    .industry__main {
+        padding: 6.4rem 0 6.6rem 6.6rem;
+    }
+
+    .industry__main--text {
+        width: 70%;
+    }
+
+    .industry__overview {
+        width: 85%;
+        padding: 3rem 0 2rem 0;
+    }
+
+    .industry__overview-img {
+        width: 60%;
+    }
+
+    .industry__card__wrapper {
+        width: 85%;
+        padding: 0 0 2rem 0;
+    }
+}
+
+@media (max-width:500px){
+    .industry__main--heading {
+        width: 95%;
+    }
+
+    .industry__main--text {
+        font-size: 1.8rem;
+    }
+}
+
+
