@@ -315,11 +315,13 @@
 .card__img__box {
     border: solid 3px #283fd9;
     padding: 2rem;
-    width: fit-content;
     border-radius: 50%;
     background-color: #fff;
     display: flex;
     transition: background-color 300ms ease-out;
+    width: 30%;
+    justify-content: center;
+    align-items: center;
 }
 
 .card__selected .card__img__box {
@@ -1378,6 +1380,7 @@ For displaying pill on nav item HOVER
     border: 1px solid rgba(19, 20, 21, 0.4);
     padding: 2.5rem 2rem;
     font-size: 2rem;
+    font-family: Lato, sans-serif;
 }
 
 .tod__textarea {
@@ -1387,6 +1390,7 @@ For displaying pill on nav item HOVER
     border-radius: 9px;
     border: 1px solid rgba(19, 20, 21, 0.4);
     font-size: 2rem;
+    font-family: Lato, sans-serif;
 }
 
 .tod__form__btn {
@@ -1395,7 +1399,6 @@ For displaying pill on nav item HOVER
     font-size: 2.5rem;
     font-weight: 600;
     color: #131415;
-    width: fit-content;
     padding: 3.2rem 9.5rem;
     align-self: center;
     border: 1px solid #151515;
@@ -2984,9 +2987,13 @@ For displaying pill on nav item HOVER
         transform: scale(0.6);
     }
 
+    .site__info-wcu {
+        padding: 6rem 8rem 10rem 8rem;
+    }
+
     .wcu__heading {
         font-size: 2.5rem;
-        margin-bottom: 3.5rem;
+        margin-bottom: 5rem;
     }
 
     .wcu__container {
@@ -3495,7 +3502,7 @@ For displaying pill on nav item HOVER
     }
 
     .wcu__heading {
-        margin-bottom: 2rem;
+        margin-bottom: 4rem;
     }
 
     .wcu__card__heading {
@@ -3582,6 +3589,10 @@ For displaying pill on nav item HOVER
     .wwd__card-paginator {
         padding: 0;
         transform: scale(0.95);
+    }
+
+    .site__info-wwd__card.slideOut {
+        position: initial;
     }
 
     .card {
@@ -3699,7 +3710,7 @@ For displaying pill on nav item HOVER
     }
 
     .site__info-mot {
-        padding: 3rem 0
+        padding: 5rem 0 3rem 0;
     }
 
     .mot__left-info {

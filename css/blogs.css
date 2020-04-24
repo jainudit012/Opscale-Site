@@ -403,6 +403,7 @@ div.blog__content::after {
         width: 100%;
         padding: 1.5rem 1rem;
         font-size: 1.8rem;
+        font-family: Lato, sans-serif;
     }
 
     .blogs__nav__search-icon, .blogs__nav__search-input {
