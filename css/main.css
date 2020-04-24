@@ -2984,10 +2984,6 @@ For displaying pill on nav item HOVER
         transform: scale(0.6);
     }
 
-    .site__info-wcu {
-        padding: 4rem 0 6rem 0;
-    }
-
     .wcu__heading {
         font-size: 2.5rem;
         margin-bottom: 3.5rem;
@@ -3211,6 +3207,42 @@ For displaying pill on nav item HOVER
     .ii__card__btn-svg {
         transform: scale(0.6);
     }
+
+    .site__info-wcu {
+        padding: 4rem 0;
+    }
+
+    .wcu__container {
+        flex-direction: column;
+        width: 80%;
+    }
+
+    .wcu__card {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        grid-template-rows: 1fr 0.5fr 2fr;
+        width: 100%;
+        margin-bottom: 2rem;
+        padding: 2rem 2rem 2rem 0;
+    }
+
+    .wcu__card:last-child {
+        padding-top: 0;
+    }
+
+    .wcu__card__img {
+        grid-column: 1/2;
+        grid-row: 1/-1;
+        align-self: center;
+    }
+
+    .wcu__card__heading ,.wcu__card__pill, .wcu__card__text {
+        grid-column: 2/-1;
+    }
+
+    .wcu__card__heading {
+        align-self: end;
+    }
 }
 
 @media (max-width:600px){
@@ -3352,16 +3384,7 @@ For displaying pill on nav item HOVER
     }
 
     .wcu__container {
-        width: 90%;
-        justify-content: space-evenly;
-    }
-
-    .wcu__card {
-        padding: 0 1.75rem 1.5rem 1.75rem;
-    }
-
-    .wcu__card__img {
-        transform: scale(0.5)
+        width: 85%;
     }
 
     .wcu__card__heading {
@@ -3471,16 +3494,8 @@ For displaying pill on nav item HOVER
         margin-top: 0.5rem;
     }
 
-    .site__info-wcu {
-        padding: 2rem 0 4rem 0;
-    }
-
     .wcu__heading {
         margin-bottom: 2rem;
-    }
-
-    .wcu__card {
-        padding: 0 1.25rem 1rem 1.25rem;
     }
 
     .wcu__card__heading {
@@ -3681,10 +3696,6 @@ For displaying pill on nav item HOVER
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
-    }
-
-    .wcu__container {
-        width: 95%;
     }
 
     .site__info-mot {
