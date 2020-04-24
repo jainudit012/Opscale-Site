@@ -700,7 +700,7 @@
         padding: 12.7rem 0 14rem 12.6rem;
     }
 
-    .project__background-text {
+    .project__background-text, .project__challenges-text, .project__challenges-list-text {
         font-size: 1.8rem;
     }
 
@@ -834,7 +834,6 @@
     }
 
     .project__technology__stories-author-details {
-        font-size: 1.4rem;
         width: 80%;
     }
 
@@ -845,10 +844,6 @@
 
     .project__technology__stories-author-img {
         width: 50%;
-    }
-
-    .project__technology__stories-text-info, .project__solution-text {
-        font-size: 1.6rem;
     }
 
     .project__explore {
@@ -887,12 +882,26 @@
         width: 85%;
     }
 
-    .project__challenges-wrapper {
-        padding-bottom: 1rem;
+    .project__background-wrapper,.project__challenges-wrapper {
+        flex-wrap: wrap;
     }
 
-    .project__background-text, .project__challenges-text, .project__challenges-list-wrapper {
-        font-size: 1.6rem;
+    .project__background-text-box, .project__challenges-text {
+        width: 100%;
+        margin-bottom: 1rem;
+    }
+
+    .project__background-img-box {
+        margin: 0 auto;
+        width: 50%;
+    }
+    
+    .project__challenges-list-wrapper {
+        width: 100%;
+    }
+
+    .project__challenges-wrapper {
+        padding-bottom: 1rem;
     }
 
     .project__approach-wrapper {
@@ -924,10 +933,6 @@
         width: 12%;
     }
 
-    .project__technology__stories-text-info, .project__solution-text {
-        font-size: 1.5rem;
-    }
-
     .project__technology__stories-paginator-wrapper {
         width: 8rem;
         height: 3.5rem;
@@ -949,6 +954,7 @@
 
     .project__technology__stories-info-wrapper {
         padding: 1rem 0 2rem 0;
+        width: 100%;
     }
 
     .project__technology__stories-info {
@@ -985,37 +991,16 @@
         font-size: 1.8rem;
     }
 
-    .project__technology__stories-author-details {
-        font-size: 1.2rem;
-    }
-
-    .project__technology__stories-text-info, .project__solution-text {
-        font-size: 1.4rem;
-    }
-
     .project__background-wrapper {
-        flex-wrap: wrap;
         padding-bottom: 2.5rem;
-    }
-
-    .project__background-text-box {
-        width: 100%;
-        margin-bottom: 1rem;
-    }
-
-    .project__background-img-box {
-        margin: 0 auto;
-        width: 50%;
     }
 
     .project__approach__info__card--header {
         padding: 1.2rem;
     }
 
-    .project__technology__stories-paginator-wrapper {
-        width: 6rem;
-        height: 2.5rem;
-        bottom: 4px;
+    .project__technology__stories-header {
+        padding: 0 2rem;
     }
 
     .paginator__arrow {

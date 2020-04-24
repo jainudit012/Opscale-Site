@@ -346,6 +346,10 @@
         margin-bottom: 2rem;
     }
 
+    .about__info--culture-text {
+        font-size: 1.8rem;
+    }
+
     .about__info {
         padding: 3.4rem 12.6rem 0 12.6rem;
     }
@@ -410,10 +414,6 @@
 
     .about__info__card--bold {
         font-size: 2rem;
-    }
-
-    .about__info__card--text {
-        font-size: 1.5rem;
     }
 
     .about__join--box-info-heading {
@@ -502,10 +502,6 @@
 
     .about__info__mission-heading {
         margin-bottom: 3rem;
-    }
-
-    .about__info__mission-text, .about__info--culture-text {
-        font-size: 1.7rem;
     }
 
     .about__info--culture {
