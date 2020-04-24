@@ -597,6 +597,10 @@
         transform: rotateZ(180deg) translateY(-150%);
     }
 
+    .about__info__card--header {
+        padding: 1.2rem;
+    }
+
     .about__mot__cards-box {
         width: 100%;
         padding: 0 3rem;
@@ -605,5 +609,4 @@
     .about__join , .about__info{
         width: 85%;
     }
-
 }

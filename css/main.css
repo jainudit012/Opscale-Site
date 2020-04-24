@@ -3556,6 +3556,10 @@ For displaying pill on nav item HOVER
         width: 95%;
     }
 
+    .sections__arrow-down {
+        margin-right: 0.5rem;
+    }
+
     .card__heading {
         font-size: 2rem;
     }
