@@ -319,7 +319,7 @@
     background-color: #fff;
     display: flex;
     transition: background-color 300ms ease-out;
-    width: 30%;
+    width: 8rem;
     justify-content: center;
     align-items: center;
 }
@@ -334,8 +334,6 @@
 }
 
 .card__img {
-    width: 3rem;
-    height: 3rem;
     fill: #283fd9;
     transition: fill 300ms ease-out;
 }
