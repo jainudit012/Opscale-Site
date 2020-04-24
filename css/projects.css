@@ -156,6 +156,9 @@
     align-self: end;
     background-color: #F7F7F7;
     padding: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .project__approach__info__card--bold {
@@ -167,6 +170,10 @@
     font-size: 1.6rem;
     opacity: 0.7;
     margin-top: 0.9rem;
+}
+
+.project__approach__info__card--header-img {
+    width: 100%;
 }
 
 .project__solution-wrapper {
@@ -240,14 +247,17 @@
     position: absolute;
     bottom: 5px;
     right: 20%;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    display: flex;
+    height: 5rem;
+    width: 12rem
 }
 
 .paginator__box {
-    width: 6rem;
+    width: 50%;
     background-color: #283FD9;
-    padding: 1.2rem 1.2rem 0.6rem 1.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     cursor: pointer;
     transition: background-color 300ms ease-out;
 }
@@ -366,19 +376,19 @@
     display: flex;
     flex-wrap: wrap;
     align-items: flex-start;
-    justify-content: space-between;
+    justify-content: space-evenly;
 }
 
 .project__explore-links {
     padding: 1.3rem 2.4rem;
     font-family: Lato, sans-serif;
-    font-size: 1.4rem;
+    font-size: 1.6rem;
     opacity: 0.3;
     border: 1px solid rgba(21, 21, 21, 1);
     border-radius: 10px;
     color: #131415;
-    width: 18rem;
-    margin: 3rem 1rem 0 0;
+    white-space: nowrap;
+    margin: 2rem 1rem 0 0;
     text-align: center;
 }
 
@@ -539,6 +549,18 @@
         font-size: 2rem
     }
 
+    .project__approach__cards-box {
+        grid-column-gap: 15%;
+    }
+
+    .project__approach__info__card--header {
+        width: 70%;
+    }
+
+    .project__approach__info__card--bold {
+        margin-top: 3.3rem;
+    }
+
     .project__background-wrapper {
         padding: 9.5rem 0;
         width: 80%;
@@ -554,7 +576,7 @@
     }
 
     .author__quote_img {
-        transform: scale(0.8) rotateZ(180deg) translateY(50%);
+        width: 20%;
     }
 
     .project__technology__stories-text-heading {
@@ -571,10 +593,6 @@
 
     .project__approach__info__card--header {
         padding: 2rem;
-    }
-
-    .project__approach__info__card--header-img {
-        transform: scale(0.8)
     }
 
     .project__approach-wrapper {
@@ -610,10 +628,6 @@
         padding: 7.5rem 0;
     }
 
-    .project__approach__cards-box {
-        grid-column-gap: 15%;
-    }
-
     .project__technology__stories-text-info, .project__solution-text {
         font-size: 1.8rem;
     }
@@ -623,8 +637,7 @@
     }
 
     .project__technology__stories-author-img {
-        max-width: 25rem;
-        max-height: 25rem;
+        width: 70%;
     }
 
     .project__technology__stories-text-wrapper {
@@ -632,7 +645,7 @@
     }
 
     .author__quote_img {
-        transform: scale(0.7) rotateZ(180deg) translateY(50%);
+        width: 15%;
     }
 
     .project__explore {
@@ -644,19 +657,15 @@
     }
 
     .project__technology__stories-info-wrapper {
-        padding: 8rem 0;
+        padding: 4rem 0;
     }
 
     .project__cards__section {
         margin-bottom: 10rem;
     }
 
-    .project__approach__info__card--header {
-        padding: 1.5rem;
-    }
-
-    .project__approach__info__card--header-img {
-        transform: scale(0.75)
+    .about__info__card--header {
+        width: 60%;
     }
 
     .project__approach-wrapper {
@@ -668,9 +677,29 @@
     .project__card-header-img {
         max-width: 30rem;
     }
+
+    .project__approach__cards-box {
+        grid-column-gap: 10%;
+    }
+
+    .project__approach__info__card--bold {
+        font-size: 2rem;
+    }
+
+    .project__approach__info__card--text {
+        font-size: 1.5rem;
+    }
+
+    .project__approach__info__card--header {
+        width: 60%;
+    }
 }
 
 @media (max-width:1100px){
+    .project__mast__wrapper {
+        padding: 12.7rem 0 14rem 12.6rem;
+    }
+
     .project__background-text {
         font-size: 1.8rem;
     }
@@ -684,13 +713,307 @@
         max-width: 28rem;
     }
 
+    .project__challenges-wrapper {
+        padding-top: 0;
+    }
+
     .project__approach-wrapper {
         padding: 4rem 0 5.7rem 0;
+    }
+
+    .project__technology__stories-info-wrapper {
+        padding: 5rem 0 4rem 0;
+    }
+
+    .project__cards__section {
+        margin-bottom: 6rem;
+    }
+}
+
+@media (max-width:1000px){
+    .project__mast__wrapper {
+        padding: 12.7rem 0 12rem 10.6rem;
+    }
+
+    .project__technology__stories-header {
+        padding: 0 10rem;
+    }
+
+    .project__technology__stories-author-img-box {
+        width: auto;
+    }
+
+    .project__technology__stories-author-img {
+        width: 60%;
+    }
+}
+
+@media (max-width:800px) {
+    .project__mast__wrapper {
+        padding: 10.7rem 0 10rem 8.6rem;
+    }
+
+    .project__info-detail {
+        font-size: 2rem;
+    }
+
+    .project__background-wrapper {
+        padding: 4.5rem 0;
+        width: 82%;
+    }
+
+    .project__background-heading, .project__challenges-heading, .project__solution-heading {
+        font-size: 2.5rem
+    }
+
+    .project__challenges-wrapper, .project__approach-wrapper, .project__solution-wrapper, .project__technology-wrapper, .project__technology__stories-info-wrapper, .project__explore, .project__cards__section {
+        width: 82%;
+    }
+
+    .project__background-text-box, .project__challenges-text {
+        width: 55%;
+    }
+
+    .project__background-img-box, .project__challenges-list-wrapper {
+        width: 40%;
+    }
+
+    .project__approach-heading {
+        font-size: 2.5rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .project__approach__cards-box {
+        width: 100%;
+        padding: 2rem 0;
+        grid-column-gap: 5%;
+    }
+
+    .project__solution-wrapper {
+        flex-wrap: wrap;
+    }
+
+    .project__solution-info {
+        width: 100%;
+    }
+
+    .project__solution-img-box {
+        width: 50%;
+        margin: 0 auto;
+    }
+
+    .project__technology-img {
+        width: 12%;
+    }
+
+    .project__technology__stories-paginator-wrapper {
+        width: 10rem;
+        height: 4.5rem;
+        bottom: 4px;
+    }
+
+    .paginator__arrow {
+        transform: scale(0.6);
+    }
+
+    .project__technology__stories-info{
+        justify-content: center;
+    }
+
+    .project__technology__stories-author {
+        padding-left: 0;
+        width: 30%;
+    }
+
+    .project__technology__stories-author-img-box {
+        margin-bottom: 1.5rem;
+    }
+
+    .project__technology__stories-author-name {
+        font-size: 2.25rem;
+    }
+
+    .project__technology__stories-author-details {
+        font-size: 1.4rem;
+        width: 80%;
+    }
+
+    .project__technology__stories-text-heading {
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+    }
+
+    .project__technology__stories-author-img {
+        width: 50%;
+    }
+
+    .project__technology__stories-text-info, .project__solution-text {
+        font-size: 1.6rem;
+    }
+
+    .project__explore {
+        margin: 2rem auto;
+    }
+
+    .project__explore-links {
+        margin: 1.5rem 1rem 0 0;
+        padding: 1rem 2rem;
+        font-size: 1.5rem;
+    }
+
+}
+
+@media (max-width:700px) {
+    .project__technology__stories-paginator-wrapper {
+        bottom: 3px;
+    }
+}
+
+@media (max-width:600px) {
+    .project__mast__wrapper {
+        padding: 8.7rem 0 6rem 4.6rem;
+    }
+
+    .project__info-detail {
+        width: 50%;
+    }
+
+    .project__background-wrapper, .project__challenges-wrapper, .project__approach-wrapper, .project__solution-wrapper, .project__technology-wrapper, .project__technology__stories-info-wrapper, .project__explore, .project__cards__section {
+        width: 85%;
+    }
+
+    .project__challenges-wrapper {
+        padding-bottom: 1rem;
+    }
+
+    .project__background-text, .project__challenges-text, .project__challenges-list-wrapper {
+        font-size: 1.6rem;
+    }
+
+    .project__approach-wrapper {
+        padding: 2rem 0;
+    }
+
+    .project__approach__info__card--header {
+        width: 50%;
+        padding: 1.5rem
+    }
+
+    .project__approach__info__card--bold {
+        font-size: 1.8rem;
+    }
+
+    .project__approach__info__card--text {
+        font-size: 1.4rem;
+    }
+
+    .project__technology__stories-author-img {
+        width: 40%;
+    }
+
+    .project__technology__stories-text-heading, .project__technology__stories-author-name {
+        font-size: 2rem;
+    }
+
+    .author__quote_img { 
+        width: 12%;
+    }
+
+    .project__technology__stories-text-info, .project__solution-text {
+        font-size: 1.5rem;
+    }
+
+    .project__technology__stories-paginator-wrapper {
+        width: 8rem;
+        height: 3.5rem;
+    }
+
+    .paginator__arrow {
+        transform: scale(0.5)
     }
 }
 
 @media (max-width:500px) {
     .project__name--pill {
         width: 2rem;
+    }
+
+    .project__technology__stories-header {
+        padding: 0 6rem;
+    }
+
+    .project__technology__stories-info-wrapper {
+        padding: 1rem 0 2rem 0;
+    }
+
+    .project__technology__stories-info {
+        flex-wrap: wrap;
+    }
+
+    .project__technology__stories-author, .project__technology__stories-text-wrapper {
+        width: 80%;
+    }
+
+    .project__technology__stories-author-img {
+        width: 20%;
+    }
+
+    .project__technology__stories-text-wrapper {
+        margin-top: 1rem;
+    }
+
+    .project__technology__stories-text-heading {
+        margin-bottom: 0;
+    }
+}
+
+@media (max-width:425px) {
+    .project__client-name {
+        font-size: 2rem;
+    }
+
+    .project__industry-name {
+        font-size: 1.6rem
+    }
+
+    .project__info-detail, .project__technology__stories-author-name, .project__technology__stories-text-heading {
+        font-size: 1.8rem;
+    }
+
+    .project__technology__stories-author-details {
+        font-size: 1.2rem;
+    }
+
+    .project__technology__stories-text-info, .project__solution-text {
+        font-size: 1.4rem;
+    }
+
+    .project__background-wrapper {
+        flex-wrap: wrap;
+        padding-bottom: 2.5rem;
+    }
+
+    .project__background-text-box {
+        width: 100%;
+        margin-bottom: 1rem;
+    }
+
+    .project__background-img-box {
+        margin: 0 auto;
+        width: 50%;
+    }
+
+    .project__approach__info__card--header {
+        padding: 1.2rem;
+    }
+
+    .project__technology__stories-paginator-wrapper {
+        width: 6rem;
+        height: 2.5rem;
+        bottom: 4px;
+    }
+
+    .paginator__arrow {
+        transform: scale(0.4)
     }
 }
