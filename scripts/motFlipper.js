@@ -42,10 +42,10 @@ try{
     
     addSwipeEvents(motFlipperData.items, 
         target => {
-            if(target.id.indexOf('1') !== -1) return;
+            if(target.id.indexOf('1') !== -1 || isButtonDisabled(motPrevBtn, motClassConfig.disabledPaginationClass)) return;
             motPrevBtn.click() },
         target => {
-            if(target.id.indexOf(motFlipperData.items.length) !== -1) return;
+            if(target.id.indexOf(motFlipperData.items.length) !== -1 || isButtonDisabled(motNextBtn, motClassConfig.disabledPaginationClass)) return;
             motNextBtn.click() })
 
     if(window.location.pathname !== '/about.html'){

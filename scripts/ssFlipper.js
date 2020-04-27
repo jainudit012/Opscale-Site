@@ -27,10 +27,10 @@ try{
 
     addSwipeEvents(flipperData.items, 
         target => {
-            if(target.id.indexOf('1') !== -1) return;
+            if(target.id.indexOf('1') !== -1 || isButtonDisabled(ssPanelBckBtn, classConfig.disabledPaginationClass)) return;
             ssPanelBckBtn.click() },
         target => {
-            if(target.id.indexOf(flipperData.items.length) !== -1) return;
+            if(target.id.indexOf(flipperData.items.length) !== -1 || isButtonDisabled(ssPanelFwdBtn, classConfig.disabledPaginationClass)) return;
             ssPanelFwdBtn.click() })
 
     ssPanelMobileFwdBtn.addEventListener('click', ()=>{

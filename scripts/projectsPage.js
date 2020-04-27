@@ -75,10 +75,11 @@ try{
 
                     addSwipeEvents(storiesData.items,
                         target => {
-                            if(target.id.indexOf('story-1') !== -1) return;
+                            console.log()
+                            if(target.id.indexOf('story-1') !== -1 || isButtonDisabled(projectBackBtn, classConfig.disabledPaginationClass)) return;
                             projectBackBtn.click() },
                         target => {
-                            if(target.id.indexOf(storiesData.items.length) !== -1) return;
+                            if(target.id.indexOf(storiesData.items.length) !== -1 || isButtonDisabled(projectNextBtn, classConfig.disabledPaginationClass)) return;
                             projectNextBtn.click() })
                 }
             }

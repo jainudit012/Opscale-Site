@@ -8,6 +8,13 @@ try{
         siteNavOverlay.addEventListener('click', ()=>{
             sideNavToggleInput.checked = false
         })
+
+        addSwipeEvents([siteNavOverlay, window], 
+            () => {
+                sideNavToggleInput.checked = true
+                },
+            () => {
+                sideNavToggleInput.checked = false})
     }
 
     if(siteHeader){

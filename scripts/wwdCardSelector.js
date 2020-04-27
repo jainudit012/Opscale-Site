@@ -25,10 +25,10 @@ try {
         addSelectItemListener(allCardData.items, 'card__selected', false)
         addSwipeEvents(allCardData.items, 
             target => {
-                if(target.id.indexOf('1') !== -1) return;
+                if(target.id.indexOf('1') !== -1 || isButtonDisabled(wwdBackBtn, classConfig.disabledPaginationClass)) return;
                 wwdBackBtn.click() },
             target => {
-                if(target.id.indexOf(allCardData.items.length) !== -1) return;
+                if(target.id.indexOf(allCardData.items.length) !== -1 || isButtonDisabled(wwdNextBtn, classConfig.disabledPaginationClass)) return;
                 wwdNextBtn.click() })
         otherPaginate(allCardData.items, classConfig, null)
     }

@@ -111,12 +111,12 @@ try{
         })
 
         mobileProjectPaginationFwd.addEventListener('click', ()=>{
-            if(mobileProjectPaginationFwd.className.indexOf('hidden') > -1 || mobileProjectPaginationFwd.className.indexOf('mobile-paginator-disabled') > -1) return;
+            if(isButtonDisabled(mobileProjectPaginationFwd, classConfigOfPanels.mobileDisabledPaginationClass)) return;
             projectPaginationFwd.click()
         })
 
         mobileProjectPaginationBck.addEventListener('click', ()=>{
-            if(mobileProjectPaginationBck.className.indexOf('mobile-paginator-disabled') > -1 || mobileProjectPaginationBck.className.indexOf('hidden') > -1 ) return;
+            if(isButtonDisabled(mobileProjectPaginationBck, classConfigOfPanels.mobileDisabledPaginationClass)) return;
             projectPaginationBck.click()
         })
 

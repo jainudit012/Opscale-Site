@@ -188,3 +188,8 @@ function handleTouchMove(event, backCallback, nextCallback, wrapperElement){
     elXOffset = null;
     elYOffset = null;
 }
+
+function isButtonDisabled(buttonElement, disabledClass) {
+    if(buttonElement.className.indexOf('hidden') > -1 || buttonElement.className.indexOf(disabledClass) > -1) return true;
+    else return false
+}
