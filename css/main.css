@@ -3055,11 +3055,11 @@ For displaying pill on nav item HOVER
     .mot__cards {
         grid-column: 1/-1;
         grid-template-rows: 44% 56%;
+        border-bottom: none;
     }
 
     .mot__cards--front {
         transform: translateX(0);
-        border-bottom: none;
     }
 
     .mot__cards--next , .mot__cards--back {
