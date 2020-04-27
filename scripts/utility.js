@@ -90,7 +90,7 @@ function loadElementsToArray(idPattern, itemsWrapper){
  * 
  * @param {Array[HtmlElement]} itemsArray array of HTML elements on which a click event is to be added
  * @param {String} className the className to be toggled on the selected item
- * @param {Boolean} raiseSelectedEvent state whether an event of item selection should be raised or not
+ * @param {Boolean} raiseSelectedEvent state whether an event of item selection should dispatch further events or not
  */
 function addSelectItemListener(itemsArray, className, raiseSelectedEvent){
     itemsArray.forEach(item => {
