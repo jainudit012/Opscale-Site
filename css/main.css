@@ -2912,6 +2912,7 @@ For displaying pill on nav item HOVER
         grid-template-columns: 0.5fr 2fr 0.5fr;
         grid-column-gap: 1rem;
         grid-template-rows: 30% 50% 20%;
+        border-bottom: 3px solid transparent;
     }
 
     .ii__card--selected {
