@@ -150,3 +150,41 @@ function changeHashToQuery(queryName, defaultState){
 function isMobile(){
     return true ? (window.outerWidth < 801 || window.innerWidth < 801): false
 }
+
+let elXOffset = null
+let elYOffset = null
+
+function addSwipeEvents(itemsArray, backSwipeCallback, nextSwipeCallback){
+    itemsArray.forEach(element => {
+        element.addEventListener('touchstart', handleTouchStart, false)
+        element.addEventListener('touchmove', e => handleTouchMove(e, backSwipeCallback, nextSwipeCallback, element), false)
+    })
+}
+
+function handleTouchStart(event){
+    elXOffset = event.touches[0].clientX
+    elYOffset = event.touches[0].clientY
+}
+
+function handleTouchMove(event, backCallback, nextCallback, wrapperElement){
+    if(!elXOffset || !elYOffset || window.innerWidth > 800 || window.outerWidth > 800) return;
+
+    let xPos = event.touches[0].clientX
+    let yPos = event.touches[0].clientY
+    
+    let xDiff = xPos - elXOffset
+    let yDiff = yPos - elYOffset
+
+    if ( Math.abs( xDiff ) > Math.abs( yDiff ) ) {/*most significant*/
+        if ( xDiff > 0 ) {
+            backCallback(wrapperElement)
+            /* left swipe */ 
+        } else {
+            nextCallback(wrapperElement)
+            /* right swipe */
+        }                       
+    }
+    /* reset values */
+    elXOffset = null;
+    elYOffset = null;
+}
