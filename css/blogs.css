@@ -171,7 +171,6 @@ div.blog__content::after {
 }
 
 .blog__quote_img {
-    height: 100%;
     transform: translateY(-60%);
     width: 15%;
     margin-right: 0.5rem;

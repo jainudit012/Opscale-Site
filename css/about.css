@@ -55,8 +55,7 @@
 
 .about__info__mission-quotes {
     width: 9%;
-    height: 100%;
-    transform: rotateZ(180deg) translateY(-25%);
+    transform: rotateZ(180deg) translateY(25%);
 }
 
 .about__info--culture {
@@ -302,7 +301,7 @@
 
     .about__info__mission-quotes {
         width: 8%;
-        transform: rotateZ(180deg) translateY(-30%);
+        transform: rotateZ(180deg) translateY(30%);
     }
 
     .about__info__cards-box {
@@ -437,7 +436,6 @@
 
     .about__info__mission-quotes {
         width: 6%;
-        transform: rotateZ(180deg) translateY(-80%);
     }
 
     .about__mot {
@@ -479,6 +477,10 @@
 
     .about__main-heading, .about__info__mission-heading, .about__mot--heading, .about__info--culture , .about__join--heading {
         font-size: 2.75rem;
+    }
+
+    .about__info__mission-quotes {
+        transform: rotateZ(180deg) translateY(35%);
     }
 
     .about__info__mission, .about__info--culture-text {
@@ -537,6 +539,10 @@
         grid-template-rows: 44% 56%;
     }
 
+    .about__mot__card:hover .mot__cards__body {
+        border-bottom: 5px solid transparent;
+    }
+
     .mot__cards--front {
         transform: translateX(0);
     }
@@ -561,7 +567,7 @@
 
 @media (max-width:600px){
     .about__info__mission-quotes {
-        transform: rotateZ(180deg) translateY(-125%);
+        transform: rotateZ(180deg) translateY(40%);
     }
 
     .about__info__card--header {
@@ -588,11 +594,7 @@
     .about__main-text {
         width: 70%;
     }
-
-    .about__info__mission-quotes {
-        transform: rotateZ(180deg) translateY(-150%);
-    }
-
+    
     .about__info__card--header {
         padding: 1.2rem;
     }
