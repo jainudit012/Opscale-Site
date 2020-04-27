@@ -25,6 +25,14 @@ const classConfig = {
 try{
     otherPaginate(flipperData.items, classConfig, null)
 
+    addSwipeEvents(flipperData.items, 
+        target => {
+            if(target.id.indexOf('1') !== -1) return;
+            ssPanelBckBtn.click() },
+        target => {
+            if(target.id.indexOf(flipperData.items.length) !== -1) return;
+            ssPanelFwdBtn.click() })
+
     ssPanelMobileFwdBtn.addEventListener('click', ()=>{
         ssPanelFwdBtn.click()
     })
