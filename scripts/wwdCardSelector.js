@@ -29,8 +29,7 @@ try {
                 wwdBackBtn.click() },
             target => {
                 if(target.id.indexOf(allCardData.items.length) !== -1) return;
-                wwdNextBtn.click() }
-            )
+                wwdNextBtn.click() })
         otherPaginate(allCardData.items, classConfig, null)
     }
 }catch(err){
