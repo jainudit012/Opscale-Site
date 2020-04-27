@@ -26,17 +26,20 @@
 
 .sidenav__toggle__label {
     display: none;
+    -webkit-tap-highlight-color: transparent;
     cursor: pointer;
 }
 
 .nav__expandlist__icon {
     display: none;
     cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
     transition: transform 300ms ease-out;
 }
 
 .nav__logo__link {
     cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
 }
 
 .nav__logo {
@@ -66,6 +69,7 @@
     display: block;
     padding: 3.15rem 2rem;
     cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
     color: #ffffff;
     text-align: center;
 }
@@ -181,6 +185,7 @@
 
 .sections__button-group__link {
     cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
     color: #fff;
     display: flex;
     align-items: center;
@@ -420,6 +425,7 @@
     margin-bottom: 2.5rem;
     height: 5rem;
     cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
     transition: transform 400ms ease-out, opacity 400ms ease-out;
 }
 
@@ -599,6 +605,7 @@
 .site__info-rp__panels__description-btn {
     display: inline-block;
     cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
     color: #ffffff;
     text-decoration: none;
     border: 1px solid #fff;
@@ -887,6 +894,7 @@
     line-height: 1.35;
     font-size: 2rem;
     cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
 }
 
 .ii__nav-item__heading {
@@ -938,6 +946,7 @@ For displaying pill on nav item HOVER
 .ii__card {
     font-family: Lato, sans-serif;
     cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
     border-bottom: 5px solid transparent;
     animation: fadeIn 500ms;
     transition: all 200ms ease-in;
@@ -1076,6 +1085,7 @@ For displaying pill on nav item HOVER
     border-radius: 20px;
     cursor: pointer;
     transition: all 300ms ease-in;
+    -webkit-tap-highlight-color: transparent;
 }
 
 .wcu__card__img {
@@ -1165,6 +1175,7 @@ For displaying pill on nav item HOVER
     display: flex;
     align-items: baseline;
     cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
 }
 
 .mot__info__sub-heading {
@@ -1294,6 +1305,7 @@ For displaying pill on nav item HOVER
 
 .mot__cards__footer--link {
     cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
     display: flex;
     margin-right: 5rem;
 }
@@ -1401,6 +1413,7 @@ For displaying pill on nav item HOVER
     border: 1px solid #151515;
     border-radius: 5px;
     cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
 }
 
 
@@ -1414,6 +1427,7 @@ For displaying pill on nav item HOVER
     padding: 3rem;
     border-radius: 50%;
     cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
     transition: all 200ms ease-in;
 }
 
@@ -1531,6 +1545,7 @@ For displaying pill on nav item HOVER
     padding: 2rem;
     margin-left: auto;
     cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
 }
 
 .contact__footer--box > .footer__site-sections__links {
@@ -2674,6 +2689,7 @@ For displaying pill on nav item HOVER
         padding: 1rem;
         z-index: 5;
         cursor: pointer;
+        -webkit-tap-highlight-color: transparent;
     }
 
     .site__info-rp__fixed {

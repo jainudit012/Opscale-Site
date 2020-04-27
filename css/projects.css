@@ -390,6 +390,7 @@
     white-space: nowrap;
     margin: 2rem 1rem 0 0;
     text-align: center;
+    -webkit-tap-highlight-color: transparent;
 }
 
 .project__cards__section {

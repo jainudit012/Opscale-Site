@@ -204,6 +204,7 @@
     border-radius: 9px;
     margin-top: 2rem;
     cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
 }
 
 .about__join--info {
