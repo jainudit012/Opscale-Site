@@ -2980,11 +2980,6 @@ For displaying pill on nav item HOVER
         margin-bottom: 5rem;
     }
 
-    .wcu__container {
-        width: 85%;
-        margin: 0 auto;
-    }
-
     .wcu__card {
         padding: 0 2rem 2rem 2rem;
     }
@@ -3210,6 +3205,7 @@ For displaying pill on nav item HOVER
     .wcu__container {
         flex-direction: column;
         width: 80%;
+        margin: 0 auto;
     }
 
     .wcu__card {
