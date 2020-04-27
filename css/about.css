@@ -54,7 +54,7 @@
 }
 
 .about__info__mission-quotes {
-    width: 9%;
+    width: 5%;
     transform: rotateZ(180deg) translateY(25%);
 }
 
@@ -256,6 +256,10 @@
         margin-bottom: 4.9rem;
     }
 
+    .about__info__mission-quotes {
+        transform: rotateZ(180deg) translateY(30%);
+    }
+
     .about__info--culture {
         font-size: 4rem;
         padding-top: 4rem;
@@ -300,11 +304,6 @@
         padding: 4.4rem 16.6rem 0 16.6rem;
     }
 
-    .about__info__mission-quotes {
-        width: 8%;
-        transform: rotateZ(180deg) translateY(30%);
-    }
-
     .about__info__cards-box {
         padding: 10.2rem 0 8.2rem 0;
         grid-column-gap: 15%;
@@ -344,6 +343,10 @@
     .about__info__mission-text {
         font-size: 1.8rem;
         margin-bottom: 2rem;
+    }
+
+    .about__info__mission-quotes {
+        transform: rotateZ(180deg) translateY(27%);
     }
 
     .about__info--culture-text {
@@ -433,10 +436,6 @@
 
     .about__info {
         padding: 2.4rem 10.6rem 0 10.6rem;
-    }
-
-    .about__info__mission-quotes {
-        width: 6%;
     }
 
     .about__mot {

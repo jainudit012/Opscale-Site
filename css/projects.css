@@ -352,8 +352,10 @@
 }
 
 .author__quote_img {
-    height: 100%;
-    transform: rotateZ(180deg) translateY(50%);
+    align-self: flex-start;
+    width: 40%;
+    transform: rotateZ(180deg) translate(50%, 70%);
+    margin: 0 0 0 2.5rem;
 }
 
 .project__technology__stories-text-info {
@@ -531,6 +533,10 @@
     .project__challenges-list-wrapper {
         font-size: 2.5rem;
     }
+
+    .author__quote_img {
+        transform: rotateZ(180deg) translate(40%, 60%);
+    }
 }
 
 @media (max-width:1500px){
@@ -574,10 +580,6 @@
     .project__explore {
         width: 80%;
         margin: 4.6rem auto;
-    }
-
-    .author__quote_img {
-        width: 20%;
     }
 
     .project__technology__stories-text-heading {
@@ -646,7 +648,7 @@
     }
 
     .author__quote_img {
-        width: 15%;
+        width: 30%;
     }
 
     .project__explore {
@@ -928,10 +930,6 @@
 
     .project__technology__stories-text-heading, .project__technology__stories-author-name {
         font-size: 2rem;
-    }
-
-    .author__quote_img { 
-        width: 12%;
     }
 
     .project__technology__stories-paginator-wrapper {
