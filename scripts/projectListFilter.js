@@ -93,6 +93,12 @@ try{
     
         otherPaginate(filteredData, classConfigOfPanels, sectionWrapper)
 
+        addSwipeEvents(filteredData, 
+            () => {
+                mobileProjectPaginationBck.click() },
+            () => {
+                mobileProjectPaginationFwd.click() })
+
         window.addEventListener('resize', () => {
             isMobileDevice = isMobile()
 
@@ -105,10 +111,12 @@ try{
         })
 
         mobileProjectPaginationFwd.addEventListener('click', ()=>{
+            if(mobileProjectPaginationFwd.className.indexOf('hidden') > -1 || mobileProjectPaginationFwd.className.indexOf('mobile-paginator-disabled') > -1) return;
             projectPaginationFwd.click()
         })
 
         mobileProjectPaginationBck.addEventListener('click', ()=>{
+            if(mobileProjectPaginationBck.className.indexOf('mobile-paginator-disabled') > -1 || mobileProjectPaginationBck.className.indexOf('hidden') > -1 ) return;
             projectPaginationBck.click()
         })
 
