@@ -18,6 +18,7 @@ if(window.location.pathname !== '/about.html'){
     motCardsWrapper = document.getElementById('about__mot__cards-box')
     motFlipperData = loadElementsToArray('about__mot__card-', motCardsWrapper)
 
+    // about page only has mobile pagination
     motNextBtn = document.getElementById('mot__card-fwd')
     motPrevBtn = document.getElementById('mot__card-bck')
 }
@@ -38,6 +39,14 @@ const motClassConfig = {
 
 try{
     otherPaginate(motFlipperData.items, motClassConfig, null)
+    
+    addSwipeEvents(motFlipperData.items, 
+        target => {
+            if(target.id.indexOf('1') !== -1) return;
+            motPrevBtn.click() },
+        target => {
+            if(target.id.indexOf(motFlipperData.items.length) !== -1) return;
+            motNextBtn.click() })
 
     if(window.location.pathname !== '/about.html'){
         mobileMotNextBtn.addEventListener('click', ()=>{
