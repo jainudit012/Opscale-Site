@@ -72,6 +72,14 @@ try{
                     }
 
                     otherPaginate(storiesData.items, classConfig, null)
+
+                    addSwipeEvents(storiesData.items,
+                        target => {
+                            if(target.id.indexOf('story-1') !== -1) return;
+                            projectBackBtn.click() },
+                        target => {
+                            if(target.id.indexOf(storiesData.items.length) !== -1) return;
+                            projectNextBtn.click() })
                 }
             }
         })
