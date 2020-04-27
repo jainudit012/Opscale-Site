@@ -167,7 +167,7 @@ function handleTouchStart(event){
 }
 
 function handleTouchMove(event, backCallback, nextCallback, wrapperElement){
-    if(!elXOffset || !elYOffset || window.innerWidth > 800 || window.outerWidth > 800) return;
+    if(!elXOffset || !elYOffset || !isMobile()) return;
 
     let xPos = event.touches[0].clientX
     let yPos = event.touches[0].clientY
