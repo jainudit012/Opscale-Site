@@ -154,10 +154,21 @@ function isMobile(){
 let elXOffset = null
 let elYOffset = null
 
+let supportsPassive = false;
+try {
+  const opts = Object.defineProperty({}, 'passive', {
+    get: function() {
+      supportsPassive = true;
+    }
+  });
+  window.addEventListener("testPassive", null, opts);
+  window.removeEventListener("testPassive", null, opts);
+} catch (e) {}
+
 function addSwipeEvents(itemsArray, backSwipeCallback, nextSwipeCallback){
     itemsArray.forEach(element => {
-        element.addEventListener('touchstart', handleTouchStart, false)
-        element.addEventListener('touchmove', e => handleTouchMove(e, backSwipeCallback, nextSwipeCallback, element), false)
+        element.addEventListener('touchstart', handleTouchStart, supportsPassive ? {passive: true} : false)
+        element.addEventListener('touchmove', e => handleTouchMove(e, backSwipeCallback, nextSwipeCallback, element), supportsPassive ? {passive: true} : false)
     })
 }
 
