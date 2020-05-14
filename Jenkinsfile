@@ -9,13 +9,11 @@ pipeline {
   stages {
     stage('build') {
       steps {
-        sh '''npm install -g postcss-cli
-              
-              npm install
-
-              npm run build:prod
+        sh '''npm install
+npm run build:prod
           '''
       }
     }
+
   }
 }
