@@ -4,24 +4,8 @@
 }
 
 .project__mast__wrapper {
-    padding: 22.7rem 0 24rem 22.6rem;
+    padding: 31rem 0 24rem 22.6rem;
     color: #fff;
-}
-
-#project-1 .project__mast__wrapper {
-    background: linear-gradient(90deg, rgba(9, 7, 10, 0.9) 38%, rgba(224, 228, 238, 0.1) 80%), -webkit-image-set( url('../assets/phone_background.jpg') 1x, url('../assets/phone_background@2x.jpg') 2x);
-    background-image: linear-gradient(90deg, rgba(9, 7, 10, 0.9) 38%, rgba(224, 228, 238, 0.1) 80%), url('../assets/phone_background.jpg');
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-#project-2 .project__mast__wrapper, #project-3 .project__mast__wrapper ,  #project-4 .project__mast__wrapper, #project-5 .project__mast__wrapper , #project-6 .project__mast__wrapper,
-#project-7 .project__mast__wrapper, #project-8 .project__mast__wrapper, #project-9 .project__mast__wrapper, #project-10 .project__mast__wrapper, #project-11 .project__mast__wrapper {
-    background-image: linear-gradient(62deg, rgba(9, 7, 10, 0.85) 43%, rgba(224, 228, 238, 0.1) 120%), url('../assets/watch.jpg');
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
 }
 
 .project__name__box {
@@ -225,7 +209,7 @@
 
 .project__technology-img-wrapper {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     align-items: center;
 }
 
@@ -520,6 +504,15 @@
     border-bottom: 0.5rem solid #283FD9;
 }
 
+.page-404 {
+    padding-top: 15rem;
+}
+
+.page-404 > h2 {
+    text-align: center;
+    font-size: 2.5rem;
+}
+
 @media (max-width:1700px){
     .project__background-heading, .project__challenges-heading, .project__solution-heading {
         font-size: 4rem;
@@ -541,7 +534,7 @@
 
 @media (max-width:1500px){
     .project__mast__wrapper {
-        padding: 18.7rem 0 20rem 18.6rem;
+        padding: 28rem 0 20rem 18.6rem;
     }
 
     .project__info-detail {
@@ -602,11 +595,15 @@
         width: 80%;
         padding: 16rem 0 9.7rem 0;
     }
+
+    .page-404 {
+        padding-top: 12rem;
+    }
 }
 
 @media (max-width:1300px){
     .project__mast__wrapper {
-        padding: 14.7rem 0 16rem 14.6rem;
+        padding: 20rem 0 16rem 14.6rem;
     }
 
     .project__background-heading, .project__challenges-heading, .project__solution-heading {
@@ -674,6 +671,10 @@
     .project__approach-wrapper {
         padding: 8rem 0 8.7rem 0;
     }
+
+    .page-404 {
+        padding-top: 10rem;
+    }
 }
 
 @media (max-width:1200px){
@@ -700,7 +701,7 @@
 
 @media (max-width:1100px){
     .project__mast__wrapper {
-        padding: 12.7rem 0 14rem 12.6rem;
+        padding: 18rem 0 14rem 12.6rem;
     }
 
     .project__background-text, .project__challenges-text, .project__challenges-list-text {
@@ -735,7 +736,7 @@
 
 @media (max-width:1000px){
     .project__mast__wrapper {
-        padding: 12.7rem 0 12rem 10.6rem;
+        padding: 16rem 0 12rem 10.6rem;
     }
 
     .project__technology__stories-header {
@@ -753,7 +754,7 @@
 
 @media (max-width:800px) {
     .project__mast__wrapper {
-        padding: 10.7rem 0 10rem 8.6rem;
+        padding: 12rem 0 10rem 8.6rem;
     }
 
     .project__info-detail {
@@ -864,6 +865,9 @@
         display: none;
     }
 
+    .page-404 {
+        padding-top: 7rem;
+    }
 }
 
 @media (max-width:700px) {
@@ -874,7 +878,7 @@
 
 @media (max-width:600px) {
     .project__mast__wrapper {
-        padding: 8.7rem 0 6rem 4.6rem;
+        padding: 7rem 0 6rem 4.6rem;
     }
 
     .project__info-detail {
@@ -939,6 +943,11 @@
 
     .paginator__arrow {
         transform: scale(0.5)
+    }
+
+    .page-404 {
+        padding-top: 5rem;
+        margin-bottom: 3rem;
     }
 }
 
