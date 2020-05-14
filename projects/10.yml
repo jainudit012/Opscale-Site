@@ -1,0 +1,73 @@
+id: 10
+clientName: 'Client Name'
+industry: Industry
+projectName: 'Project Name'
+heading: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr'
+description: 'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using'
+tag: enr
+exploreName: '#Energy'
+card:
+  imageUrl: 'https://res.cloudinary.com/opscale/image/upload/q_auto/v1585720629/watch_zrqqzh.jpg'
+  imageSrcSetUrl: 'https://res.cloudinary.com/opscale/image/upload/q_auto/v1585720629/watch_zrqqzh.jpg 1x, https://res.cloudinary.com/opscale/image/upload/q_auto/v1585720630/watch_2x_liioz0.jpg 2x, https://res.cloudinary.com/opscale/image/upload/q_auto/v1585720629/watch_3x_br9roo.jpg 3x'
+  altName: watch
+  backgroundStyle: "background-image: linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.95)), url('https://res.cloudinary.com/opscale/image/upload/q_auto/v1585720629/watch_zrqqzh.jpg'); \n background: linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.95)), -webkit-image-set( url('https://res.cloudinary.com/opscale/image/upload/q_auto/v1585720629/watch_zrqqzh.jpg') 1x, url('https://res.cloudinary.com/opscale/image/upload/q_auto/v1585720630/watch_2x_liioz0.jpg') 2x, url('https://res.cloudinary.com/opscale/image/upload/q_auto/v1585720629/watch_3x_br9roo.jpg') 3x); \n background-size: cover; \n background-position: center; \n background-repeat: no-repeat;"
+mastImageStyle: "background-image: linear-gradient(62deg, rgba(9, 7, 10, 0.85) 43%, rgba(224, 228, 238, 0.1) 120%), url(../assets/watch.jpg);\n                         background-position: center;\n                         background-repeat: no-repeat;\n                         background-size: cover;"
+background: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam'
+challenges:
+  info: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam'
+  steps:
+      - 'Lorem ipsum dolor sit amet, consetetur'
+      - 'Lorem ipsum dolor sit amet'
+      - 'Lorem ipsum dolor sit amet, consetetur'
+approach:
+  -
+      heading: 'Limit Scope'
+      text: 'Maintaining excellence requires continual learning and personal growth, that is why at Opscale, we encourage a learning environment for everyone.'
+  -
+      heading: 'Minimise Efforts'
+      text: 'We’re all here to help each other climb as high as possible in the work that we do and catch each other if we fall.'
+  -
+      heading: 'Leverage Wisdom'
+      text: 'Trust is built over time, with dedication and integrity. With integrity comes a healthy & fair environment for all to grow.'
+solution:
+  - 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam'
+  - 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam'
+technologies:
+  - redux
+  - java
+  - react
+  - spring
+  - node
+  - python
+  - postgres
+ssHeaderImageUrl: 'https://res.cloudinary.com/opscale/image/upload/q_auto/v1586876078/laptop_bg_wbbsd9.jpg'
+ssHeaderImageSrcSetUrl: 'https://res.cloudinary.com/opscale/image/upload/q_auto/v1586876078/laptop_bg_wbbsd9.jpg 1x, https://res.cloudinary.com/opscale/image/upload/q_auto/v1586876078/laptop_bg_2x_avjmo1.jpg 2x'
+ssHeaderImageAlt: 'Working Man'
+stories:
+  -
+      data:
+        userImageUrl: 'https://res.cloudinary.com/opscale/image/upload/q_auto/v1586871685/johan_ejicep.jpg'
+        userImageSrcSetUrl: 'https://res.cloudinary.com/opscale/image/upload/q_auto/v1586871685/johan_ejicep.jpg 1x, https://res.cloudinary.com/opscale/image/upload/q_auto/v1586871686/johan_2x_uhq5iv.jpg 2x, https://res.cloudinary.com/opscale/image/upload/q_auto/v1586871686/johan_3x_pdadzc.jpg 3x'
+        userName: 'Johan Khalili'
+        userDesignation: 'Research Scientist at MD Anderson Cancer Center Texas'
+        heading: 'Amazing Determination to Quality'
+        info: 'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.'
+      featured: false
+  -
+      data:
+        userImageUrl: 'https://res.cloudinary.com/opscale/image/upload/q_auto/v1586871685/johan_ejicep.jpg'
+        userImageSrcSetUrl: 'https://res.cloudinary.com/opscale/image/upload/q_auto/v1586871685/johan_ejicep.jpg 1x, https://res.cloudinary.com/opscale/image/upload/q_auto/v1586871686/johan_2x_uhq5iv.jpg 2x, https://res.cloudinary.com/opscale/image/upload/q_auto/v1586871686/johan_3x_pdadzc.jpg 3x'
+        userName: 'Johan Khalili'
+        userDesignation: 'Research Scientist at MD Anderson Cancer Center Texas'
+        heading: 'Amazing Determination to Quality'
+        info: 'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.'
+      featured: false
+  -
+      data:
+        userImageUrl: 'https://res.cloudinary.com/opscale/image/upload/q_auto/v1586871685/johan_ejicep.jpg'
+        userImageSrcSetUrl: 'https://res.cloudinary.com/opscale/image/upload/q_auto/v1586871685/johan_ejicep.jpg 1x, https://res.cloudinary.com/opscale/image/upload/q_auto/v1586871686/johan_2x_uhq5iv.jpg 2x, https://res.cloudinary.com/opscale/image/upload/q_auto/v1586871686/johan_3x_pdadzc.jpg 3x'
+        userName: 'Johan Khalili'
+        userDesignation: 'Research Scientist at MD Anderson Cancer Center Texas'
+        heading: 'Amazing Determination to Quality'
+        info: 'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.'
+      featured: false
