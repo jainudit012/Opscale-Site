@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Opscale Technologies Project Detail">
+    <title>Project Detail</title>
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/base.css">
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/projects.css">
+    <script src="./scripts/utility.js" defer></script>
+    <script src="./scripts/sideNav.js" defer></script>
+    <script src="./scripts/floatingIcon.js" defer></script>
+    <script src="./scripts/paginator.js" defer></script>
+    <script src="./scripts/carousel.js" defer></script>
+    <script src="./scripts/projectsPage.js" defer></script>
+</head>
+<body>
+    <header class="site__header" id="site__header">
+        <nav class="site__nav">
+          <input type="checkbox" id="sidenav__toggle" class="sidenav__toggle__input" role="button">
+          <label for="sidenav__toggle" class="sidenav__toggle__label" aria-label="sidenav-toggle-btn">
+              <svg height="32" viewBox="0 0 32 32" width="32" xmlns="http://www.w3.org/2000/svg" class="sidenav__toggle__icon"><path d="m25.333 22.667h-18.667c-1.471 0-2.667 1.196-2.667 2.667s1.196 2.667 2.667 2.667h18.667c1.471 0 2.667-1.196 2.667-2.667s-1.196-2.667-2.667-2.667z"/><path d="m25.333 13.333h-18.667c-1.471 0-2.667 1.196-2.667 2.667s1.196 2.667 2.667 2.667h18.667c1.471 0 2.667-1.196 2.667-2.667s-1.196-2.667-2.667-2.667z"/><path d="m25.333 4h-18.667c-1.471 0-2.667 1.196-2.667 2.667s1.196 2.667 2.667 2.667h18.667c1.471 0 2.667-1.196 2.667-2.667s-1.196-2.667-2.667-2.667z"/></svg>
+          </label>
+          <div class="site__nav__overlay" id="site__nav__overlay"></div>
+          <a href="/index.html" class="nav__logo__link"><img src="./assets/logo.png" srcset="./assets/logo.png 1x, ./assets/logo@2x.png 2x" alt="Opscale Logo" class="nav__logo"></a>
+          <ul class="nav__list__wrapper">
+              <li class="nav__list__item" id="wwd__link"><a href="/index.html#wwd" class="nav__list__link">What&nbsp;We&nbsp;Do</a></li>
+              <li class="nav__list__item nav__list__item__expand" id="ind__link">
+                <a href="/industry.html" class="nav__list__link">Industries</a>
+                <input type="checkbox" role="button" id="industries__expand" class="nav__expandlist__toggle">
+                <label for="industries__expand" class="nav__expandlist__label">
+                  <img src="./assets/arrow_right.svg" alt="expand" class="nav__expandlist__icon">
+                </label>
+                <ul class="nav__list__item__group hide-slideDown" id="ind__group">
+                  <li class="nav__list__item__group__item"><a href="/industry.html#info" class="nav__list__link">Healthcare</a></li>
+                  <li class="nav__list__item__group__item"><a href="/industry.html#info" class="nav__list__link">Finance</a></li>
+                  <li class="nav__list__item__group__item"><a href="/industry.html#info" class="nav__list__link">Media&nbsp;&amp;&nbsp;Entertainment</a></li>
+                  <li class="nav__list__item__group__item"><a href="/industry.html#info" class="nav__list__link">Energy</a></li>
+                  <li class="nav__list__item__group__item"><a href="/industry.html#info" class="nav__list__link">E-Commerce</a></li>
+                </ul>
+              </li>
+              <li class="nav__list__item nav__list__item__expand">
+                <a href="/blogs.html" class="nav__list__link" id="ins__link">Insights</a>
+                <input type="checkbox" role="button" id="insights__expand" class="nav__expandlist__toggle">
+                <label for="insights__expand" class="nav__expandlist__label">
+                    <img src="./assets/arrow_right.svg" alt="expand" class="nav__expandlist__icon">
+                </label>
+                <ul class="nav__list__item__group hide-slideDown" id="ins__group">
+                  <li class="nav__list__item__group__item"><a href="/blogs.html?type=pm" class="nav__list__link">Product&nbsp;Management</a></li>
+                  <li class="nav__list__item__group__item"><a href="/blogs.html?type=dev" class="nav__list__link">DevOps&nbsp;&amp;&nbsp;SRE</a></li>
+                  <li class="nav__list__item__group__item"><a href="/blogs.html?type=per" class="nav__list__link">Performance</a></li>
+                  <li class="nav__list__item__group__item"><a href="/blogs.html?type=ux" class="nav__list__link">UX</a></li>
+                  <li class="nav__list__item__group__item"><a href="/blogs.html?type=app" class="nav__list__link">Applications</a></li>
+                  <li class="nav__list__item__group__item"><a href="/blogs.html?type=sta" class="nav__list__link">Startup</a></li>
+                </ul>
+              </li>
+              <li class="nav__list__item nav__list__item__expand" id="abt__link">
+                <a href="/about.html" class="nav__list__link">About&nbsp;Us</a>
+                <input type="checkbox" role="button" id="abt__expand" class="nav__expandlist__toggle">
+                <label for="abt__expand" class="nav__expandlist__label">
+                    <img src="./assets/arrow_right.svg" alt="expand" class="nav__expandlist__icon">
+                </label>
+                <ul class="nav__list__item__group hide-slideDown" id="abt__group">
+                  <li class="nav__list__item__group__item"><a href="/about.html#about-mission" class="nav__list__link">Why&nbsp;Choose&nbsp;Us</a></li>
+                  <li class="nav__list__item__group__item"><a href="/about.html#meet-team" class="nav__list__link">Meet&nbsp;Our&nbsp;Team</a></li>
+                  <li class="nav__list__item__group__item"><a href="/about.html#careers" class="nav__list__link">Careers</a></li>
+                </ul>
+              </li>
+              <li class="nav__list__item" id="ctu__link"><a href="/index.html#contact" class="nav__list__link">Contact&nbsp;Us</a></li>
+          </ul>
+        </nav>
+    </header>
+    <div class="nav__spot"></div>
+    <section class="page-404 hidden" id="project-404">
+      <h2>The project is not available!</h2>
+    </section>
+    <main class="project__section__wrapper" id="projects__wrapper">
+    <%_ _projects.forEach((projectData, index) =>{ -%>
+      <section class="project__section <%_ if(index === 0){ %> block <%_ }_%>" id="project-<%=index + 1%>" data-projectNumber="<%=index + 1%>" data-industry="<%=projectData.tag%>">
+        <div class="project__mast__wrapper" style="<%= projectData.mastImageStyle %>">
+            <div class="project__name__box">
+                <h4 class="project__client-name"><%= projectData.clientName %></h4>
+                <p class="project__industry-name"><%= projectData.industry %></p>
+                <div class="project__name--pill"></div>
+            </div>
+            <h4 class="project__info-detail">Project Heading : <%= projectData.heading %></h4>
+            <div class="sections__button-group">
+                <a class="sections__button-group__link" href="#more-<%=index + 1%>">
+                    <img src="./assets/downArrow.svg" alt="More" class="sections__arrow-down">
+                    <span class="sections__learn">Learn More</span>
+                </a>
+            </div>
+        </div>
+        <div class="project__background-wrapper" id="more-<%=index + 1%>">
+            <div class="project__background-text-box">
+                <h3 class="project__background-heading">Background</h3>
+                <p class="project__background-text"><%= projectData.background %></p>
+            </div>
+            <div class="project__background-img-box">
+                <img src="https://res.cloudinary.com/opscale/image/upload/q_auto/v1586871687/phone_metrics_llksbj.jpg" srcset="https://res.cloudinary.com/opscale/image/upload/q_auto/v1586871687/phone_metrics_llksbj.jpg 1x, https://res.cloudinary.com/opscale/image/upload/q_auto/v1586871687/phone_metrics_2x_sseffg.jpg 2x" alt="phone" class="project__background-img">
+            </div>
+        </div>
+        <div class="project__challenges-wrapper">
+            <h3 class="project__challenges-heading">Challenges</h3>
+            <p class="project__challenges-text"><%= projectData.challenges.info %></p>
+            <ul class="project__challenges-list-wrapper">
+            <%_ projectData.challenges.steps.forEach((step, stepIndex) =>{ -%>
+              <li class="project__challenges-list-item">
+                <span class="project__challenges-list-number">0<%=stepIndex + 1%></span>
+                <span class="project__challenges-list-text"><%= step %></span>
+              </li>
+            <%_ }) _%>
+            </ul>
+        </div>
+        <div class="project__approach-wrapper">
+            <h3 class="project__approach-heading">Approach</h3>
+            <div class="project__approach__cards-box">
+                <div class="project__approach__info__card">
+                    <header class="project__approach__info__card--header">
+                      <img src="./assets/medal.svg" alt="Medal" class="project__approach__info__card--header-img">
+                    </header>
+                    <h3 class="project__approach__info__card--bold"><%= projectData.approach[0].heading %></h3>
+                    <p class="project__approach__info__card--text"><%= projectData.approach[0].text %></p>
+                </div>
+                <div class="project__approach__info__card">
+                    <header class="project__approach__info__card--header">
+                        <img src="./assets/team.svg" alt="Team" class="project__approach__info__card--header-img">
+                    </header>
+                    <h3 class="project__approach__info__card--bold"><%= projectData.approach[1].heading %></h3>
+                    <p class="project__approach__info__card--text"><%= projectData.approach[1].text %></p>
+                </div>
+                <div class="project__approach__info__card">
+                    <header class="project__approach__info__card--header">
+                        <img src="./assets/handshake.svg" alt="Handshake" class="project__approach__info__card--header-img">
+                    </header>
+                    <h3 class="project__approach__info__card--bold"><%= projectData.approach[2].heading %></h3>
+                    <p class="project__approach__info__card--text"><%= projectData.approach[2].text %></p>
+                </div>
+            </div>
+        </div>
+        <div class="project__solution-wrapper">
+            <div class="project__solution-info">
+                <h3 class="project__solution-heading">Solution</h3>
+              <%_ projectData.solution.forEach(solution =>{ -%>
+                <p class="project__solution-text"><%= solution %></p>
+              <%_ }) _%>
+            </div>
+            <div class="project__solution-img-box">
+                <img src="https://res.cloudinary.com/opscale/image/upload/q_auto/v1586871687/phone_other_ixjh3r.jpg" srcset="https://res.cloudinary.com/opscale/image/upload/q_auto/v1586871687/phone_other_ixjh3r.jpg 1x, https://res.cloudinary.com/opscale/image/upload/q_auto/v1586871687/phone_other_2x_kkd6de.jpg 2x" alt="phone" class="project__solution-img">
+            </div>
+        </div>
+        <div class="project__technology-wrapper">
+            <h4 class="project__technology-heading">Technology</h4>
+            <div class="project__technology-img-wrapper">
+            <% if(projectData.technologies.indexOf('redux') > -1) { _%> <img src="https://res.cloudinary.com/opscale/image/upload/q_auto/v1586871688/redux-saga_vm27da.jpg" srcset="https://res.cloudinary.com/opscale/image/upload/q_auto/v1586871688/redux-saga_vm27da.jpg 1x, https://res.cloudinary.com/opscale/image/upload/q_auto/v1586871689/redux-saga_2x_ajudpo.jpg 2x" alt="Redux" class="project__technology-img"> <%_ }_%>
+            <% if(projectData.technologies.indexOf('java') > -1) { _%> <img src="https://res.cloudinary.com/opscale/image/upload/q_auto/v1586871685/java_j6xsjd.jpg" srcset="https://res.cloudinary.com/opscale/image/upload/q_auto/v1586871685/java_j6xsjd.jpg 1x, https://res.cloudinary.com/opscale/image/upload/q_auto/v1586871685/java_2x_qghktf.jpg 2x" alt="Java" class="project__technology-img"> <%_ }_%>
+            <% if(projectData.technologies.indexOf('react') > -1) { _%> <img src="https://res.cloudinary.com/opscale/image/upload/q_auto/v1586871688/react-icon_of2mok.jpg" srcset="https://res.cloudinary.com/opscale/image/upload/q_auto/v1586871688/react-icon_of2mok.jpg 1x, https://res.cloudinary.com/opscale/image/upload/q_auto/v1586871688/react-icon_2x_sc7cw4.jpg 2x" alt="React JS" class="project__technology-img"> <%_ }_%>
+            <% if(projectData.technologies.indexOf('spring') > -1) { _%> <img src="https://res.cloudinary.com/opscale/image/upload/q_auto/v1586871689/spring-logo_xjpuwy.jpg" srcset="https://res.cloudinary.com/opscale/image/upload/q_auto/v1586871689/spring-logo_xjpuwy.jpg 1x, https://res.cloudinary.com/opscale/image/upload/q_auto/v1586871689/spring-logo_2x_gekaze.jpg 2x" alt="Spring" class="project__technology-img"> <%_ }_%>
+            <% if(projectData.technologies.indexOf('node') > -1) { _%> <img src="https://res.cloudinary.com/opscale/image/upload/q_auto/v1586871686/node-logo_nssmdw.jpg" srcset="https://res.cloudinary.com/opscale/image/upload/q_auto/v1586871686/node-logo_nssmdw.jpg 1x, https://res.cloudinary.com/opscale/image/upload/q_auto/v1586871686/node-logo_2x_f02jf7.jpg 2x" alt="Node JS" class="project__technology-img"> <%_ }_%>
+            <% if(projectData.technologies.indexOf('python') > -1) { _%> <img src="https://res.cloudinary.com/opscale/image/upload/q_auto/v1586871688/python_wsbvjb.jpg" srcset="https://res.cloudinary.com/opscale/image/upload/q_auto/v1586871688/python_wsbvjb.jpg 1x, https://res.cloudinary.com/opscale/image/upload/q_auto/v1586871688/python_2x_djr6vr.jpg 2x" alt="Python" class="project__technology-img"> <%_ }_%>
+            <% if(projectData.technologies.indexOf('postgres') > -1) { _%> <img src="https://res.cloudinary.com/opscale/image/upload/q_auto/v1586871688/psql-logo_l4xv4h.jpg" srcset="https://res.cloudinary.com/opscale/image/upload/q_auto/v1586871688/psql-logo_l4xv4h.jpg 1x, https://res.cloudinary.com/opscale/image/upload/q_auto/v1586871688/psql-logo_2x_qqna4v.jpg 2x" alt="Postgres SQL" class="project__technology-img"> <%_ }_%>
+            </div>
+        </div>
+        <div class="project__technology__stories">
+          <header class="project__technology__stories-header">
+            <img src="<%= projectData.ssHeaderImageUrl %>" srcset="<%= projectData.ssHeaderImageSrcSetUrl %>" alt="<%= projectData.ssHeaderImageAlt %>" class="project__technology__stories-header-img">
+            <div class="project__technology__stories-paginator-wrapper">
+              <div class="paginator__box paginator__box-left projects-disabled-paginator" id="stories-bck-project-<%=index + 1%>">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="33.384" height="25.521" viewBox="0 0 33.384 25.521" class="paginator__arrow">
+                      <path id="thin_arrow-1-<%=index + 1%>" d="M8.527 30.913l10.938 10.981a1.755 1.755 0 002.46-2.5l-7.951-7.954h25.653a1.757 1.757 0 100-3.514H13.974l7.995-7.995a1.77 1.77 0 00-2.5-2.5L8.527 28.409a1.75 1.75 0 000 2.504z" data-name="Thin Arrow" transform="translate(-8 -16.9)"/>
+                  </svg>
+              </div>
+              <div class="paginator__box paginator__box-right" id="stories-fwd-project-<%=index + 1%>">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="33.384" height="25.521" viewBox="0 0 33.384 25.521" class="paginator__arrow">
+                      <path id="thin_arrow-2-<%=index + 1%>" d="M40.857 30.913L29.919 41.894a1.755 1.755 0 11-2.46-2.5l7.951-7.954H9.757a1.757 1.757 0 110-3.514H35.41l-7.995-7.995a1.77 1.77 0 112.5-2.5l10.942 10.978a1.75 1.75 0 010 2.504z" data-name="Thin Arrow" transform="translate(-8 -16.9)"/>
+                  </svg>
+              </div>
+            </div>
+          </header>
+          <div class="project__technology__stories-info-wrapper" id="stories-project-<%=index + 1%>">
+          <%_ projectData.stories.forEach((story, storyIndex) =>{ -%>
+            <div class="project__technology__stories-info <%_ if(storyIndex === 0){ %> project__technology__stories-info-front <%_ }_%>" id="project-<%=index + 1%>-story-<%=storyIndex + 1%>">
+              <div class="project__technology__stories-author">
+                <header class="project__technology__stories-author-img-box">
+                  <img src="<%= story.data.userImageUrl %>" srcset="<%= story.data.userImageSrcSetUrl %>" alt="<%= story.data.userName %>" class="project__technology__stories-author-img">
+                </header>
+                <h5 class="project__technology__stories-author-name"><%= story.data.userName %></h5>
+                <p class="project__technology__stories-author-details"><%= story.data.userDesignation %></p>
+              </div>
+              <div class="project__technology__stories-text-wrapper">
+                <div class="project__technology__stories-text-box">
+                  <h5 class="project__technology__stories-text-heading"><%= story.data.heading %></h5>
+                  <p class="project__technology__stories-text-info"><%= story.data.info %></p>
+                </div>
+                <img src="./assets/quotes.svg" alt='"' class="author__quote_img">
+              </div>
+            </div>
+          <%_ }) _%>
+          </div>
+        </div>
+      </section>
+    <%_ }) _%>
+        <div class="project__explore">
+          <h3 class="project__explore-heading">Explore More Projects</h3>
+          <div class="project__explore-links-wrapper">
+          <%_ _projects.forEach((projectData, index) =>{ -%>
+            <a href="#projNo=<%=index + 1%>" class="project__explore-links"><%= projectData.exploreName %></a>
+          <%_ }) _%>
+          </div>
+        </div>
+        <div class="project__cards__section">
+          <div class="project__cards__wrapper" id="project__cards__wrapper">
+          <%_ _projects.forEach((projectData, index) =>{ -%>
+            <a class="project__card <%_ if(index < 3){ %> project__card--front <%_ }_%>" id="project__card-<%=index + 1%>" href="#projNo=<%=index + 1%>">
+              <img src="<%= projectData.card.imageUrl %>" srcset="<%= projectData.card.imageSrcSetUrl %>" alt="<%= projectData.card.altName %>" class="project__card-header-img">
+              <div class="project__card-body">
+                <div class="project__card-info">
+                  <span class="project__card-info-num"><%_ if(index < 9){ %> 0 <%_ }_%><%=index + 1%></span>
+                  <div class="project__card-info-box">
+                    <div class="project__card-info-client"><%= projectData.clientName %></div>
+                    <div class="project__card-info-industry"><%= projectData.industry %></div>
+                  </div>
+                </div>
+                <h6 class="project__card-heading"><%= projectData.projectName %></h6>
+                <p class="project__card-text"><%= projectData.description %></p>
+                <footer class="project__card-footer">
+                  <div class="project__card-btn">
+                      <div class="project__card-btn-text">Read more</div>
+                      <span class="project__card-btn-svg-wrapper">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="33.384" height="14.8" viewBox="0 0 33.384 25.521" class="project__card-btn-svg">
+                              <path id="prefix__Thin_Arrow-<%=index + 1%>" d="M40.857 30.913L29.919 41.894a1.755 1.755 0 11-2.46-2.5l7.951-7.954H9.757a1.757 1.757 0 110-3.514H35.41l-7.995-7.995a1.77 1.77 0 112.5-2.5l10.942 10.978a1.75 1.75 0 010 2.504z" data-name="Thin Arrow" transform="translate(-8 -16.9)"/>
+                          </svg>
+                      </span>
+                  </div>
+                </footer>
+              </div>
+            </a>
+          <%_ }) _%>
+          </div>
+          <div class="project__cards-paginator-wrapper">
+            <div class="paginator__box paginator__box-left projects-disabled-paginator" id="project-bck">
+              <svg xmlns="http://www.w3.org/2000/svg" width="33.384" height="25.521" viewBox="0 0 33.384 25.521" class="paginator__arrow">
+                <path id="thin_arrow-3" d="M8.527 30.913l10.938 10.981a1.755 1.755 0 002.46-2.5l-7.951-7.954h25.653a1.757 1.757 0 100-3.514H13.974l7.995-7.995a1.77 1.77 0 00-2.5-2.5L8.527 28.409a1.75 1.75 0 000 2.504z" data-name="Thin Arrow" transform="translate(-8 -16.9)"/>
+              </svg>
+            </div>
+            <div class="paginator__box paginator__box-right" id="project-fwd">
+              <svg xmlns="http://www.w3.org/2000/svg" width="33.384" height="25.521" viewBox="0 0 33.384 25.521" class="paginator__arrow">
+                <path id="thin_arrow-4" d="M40.857 30.913L29.919 41.894a1.755 1.755 0 11-2.46-2.5l7.951-7.954H9.757a1.757 1.757 0 110-3.514H35.41l-7.995-7.995a1.77 1.77 0 112.5-2.5l10.942 10.978a1.75 1.75 0 010 2.504z" data-name="Thin Arrow" transform="translate(-8 -16.9)"/>
+              </svg>
+            </div>
+          </div>
+        </div>
+    </main>
+    <div class="floating-icon invisible" id="floating__icon">
+      <svg xmlns="http://www.w3.org/2000/svg" width="30.822" height="30.822" viewBox="0 0 30.822 30.822" class="floating-icon-svg">
+          <path id="prefix__XMLID_933_" d="M50.322 35.2a2.606 2.606 0 01-2.622 2.619H37.237V47.7a2.617 2.617 0 01-5.237 0v-9.881h-9.883a2.617 2.617 0 010-5.234H32V22.117a2.617 2.617 0 015.234 0v10.468H47.7a2.606 2.606 0 012.622 2.615z" transform="translate(-19.5 -19.5)"/>
+      </svg>
+    </div>
+    <div class="site__footer-section" id="footer">
+        <div class="footer__company__contacts">
+            <div class="footer__company__contacts__img-box">
+                <img src="./assets/logo.png" srcset="./assets/logo.png 1x, ./assets/logo@2x.png 2x" alt="Opscale Logo" class="footer__company__contacts__img">
+            </div>
+            <ul class="footer__company__contacts__list">
+                <li class="footer__company__contacts__list-item">
+                    <span class="company__contacts__svg-box">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="13" height="22" viewBox="0 0 13 22" class="company__contacts__svg">
+                            <path id="prefix__cellphone-iphone_1_" d="M16 18H7V4h9m-4.5 18a1.5 1.5 0 111.5-1.5 1.5 1.5 0 01-1.5 1.5m4-21h-8A2.5 2.5 0 005 3.5v17A2.5 2.5 0 007.5 23h8a2.5 2.5 0 002.5-2.5v-17A2.5 2.5 0 0015.5 1z" data-name="cellphone-iphone (1)" transform="translate(-5 -1)" style="fill:#fff;opacity:.801"/>
+                        </svg>
+                    </span>
+                    <span class="company__contacts__info">+91 7760830496</span>
+                </li>
+                <li class="footer__company__contacts__list-item">
+                    <span class="company__contacts__svg-box">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="16" viewBox="0 0 20 16" class="company__contacts__svg">
+                            <path id="prefix__email" d="M20 8l-8 5-8-5V6l8 5 8-5m0-2H4a1.993 1.993 0 00-2 2v12a2 2 0 002 2h16a2 2 0 002-2V6a2 2 0 00-2-2z" transform="translate(-2 -4)" style="fill:#fff;opacity:.801"/>
+                        </svg>
+                    </span>
+                    <span class="company__contacts__info">support@opscale.io</span>
+                </li>
+                <li class="footer__company__contacts__list-item">
+                    <span class="company__contacts__svg-box company__contacts__svg-box-offset">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="20" viewBox="0 0 14 20" class="company__contacts__svg">
+                            <path id="prefix__map-marker" d="M12 11.5A2.5 2.5 0 1114.5 9a2.5 2.5 0 01-2.5 2.5M12 2a7 7 0 00-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 00-7-7z" transform="translate(-5 -2)" style="fill:#fff;opacity:.801"/>
+                        </svg>
+                    </span>
+                    <span class="company__contacts__info">Opscale, Indiqube, Tower-D Ground Floor, Subramanya Arcade, Bannerghatta Main Rd, OLd Gurappanapalya, BTM Layout, Bengaluru, Karnataka 560029</span>
+                </li>
+            </ul>
+        </div>
+        <div class="footer__site-sections__links__wrapper">
+            <ul class="footer__site-sections__container">
+              <li class="footer__site-sections__item"><a href="/index.html#wwd" class="footer__site-sections__links sections__links__highlighted">What we do</a></li>
+              <li class="footer__site-sections__item"><a href="/index.html#projects" class="footer__site-sections__links">Projects</a></li>
+              <li class="footer__site-sections__item"><a href="/index.html#hww" class="footer__site-sections__links">How we work</a></li>
+              <li class="footer__site-sections__item"><a href="/index.html#stories" class="footer__site-sections__links">Success Stories</a></li>
+            </ul>
+            <ul class="footer__site-sections__container">
+              <li class="footer__site-sections__item"><a href="/industry.html" class="footer__site-sections__links sections__links__highlighted">Industries</a></li>
+              <li class="footer__site-sections__item"><a href="/industry.html#info" class="footer__site-sections__links">Travel</a></li>
+              <li class="footer__site-sections__item"><a href="/industry.html#info" class="footer__site-sections__links">Energy</a></li>
+              <li class="footer__site-sections__item"><a href="/industry.html#info" class="footer__site-sections__links">Oil &amp; Gas</a></li>
+              <li class="footer__site-sections__item"><a href="/industry.html#info" class="footer__site-sections__links">Articificial Intelligence</a></li>
+              <li class="footer__site-sections__item"><a href="/industry.html#info" class="footer__site-sections__links">Agri-Tech</a></li>
+              <li class="footer__site-sections__item"><a href="/industry.html#info" class="footer__site-sections__links">E-Commerce</a></li>
+              <li class="footer__site-sections__item"><a href="/industry.html#info" class="footer__site-sections__links">Media &amp; Entertainment</a></li>
+              <li class="footer__site-sections__item"><a href="/industry.html#info" class="footer__site-sections__links">Healthcare</a></li>
+            </ul>
+            <ul class="footer__site-sections__container">
+              <li class="footer__site-sections__item"><a href="/blogs.html" class="footer__site-sections__links sections__links__highlighted">Insights</a></li>
+              <li class="footer__site-sections__item"><a href="/blogs.html?type=pm" class="footer__site-sections__links">Product Management</a></li>
+              <li class="footer__site-sections__item"><a href="/blogs.html?type=dev" class="footer__site-sections__links">DevOps &amp; SRE</a></li>
+              <li class="footer__site-sections__item"><a href="/blogs.html?type=per" class="footer__site-sections__links">Performance</a></li>
+              <li class="footer__site-sections__item"><a href="/blogs.html?type=ux" class="footer__site-sections__links">UX</a></li>
+              <li class="footer__site-sections__item"><a href="/blogs.html?type=app" class="footer__site-sections__links">Applications</a></li>
+              <li class="footer__site-sections__item"><a href="/blogs.html?type=sta" class="footer__site-sections__links">Startup</a></li>
+            </ul>
+            <ul class="footer__site-sections__container">
+              <li class="footer__site-sections__item"><a href="/about.html" class="footer__site-sections__links sections__links__highlighted">About Us</a></li>
+              <li class="footer__site-sections__item"><a href="/about.html#about-mission" class="footer__site-sections__links">Why choose us</a></li>
+              <li class="footer__site-sections__item"><a href="/about.html#about-mission" class="footer__site-sections__links">Our Mission</a></li>
+              <li class="footer__site-sections__item"><a href="/about.html#about-culture" class="footer__site-sections__links">Our Culture</a></li>
+              <li class="footer__site-sections__item"><a href="/about.html#meet-team" class="footer__site-sections__links">Meet the team</a></li>
+              <li class="footer__site-sections__item"><a href="/about.html#careers" class="footer__site-sections__links">Careers</a></li>
+            </ul>
+            <ul class="footer__site-sections__container footer__site-sections__container-social">
+              <li class="footer__site-sections__item"><div class="footer__site-sections__links sections__links__highlighted">Contact Us</div></li>
+              <li class="footer__site-sections__item contact__footer--box">
+                  <a href="#" class="footer__site-sections__links">
+                      <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="3.2rem" height="3.2rem" viewBox="0 0 32 32" class="contact__footer--icon">
+                          <title>facebook</title>
+                          <path d="M19 6h5v-6h-5c-3.86 0-7 3.14-7 7v3h-4v6h4v16h6v-16h5l1-6h-6v-3c0-0.542 0.458-1 1-1z"></path>
+                      </svg>
+                  </a>
+              </li>
+              <li class="footer__site-sections__item contact__footer--box">
+                  <a href="#" class="footer__site-sections__links">
+                      <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" class="contact__footer--icon">
+                          <title>linkedin</title>
+                          <path d="M12 12h5.535v2.837h0.079c0.77-1.381 2.655-2.837 5.464-2.837 5.842 0 6.922 3.637 6.922 8.367v9.633h-5.769v-8.54c0-2.037-0.042-4.657-3.001-4.657-3.005 0-3.463 2.218-3.463 4.509v8.688h-5.767v-18z"></path>
+                          <path d="M2 12h6v18h-6v-18z"></path>
+                          <path d="M8 7c0 1.657-1.343 3-3 3s-3-1.343-3-3c0-1.657 1.343-3 3-3s3 1.343 3 3z"></path>
+                      </svg>
+                  </a>
+              </li>
+              <li class="footer__site-sections__item contact__footer--box">
+                  <a href="#" class="footer__site-sections__links">
+                      <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="3.2rem" height="3.2rem" viewBox="0 0 32 32" class="contact__footer--icon">
+                          <title>twitter</title>
+                          <path d="M32 7.075c-1.175 0.525-2.444 0.875-3.769 1.031 1.356-0.813 2.394-2.1 2.887-3.631-1.269 0.75-2.675 1.3-4.169 1.594-1.2-1.275-2.906-2.069-4.794-2.069-3.625 0-6.563 2.938-6.563 6.563 0 0.512 0.056 1.012 0.169 1.494-5.456-0.275-10.294-2.888-13.531-6.862-0.563 0.969-0.887 2.1-0.887 3.3 0 2.275 1.156 4.287 2.919 5.463-1.075-0.031-2.087-0.331-2.975-0.819 0 0.025 0 0.056 0 0.081 0 3.181 2.263 5.838 5.269 6.437-0.55 0.15-1.131 0.231-1.731 0.231-0.425 0-0.831-0.044-1.237-0.119 0.838 2.606 3.263 4.506 6.131 4.563-2.25 1.762-5.075 2.813-8.156 2.813-0.531 0-1.050-0.031-1.569-0.094 2.913 1.869 6.362 2.95 10.069 2.95 12.075 0 18.681-10.006 18.681-18.681 0-0.287-0.006-0.569-0.019-0.85 1.281-0.919 2.394-2.075 3.275-3.394z"></path>
+                      </svg>
+                  </a>
+              </li>
+              <li class="footer__site-sections__item contact__footer--box">
+                  <a href="#" class="footer__site-sections__links">
+                      <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="3.2rem" height="3.2rem" viewBox="0 0 32 32" class="contact__footer--icon">
+                          <title>github</title>
+                          <path d="M16 0.395c-8.836 0-16 7.163-16 16 0 7.069 4.585 13.067 10.942 15.182 0.8 0.148 1.094-0.347 1.094-0.77 0-0.381-0.015-1.642-0.022-2.979-4.452 0.968-5.391-1.888-5.391-1.888-0.728-1.849-1.776-2.341-1.776-2.341-1.452-0.993 0.11-0.973 0.11-0.973 1.606 0.113 2.452 1.649 2.452 1.649 1.427 2.446 3.743 1.739 4.656 1.33 0.143-1.034 0.558-1.74 1.016-2.14-3.554-0.404-7.29-1.777-7.29-7.907 0-1.747 0.625-3.174 1.649-4.295-0.166-0.403-0.714-2.030 0.155-4.234 0 0 1.344-0.43 4.401 1.64 1.276-0.355 2.645-0.532 4.005-0.539 1.359 0.006 2.729 0.184 4.008 0.539 3.054-2.070 4.395-1.64 4.395-1.64 0.871 2.204 0.323 3.831 0.157 4.234 1.026 1.12 1.647 2.548 1.647 4.295 0 6.145-3.743 7.498-7.306 7.895 0.574 0.497 1.085 1.47 1.085 2.963 0 2.141-0.019 3.864-0.019 4.391 0 0.426 0.288 0.925 1.099 0.768 6.354-2.118 10.933-8.113 10.933-15.18 0-8.837-7.164-16-16-16z"></path>
+                      </svg>
+                  </a>
+              </li>
+            </ul>
+        </div>
+    </div>
+    <footer class="footer__copyright">
+        <p class="footer__copyright__text">&copy; 2020 OPSCALE TECHNOLOGIES (OPC) PRIVATE LIMITED, INDIA</p>
+    </footer>
+</body>
+</html>

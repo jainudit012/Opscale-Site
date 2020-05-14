@@ -1,0 +1,803 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Opscale Technologies Web Site">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/base.css">
+    <link rel="stylesheet" href="./css/main.css">
+    <script src="./scripts/utility.js" defer></script>
+    <script src="./scripts/sideNav.js" defer></script>
+    <script src="./scripts/paginator.js" defer></script>
+    <script src="./scripts/mastScroller.js" defer></script>
+    <script src="./scripts/floatingIcon.js" defer></script>
+    <script src="./scripts/wwdCardSelector.js" defer></script>
+    <script src="./scripts/blogFilter.js" defer></script>
+    <script src="./scripts/projectListFilter.js" defer></script>
+    <script src="./scripts/ssFlipper.js" defer></script>
+    <script src="./scripts/motFlipper.js" defer></script>
+    <title>OPSCALE</title>
+</head>
+<body>
+    <header class="site__header" id="site__header">
+        <nav class="site__nav">
+            <input type="checkbox" id="sidenav__toggle" class="sidenav__toggle__input" role="button">
+            <label for="sidenav__toggle" class="sidenav__toggle__label" aria-label="sidenav-toggle-btn">
+                <svg height="32" viewBox="0 0 32 32" width="32" xmlns="http://www.w3.org/2000/svg" class="sidenav__toggle__icon"><path d="m25.333 22.667h-18.667c-1.471 0-2.667 1.196-2.667 2.667s1.196 2.667 2.667 2.667h18.667c1.471 0 2.667-1.196 2.667-2.667s-1.196-2.667-2.667-2.667z"/><path d="m25.333 13.333h-18.667c-1.471 0-2.667 1.196-2.667 2.667s1.196 2.667 2.667 2.667h18.667c1.471 0 2.667-1.196 2.667-2.667s-1.196-2.667-2.667-2.667z"/><path d="m25.333 4h-18.667c-1.471 0-2.667 1.196-2.667 2.667s1.196 2.667 2.667 2.667h18.667c1.471 0 2.667-1.196 2.667-2.667s-1.196-2.667-2.667-2.667z"/></svg>
+            </label>
+            <div class="site__nav__overlay" id="site__nav__overlay"></div>
+            <a href="#" class="nav__logo__link"><img src="./assets/logo.png" srcset="./assets/logo.png 1x, ./assets/logo@2x.png 2x" alt="Opscale Logo" class="nav__logo"></a>
+            <ul class="nav__list__wrapper">
+                <li class="nav__list__item" id="wwd__link"><a href="#wwd" class="nav__list__link">What&nbsp;We&nbsp;Do</a></li>
+                <li class="nav__list__item nav__list__item__expand" id="ind__link">
+                    <a href="/industry.html" class="nav__list__link">Industries</a>
+                    <input type="checkbox" role="button" id="industries__expand" class="nav__expandlist__toggle">
+                    <label for="industries__expand" class="nav__expandlist__label">
+                        <img src="./assets/arrow_right.svg" alt="expand" class="nav__expandlist__icon">
+                    </label>
+                    <ul class="nav__list__item__group hide-slideDown" id="ind__group">
+                        <li class="nav__list__item__group__item"><a href="/industry.html#info" class="nav__list__link">Healthcare</a></li>
+                        <li class="nav__list__item__group__item"><a href="/industry.html#info" class="nav__list__link">Finance</a></li>
+                        <li class="nav__list__item__group__item"><a href="/industry.html#info" class="nav__list__link">Media&nbsp;&amp;&nbsp;Entertainment</a></li>
+                        <li class="nav__list__item__group__item"><a href="/industry.html#info" class="nav__list__link">Energy</a></li>
+                        <li class="nav__list__item__group__item"><a href="/industry.html#info" class="nav__list__link">E-Commerce</a></li>
+                    </ul>
+                </li>
+                <li class="nav__list__item nav__list__item__expand">
+                    <a href="/blogs.html" class="nav__list__link" id="ins__link">Insights</a>
+                    <input type="checkbox" role="button" id="insights__expand" class="nav__expandlist__toggle">
+                    <label for="insights__expand" class="nav__expandlist__label">
+                        <img src="./assets/arrow_right.svg" alt="expand" class="nav__expandlist__icon">
+                    </label>
+                    <ul class="nav__list__item__group hide-slideDown" id="ins__group">
+                        <li class="nav__list__item__group__item"><a href="/blogs.html?type=pm" class="nav__list__link">Product&nbsp;Management</a></li>
+                        <li class="nav__list__item__group__item"><a href="/blogs.html?type=dev" class="nav__list__link">DevOps&nbsp;&amp;&nbsp;SRE</a></li>
+                        <li class="nav__list__item__group__item"><a href="/blogs.html?type=per" class="nav__list__link">Performance</a></li>
+                        <li class="nav__list__item__group__item"><a href="/blogs.html?type=ux" class="nav__list__link">UX</a></li>
+                        <li class="nav__list__item__group__item"><a href="/blogs.html?type=app" class="nav__list__link">Applications</a></li>
+                        <li class="nav__list__item__group__item"><a href="/blogs.html?type=sta" class="nav__list__link">Startup</a></li>
+                    </ul>
+                </li>
+                <li class="nav__list__item nav__list__item__expand" id="abt__link">
+                    <a href="/about.html" class="nav__list__link">About&nbsp;Us</a>
+                    <input type="checkbox" role="button" id="abt__expand" class="nav__expandlist__toggle">
+                    <label for="abt__expand" class="nav__expandlist__label">
+                        <img src="./assets/arrow_right.svg" alt="expand" class="nav__expandlist__icon">
+                    </label>
+                    <ul class="nav__list__item__group hide-slideDown" id="abt__group">
+                        <li class="nav__list__item__group__item"><a href="/about.html#about-mission" class="nav__list__link">Why&nbsp;Choose&nbsp;Us</a></li>
+                        <li class="nav__list__item__group__item"><a href="/about.html#meet-team" class="nav__list__link">Meet&nbsp;Our&nbsp;Team</a></li>
+                        <li class="nav__list__item__group__item"><a href="/about.html#careers" class="nav__list__link">Careers</a></li>
+                    </ul>
+                </li>
+                <li class="nav__list__item" id="ctu__link"><a href="#contact" class="nav__list__link">Contact&nbsp;Us</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="nav__spot"></div>
+    <main class="site__main" id="site__main">
+        <div class="site__section__wrapper">
+            <section id="mast-1" class="site__sections site__section__first">
+                <h1 class="sections__heading">We Deliver Expert Market Leaders</h1>
+                <p class="sections__text">Founder-bootstrapped to multi-million dollar investments, we have helped startups of all shapes and sizes to become market leaders.</p>
+                <h5 class="sections__sub-heading">We Build an MVP in 4 Weeks</h5>
+                <div class="sections__button-group">
+                    <a class="sections__button-group__link" href="#wwd">
+                        <img src="./assets/downArrow.svg" alt="More" class="sections__arrow-down">
+                        <span class="sections__learn">Learn More</span>
+                    </a>
+                </div>
+            </section>
+            <section id="mast-2" class="site__sections site__section__second hideabs">
+                <h1 class="sections__heading">We Deliver Exceptional Engineering Solutions</h1>
+                <p class="sections__text">Founder-bootstrapped to multi-million dollar investments, we have helped startups of all shapes and sizes to become market leaders.</p>
+                <h5 class="sections__sub-heading">We Build an MVP in 4 Weeks</h5>
+                <div class="sections__button-group">
+                    <a class="sections__button-group__link" href="#wwd">
+                        <img src="./assets/downArrow.svg" alt="More" class="sections__arrow-down">
+                        <span class="sections__learn">Learn More</span>
+                    </a>
+                </div>
+            </section>
+            <section id="mast-3" class="site__sections site__section__third hideabs">
+                <h1 class="sections__heading">We Deliver Expertise in Innovation</h1>
+                <p class="sections__text">Founder-bootstrapped to multi-million dollar investments, we have helped startups of all shapes and sizes to become market leaders.</p>
+                <h5 class="sections__sub-heading">We Build an MVP in 4 Weeks</h5>
+                <div class="sections__button-group">
+                    <a class="sections__button-group__link" href="#wwd">
+                        <img src="./assets/downArrow.svg" alt="More" class="sections__arrow-down">
+                        <span class="sections__learn">Learn More</span>
+                    </a>
+                </div>
+            </section>
+        </div>
+        <div class="section__paginator" id="section__paginator">
+            <div class="paginator__counter" id="start__count">01</div>
+            <div class="paginator__progress-wrapper" id="paginator__progress-wrapper">
+                <div class="paginator__progress paginator__current-progress" id="paginator__progress-1"></div>
+                <div class="paginator__progress" id="paginator__progress-2"></div>
+                <div class="paginator__progress" id="paginator__progress-3"></div>
+            </div>
+            <div class="mobile-paginator__progress-wrapper" id="mobile-paginator-wrapper">
+                <div class="mobile-paginator mobile-paginator-disabled" id="mobile-paginator-1">
+                    <img src="./assets/arrow_right.svg" alt="up" class="mobile-paginator-up">
+                </div>
+                <div class="mobile-paginator" id="mobile-paginator-2">
+                    <img src="./assets/arrow_right.svg" alt="down" class="mobile-paginator-down">
+                </div>
+            </div>
+            <div class="paginator__counter paginator__greyed" id="end__count">03</div>
+        </div>
+    </main>
+    <section class="site__info-wwd" id="wwd">
+        <div class="site__info-wwd__heading-wrapper">
+            <h2 class="site__info-wwd__heading">What We Do</h2>
+            <p class="site__info-wwd__text">From lean startup techniques to scaling your developer operations and application performance for globally connected orld, our specialized teams lead the product design, development &amp; operations process for high growth companies</p>
+        </div>
+        <div class="site__info-wwd__text-extra-wrapper">
+            <img src="./assets/quotes.svg" alt='"' class="site__info-wwd__text-quotes">
+            <p class="site__info-wwd__text-extra">We develop Progressive Web Applications (PWA) that load under 200 milliseconds over the internet</p>
+        </div>
+        <div class="site__info-wwd__card__wrapper" id="wwd__card__box">
+            <div id="wwd__card-1" class="card site__info-wwd__card card__selected">
+                <div class="card__img__box">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30.8 28" class="card__img">
+                        <path id="iframe-outline" d="M12.9 11.1l2.1 2.1-4.2 4.2 4.2 4.2-2.1 2.1-6.3-6.3 6.3-6.3m7 12.6l-2.1-2.1 4.2-4.2-4.2-4.2 2.1-2.1 6.3 6.3-6.3 6.3M29 2H3.8A2.8 2.8 0 0 0 1 4.8v22.4A2.8 2.8 0 0 0 3.8 30H29a2.8 2.8 0 0 0 2.8-2.8V4.8A2.8 2.8 0 0 0 29 2m0 25.2H3.8V7.6H29z" transform="translate(-1 -2)"/>
+                    </svg>
+                </div>
+                <h3 class="card__heading">Development</h3>
+                <div class="card__pill"></div>
+                <p class="card__footer">It is a long established fact that a reader will be distracted by the readable content of a page when lookig at its layout. The point of</p>
+            </div>
+            <div id="wwd__card-2" class="card site__info-wwd__card">
+                <div class="card__img__box">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 38.499 25.666" class="card__img">
+                        <path id="cellphone-link" d="M35.291 24.854h-6.416V13.625h6.417m1.6-3.208H27.27a1.6 1.6 0 0 0-1.6 1.6v16.045a1.6 1.6 0 0 0 1.6 1.6h9.63a1.6 1.6 0 0 0 1.6-1.6V12.021a1.6 1.6 0 0 0-1.6-1.6M6.417 7.208h28.874V4H6.417a3.208 3.208 0 0 0-3.209 3.208v17.646H0v4.812h22.458v-4.812H6.417z" transform="translate(0 -4)"/>
+                    </svg>
+                </div>
+                <h3 class="card__heading">MVP</h3>
+                <div class="card__pill"></div>
+                <p class="card__footer">It is a long established fact that a reader will be distracted by the readable content of a page when lookig at its layout. The point of</p>
+            </div>
+            <div id="wwd__card-3" class="card site__info-wwd__card ">
+                <div class="card__img__box">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 21 30" class="card__img">
+                        <path id="gesture-double-tap" d="M12.5 12a1.5 1.5 0 0 1 3 0v6.7l1.815.2 7.41 3.285A2.2 2.2 0 0 1 26 24.21v6.54A2.328 2.328 0 0 1 23.75 33H14a2.03 2.03 0 0 1-1.5-.645l-7.35-6.3L6.26 24.9a1.487 1.487 0 0 1 1.11-.48h.33L12.5 27V12M14 6a6 6 0 0 1 6 6 5.934 5.934 0 0 1-3 5.19v-1.83a4.5 4.5 0 1 0-6 0v1.83A5.934 5.934 0 0 1 8 12a6 6 0 0 1 6-6m0-3a9.007 9.007 0 0 1 6.24 15.495l-1.5-.675A7.508 7.508 0 1 0 11 18.87v1.62A9 9 0 0 1 14 3z" transform="translate(-5 -3)"/>
+                    </svg>
+                </div>
+                <h3 class="card__heading">Interaction Design</h3>
+                <div class="card__pill"></div>
+                <p class="card__footer">It is a long established fact that a reader will be distracted by the readable content of a page when lookig at its layout. The point of</p>
+            </div>
+            <div id="wwd__card-4" class="card site__info-wwd__card">
+                <div class="card__img__box">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" class="card__img">
+                        <path id="file-table-box-multiple-outline" d="M3.727 6.455v21.818h21.818V31H3.727A2.735 2.735 0 0 1 1 28.273V6.455h2.727M28.273 1H9.182a2.718 2.718 0 0 0-2.727 2.727v19.091a2.735 2.735 0 0 0 2.727 2.727h19.091A2.718 2.718 0 0 0 31 22.818V3.727A2.735 2.735 0 0 0 28.273 1m0 21.818H9.182V3.727h19.091v19.091m-13.637-4.091h-4.091v2.727h4.091v-2.727m5.455 0H16v2.727h4.091v-2.727m-5.455-4.091h-4.091v2.727h4.091v-2.727m5.455 0H16v2.727h4.091v-2.727m-5.455-4.091h-4.091v2.727h4.091v-2.727m5.455 0H16v2.727h4.091z" transform="translate(-1 -1)"/>
+                    </svg>
+                </div>
+                <h3 class="card__heading">Project Management</h3>
+                <div class="card__pill"></div>
+                <p class="card__footer">It is a long established fact that a reader will be distracted by the readable content of a page when lookig at its layout. The point of</p>
+            </div>
+            <div id="wwd__card-5" class="card site__info-wwd__card">
+                <div class="card__img__box">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 27 30" class="card__img">
+                        <path id="cube-outline" d="M30 23.75a1.487 1.487 0 0 1-.8 1.32l-11.85 6.66a1.489 1.489 0 0 1-1.71 0L3.8 25.07a1.487 1.487 0 0 1-.8-1.32v-13.5a1.487 1.487 0 0 1 .8-1.32l11.85-6.66a1.489 1.489 0 0 1 1.71 0L29.2 8.93a1.487 1.487 0 0 1 .8 1.32v13.5M16.5 5.225L7.56 10.25l8.94 5.025 8.94-5.025-8.94-5.025M6 22.865l9 5.07V17.87l-9-5.055v10.05m21 0v-10.05l-9 5.055v10.065z" transform="translate(-3 -2)"/>
+                    </svg>
+                </div>
+                <h3 class="card__heading">Data Science</h3>
+                <div class="card__pill"></div>
+                <p class="card__footer">It is a long established fact that a reader will be distracted by the readable content of a page when lookig at its layout. The point of</p>
+            </div>
+            <div id="wwd__card-6" class="card site__info-wwd__card">
+                <div class="card__img__box">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 37.5 30" class="card__img">
+                        <path id="resistor-nodes" d="M2 17.125h3.131a5.625 5.625 0 1 1 9.881 5.137l2.119 3.019L22.831 4l2.813 3.994 3.919 5.587 1.5-.206a5.607 5.607 0 0 1 5.306 3.75H39.5v3.75h-3.131a5.625 5.625 0 1 1-9.881-5.137l-2.119-3.019L18.669 34l-6.731-9.581a5.618 5.618 0 0 1-6.806-3.544H2v-3.75m29.063-.937A2.813 2.813 0 1 0 33.875 19a2.813 2.813 0 0 0-2.812-2.812m-20.625 0A2.813 2.813 0 1 0 13.25 19a2.813 2.813 0 0 0-2.812-2.812z" transform="translate(-2 -4)"/>
+                    </svg>
+                </div>
+                <h3 class="card__heading">Technology Spikes</h3>
+                <div class="card__pill"></div>
+                <p class="card__footer">It is a long established fact that a reader will be distracted by the readable content of a page when lookig at its layout. The point of</p>
+            </div>
+            <div id="wwd__card-7" class="card site__info-wwd__card">
+                <div class="card__img__box">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" class="card__img">
+                        <path id="server-network" d="M18.5 27H20a1.5 1.5 0 0 1 1.5 1.5H32v3H21.5A1.5 1.5 0 0 1 20 33h-6a1.5 1.5 0 0 1-1.5-1.5H2v-3h10.5A1.5 1.5 0 0 1 14 27h1.5v-3H5a1.5 1.5 0 0 1-1.5-1.5v-6A1.5 1.5 0 0 1 5 15h24a1.5 1.5 0 0 1 1.5 1.5v6A1.5 1.5 0 0 1 29 24H18.5v3M5 3h24a1.5 1.5 0 0 1 1.5 1.5v6A1.5 1.5 0 0 1 29 12H5a1.5 1.5 0 0 1-1.5-1.5v-6A1.5 1.5 0 0 1 5 3m7.5 6H14V6h-1.5v3m0 12H14v-3h-1.5v3m-6-15v3h3V6h-3m0 12v3h3v-3z" transform="translate(-2 -3)"/>
+                    </svg>
+                </div>
+                <h3 class="card__heading">Operations</h3>
+                <div class="card__pill"></div>
+                <p class="card__footer">It is a long established fact that a reader will be distracted by the readable content of a page when lookig at its layout. The point of</p>
+            </div>
+            <div id="wwd__card-8" class="card site__info-wwd__card">
+                <div class="card__img__box">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 33 30" class="card__img">
+                        <path id="remote-desktop" d="M4 2a3 3 0 0 0-3 3v18a3 3 0 0 0 3 3h10.5v3h-3v3h12v-3h-3v-3H31a3 3 0 0 0 3-3V5a3 3 0 0 0-3-3M4 5h27v18H4M22 6.5l-5.25 5.25L22 17l2.1-2.1-3.15-3.15L24.1 8.6M13 11l-2.1 2.1 3.15 3.15-3.15 3.15 2.1 2.1 5.25-5.25" transform="translate(-1 -2)"/>
+                    </svg>
+                </div>
+                <h3 class="card__heading">Product Management</h3>
+                <div class="card__pill"></div>
+                <p class="card__footer">It is a long established fact that a reader will be distracted by the readable content of a page when lookig at its layout. The point of</p>
+            </div>
+            <div class="mobile-paginator-other mobile-paginator-left mobile-paginator-disabled" id="wwd__paginator-bck">
+                <img src="./assets/arrow_right.svg" alt="left" class="mobile-paginator-other-icon">
+            </div>
+            <div class="mobile-paginator-other mobile-paginator-right" id="wwd__paginator-fwd">
+                <img src="./assets/arrow_right.svg" alt="right" class="mobile-paginator-other-icon">
+            </div>
+        </div>
+    </section>
+    <section class="site__info-rp" id="projects">
+        <div class="site__info-rp__fixed">
+            <h2 class="site__info-rp__fixed__heading">Recent&nbsp;Projects</h2>
+            <p class="site__info-rp__fixed__text">With deep expertise across a vast range of engineering and consulting disciplines,<br><strong>WE INNOVATE ACROSS DIVERSE MARKETS GLOBALLY</strong><br>to deliver game changing products/services.</p>
+            <ul class="site__info-rp__fixed__filter-list" id="rp__list">
+                <li class="site__info-rp__fixed__filter-item fixed__filter-item-selected" id="rp__filter-1" data-filterTag="all">
+                    <div class="site__info-rp__fixed__filter-item-description">All Industries</div>
+                    <div class="site__info-rp__fixed__filter__pill"></div>
+                </li>
+                <li class="site__info-rp__fixed__filter-item" id="rp__filter-2" data-filterTag="hel">
+                    <div class="site__info-rp__fixed__filter-item-description">Healthcare</div>
+                    <div class="site__info-rp__fixed__filter__pill"></div>
+                </li>
+                <li class="site__info-rp__fixed__filter-item" id="rp__filter-3" data-filterTag="tec">
+                    <div class="site__info-rp__fixed__filter-item-description">Technology</div>
+                    <div class="site__info-rp__fixed__filter__pill"></div>
+                </li>
+                <li class="site__info-rp__fixed__filter-item" id="rp__filter-4" data-filterTag="ai">
+                    <div class="site__info-rp__fixed__filter-item-description">Articificial Intelligence</div>
+                    <div class="site__info-rp__fixed__filter__pill"></div>
+                </li>
+                <li class="site__info-rp__fixed__filter-item" id="rp__filter-5" data-filterTag="met">
+                    <div class="site__info-rp__fixed__filter-item-description">Media &amp; Entertainment</div>
+                    <div class="site__info-rp__fixed__filter__pill"></div>
+                </li>
+                <li class="site__info-rp__fixed__filter-item" id="rp__filter-6" data-filterTag="fin">
+                    <div class="site__info-rp__fixed__filter-item-description">Finance</div>
+                    <div class="site__info-rp__fixed__filter__pill"></div>
+                </li>
+                <li class="site__info-rp__fixed__filter-item" id="rp__filter-7" data-filterTag="enr">
+                    <div class="site__info-rp__fixed__filter-item-description">Energy</div>
+                    <div class="site__info-rp__fixed__filter__pill"></div>
+                </li>
+            </ul>
+            <div class="site__info-rp__fixed__filter-paginator-box">
+                <svg xmlns="http://www.w3.org/2000/svg" width="33.384" height="25.521" viewBox="0 0 33.384 25.521" class="site__info-rp__fixed__filter-paginator disabled-paginator-fixed" id="rp__list-bck">
+                    <path id="prefix__Thin_Arrow-1" d="M8.527 30.913l10.938 10.981a1.755 1.755 0 002.46-2.5l-7.951-7.954h25.653a1.757 1.757 0 100-3.514H13.974l7.995-7.995a1.77 1.77 0 00-2.5-2.5L8.527 28.409a1.75 1.75 0 000 2.504z" data-name="Thin Arrow" transform="translate(-8 -16.9)"/>
+                </svg>
+                <span class="site__info-rp__fixed__filter-paginator-dot">.</span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="33.384" height="25.521" viewBox="0 0 33.384 25.521" class="site__info-rp__fixed__filter-paginator" id="rp__list-fwd">
+                    <path id="prefix__Thin_Arrow-2" d="M40.857 30.913L29.919 41.894a1.755 1.755 0 11-2.46-2.5l7.951-7.954H9.757a1.757 1.757 0 110-3.514H35.41l-7.995-7.995a1.77 1.77 0 112.5-2.5l10.942 10.978a1.75 1.75 0 010 2.504z" data-name="Thin Arrow" transform="translate(-8 -16.9)"/>
+                </svg>
+            </div>
+        </div>
+        <div class="site__info-rp__panels__wrapper" id="rp__panels__wrapper">
+        <%_ _projects.forEach((projectCard, index) =>{ -%>
+            <div class="site__info-rp__panels <%_ if(index === 0){ %> site__info-rp__panels__front <%_ } else if(index === 1){ %> site__info-rp__panels__next <%_ } else { %> site__info-rp__panels__back <%_ } _%>" id="rp__panels-<%= index+1 %>" data-filterTag="<%= projectCard.tag %>" style="<%=  projectCard.card.backgroundStyle %>">
+                <div class="site__info-rp__panels__header">
+                    <div class="site__info-rp__panels__header__pageNum"><%_ if(index < 9){ _%> 0 <%_ }_%><%= index + 1 _%></div>
+                    <div class="site__info-rp__panels__header__text">
+                        <div  class="site__info-rp__panels__header__name"><%= projectCard.clientName %></div>
+                        <div class="site__info-rp__panels__header__industry"><%= projectCard.industry %></div>
+                    </div>
+                </div>
+                <div class="site__info-rp__panels__description">
+                    <h2 class="site__info-rp__panels__description-heading"><%= projectCard.projectName %></h2>
+                    <p class="site__info-rp__panels__description-text"><%= projectCard.description %></p>
+                    <a class="site__info-rp__panels__description-btn" href="/projects.html?projNo=<%= index + 1 %>">Learn&nbsp;More</a>
+                </div>
+            </div>
+        <%_ }) _%>
+            <div class="site__info-rp__panels-paginator-wrapper">
+                <div class="site__info-rp__panels-paginator-box site__info-rp__panels-paginator-box-left disabled-paginator" id="rp__panel-bck">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="33.384" height="25.521" viewBox="0 0 33.384 25.521" class="site__info-rp__panels-paginator site__info-rp__panels-paginator-left">
+                        <path id="prefix__Thin_Arrow-3" d="M8.527 30.913l10.938 10.981a1.755 1.755 0 002.46-2.5l-7.951-7.954h25.653a1.757 1.757 0 100-3.514H13.974l7.995-7.995a1.77 1.77 0 00-2.5-2.5L8.527 28.409a1.75 1.75 0 000 2.504z" data-name="Thin Arrow" transform="translate(-8 -16.9)"/>
+                    </svg>
+                </div>
+                <div class="site__info-rp__panels-paginator-box site__info-rp__panels-paginator-box-right" id="rp__panel-fwd">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="33.384" height="25.521" viewBox="0 0 33.384 25.521" class="site__info-rp__panels-paginator site__info-rp__panels-paginator-right">
+                        <path id="prefix__Thin_Arrow-4" d="M40.857 30.913L29.919 41.894a1.755 1.755 0 11-2.46-2.5l7.951-7.954H9.757a1.757 1.757 0 110-3.514H35.41l-7.995-7.995a1.77 1.77 0 112.5-2.5l10.942 10.978a1.75 1.75 0 010 2.504z" data-name="Thin Arrow" transform="translate(-8 -16.9)"/>
+                    </svg>
+                </div>
+            </div>
+            <div class="mobile-paginator-other mobile-paginator-left mobile-paginator-disabled" id="rp__panels__mpaginator-bck">
+                <img src="./assets/arrow_right.svg" alt="left" class="mobile-paginator-other-icon">
+            </div>
+            <div class="mobile-paginator-other mobile-paginator-right" id="rp__panels__mpaginator-fwd">
+                <img src="./assets/arrow_right.svg" alt="right" class="mobile-paginator-other-icon">
+            </div>
+        </div>
+    </section>
+    <section class="site__info-hww" id="hww">
+        <h2 class="hww__heading">How&nbsp;We&nbsp;Work</h2>
+        <div class="hww__card-wrapper">
+            <div class="card hww__card">
+                <div class="hww__card__img"></div>
+                <span class="hww__card__info">Step 1</span>
+                <div class="card__pill hww__card-pill"></div>
+                <p class="hww__card__text">Our state-of-the-art continuous delivery setup can minimize your idea-to-market cycle time from months and weeks to minutes.</p>
+            </div>
+            <div class="card hww__card">
+                <div class="hww__card__img"></div>
+                <span class="hww__card__info">Step 2</span>
+                <div class="card__pill hww__card-pill"></div>
+                <p class="hww__card__text">Our state-of-the-art continuous delivery setup can minimize your idea-to-market cycle time from months and weeks to minutes.</p>
+            </div>
+            <div class="card hww__card">
+                <div class="hww__card__img"></div>
+                <span class="hww__card__info">Step 3</span>
+                <div class="card__pill hww__card-pill"></div>
+                <p class="hww__card__text">Our state-of-the-art continuous delivery setup can minimize your idea-to-market cycle time from months and weeks to minutes.</p>
+            </div>
+            <div class="card hww__card">
+                <div class="hww__card__img"></div>
+                <span class="hww__card__info">Step 4</span>
+                <div class="card__pill hww__card-pill"></div>
+                <p class="hww__card__text">Our state-of-the-art continuous delivery setup can minimize your idea-to-market cycle time from months and weeks to minutes.</p>
+            </div>
+        </div>
+    </section>
+    <section class="site__info-ss" id="stories">
+        <div class="ss__flipper" id="ss__flipper">
+            <%_ _featuredStories.forEach((projectStory, storyIndex) =>{ -%>
+            <div class="ss__flipper-panel <%_ if(storyIndex === 0){ %> ss__flipper__front <%_ }_%>" id="ss__panel-<%= storyIndex + 1 %>">
+                <div class="ss__panels__header">
+                    <div class="ss__panels__header__pageNum"><%_ if(storyIndex < 9){ _%> 0 <%_ }_%><%=storyIndex + 1%></div>
+                    <div class="ss__panels__header__text">
+                        <div  class="ss__panels__header__name"><%= projectStory.data.userName %></div>
+                        <div class="ss__panels__header__industry"><%= projectStory.data.userDesignation %></div>
+                    </div>
+                </div>
+                <img src="<%= projectStory.data.userImageUrl %>" alt="User Image" srcset="<%= projectStory.data.userImageSrcSetUrl %>" class="ss__info__img">
+                <div class="ss__info__heading-box">
+                    <h2 class="ss__info__heading"><%= projectStory.data.heading %></h2>
+                    <img src="./assets/quotes.svg" alt='"' class="ss__info__quotes">
+                </div>
+                <p class="ss__info__panels-text"><%= projectStory.data.info %></p>
+            </div>
+            <%_ }) _%>
+            <div class="ss__panels-paginator-wrapper">
+                <div class="ss__panels-paginator-box ss__panels-paginator-box-left ss__disabled-paginator" id="ss__panel-bck">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="33.384" height="25.521" viewBox="0 0 33.384 25.521" class="ss__panels-paginator ss__panels-paginator-left">
+                        <path id="prefix__Thin_Arrow-5" d="M8.527 30.913l10.938 10.981a1.755 1.755 0 002.46-2.5l-7.951-7.954h25.653a1.757 1.757 0 100-3.514H13.974l7.995-7.995a1.77 1.77 0 00-2.5-2.5L8.527 28.409a1.75 1.75 0 000 2.504z" data-name="Thin Arrow" transform="translate(-8 -16.9)"/>
+                    </svg>
+                </div>
+                <div class="ss__panels-paginator-box ss__panels-paginator-box-right" id="ss__panel-fwd">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="33.384" height="25.521" viewBox="0 0 33.384 25.521" class="ss__panels-paginator ss__panels-paginator-right">
+                        <path id="prefix__Thin_Arrow-6" d="M40.857 30.913L29.919 41.894a1.755 1.755 0 11-2.46-2.5l7.951-7.954H9.757a1.757 1.757 0 110-3.514H35.41l-7.995-7.995a1.77 1.77 0 112.5-2.5l10.942 10.978a1.75 1.75 0 010 2.504z" data-name="Thin Arrow" transform="translate(-8 -16.9)"/>
+                    </svg>
+                </div>
+            </div>
+            <div class="mobile-paginator-other mobile-paginator-left mobile-paginator-disabled" id="ss__mpaginator-bck">
+                <img src="./assets/arrow_right.svg" alt="left" class="mobile-paginator-other-icon">
+            </div>
+            <div class="mobile-paginator-other mobile-paginator-right" id="ss__mpaginator-fwd">
+                <img src="./assets/arrow_right.svg" alt="right" class="mobile-paginator-other-icon">
+            </div>
+        </div>
+        <div class="ss__info__text">
+            <h2 class="ss__info__text-heading">Success&nbsp;Stories</h2>
+            <p class="ss__info__text-data">Clients engage us to access our deep market knowledge and exceptional technical expertise. Designing & developing exceptional ideas of tomorrow is a journey. Here are the stories behind the products.</p>
+        </div>
+    </section>
+    <section class="site__info-ii">
+        <h2 class="ii__heading">Industry Insights</h2>
+        <nav class="ii__nav">
+            <ul class="ii__nav__list">
+                <li class="ii__nav__list-item ii__nav__list-item--selected" id="blog__filter-1" data-filterTag="all">
+                    <div class="ii__nav-item__heading">All Posts</div>
+                    <div class="ii__nav-item__pill"></div>
+                </li>
+                <li class="ii__nav__list-item" id="blog__filter-2" data-filterTag="pm">
+                    <div class="ii__nav-item__heading">Product&nbsp;Management</div>
+                    <div class="ii__nav-item__pill"></div>
+                </li>
+                <li class="ii__nav__list-item" id="blog__filter-3" data-filterTag="dev">
+                    <div class="ii__nav-item__heading">DevOps &amp; SRE</div>
+                    <div class="ii__nav-item__pill"></div>
+                </li>
+                <li class="ii__nav__list-item" id="blog__filter-4" data-filterTag="per">
+                    <div class="ii__nav-item__heading">Performance</div>
+                    <div class="ii__nav-item__pill"></div>
+                </li>
+                <li class="ii__nav__list-item" id="blog__filter-5" data-filterTag="ux">
+                    <div class="ii__nav-item__heading">UX</div>
+                    <div class="ii__nav-item__pill"></div>
+                </li>
+                <li class="ii__nav__list-item" id="blog__filter-6" data-filterTag="app">
+                    <div class="ii__nav-item__heading">Applications</div>
+                    <div class="ii__nav-item__pill"></div>
+                </li>
+                <li class="ii__nav__list-item" id="blog__filter-7" data-filterTag="sta">
+                    <div class="ii__nav-item__heading">Startup</div>
+                    <div class="ii__nav-item__pill"></div>
+                </li>
+            </ul>
+        </nav>
+        <div class="ii__card__wrapper" id="ii__card__box">
+            <!-- pm -> product management; dev -> devops & sre; per -> performance; ux -> UX; app -> applications; sta -> startup -->
+            <%_ _blogs.forEach( (blog, i) => { -%>
+                <%_ if(!blog.featured) return -%>
+            <div class="ii__card" id="ii__card-<%= i+1 %>" data-filterTag="<%= blog.tag %>" data-searchTag="<%= blog.searchTags %>">
+                <header class="ii__card__header">
+                    <img src="<%= blog.imageUrl %>" srcset="<%= blog.srcSetUrls %>" alt="<%= blog.alt %>" class="ii__card__header-image">
+                </header>
+                <span class="ii__card__read-time"><%= blog.readTime %></span>
+                <h4 class="ii__card__heading"><%= blog.heading %></h4>
+                <p class="ii__card__text"><%= blog.previewText %></p>
+                <footer class="ii__card__footer">
+                    <div class="ii__card__btn">
+                        <div class="ii__card__btn-text">Read more</div>
+                        <span class="ii__card__btn-svg-wrapper">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="33.384" height="14.8" viewBox="0 0 33.384 25.521" class="ii__card__btn-svg">
+                                <path id="prefix__Thin_Arrow-<%= i+7 %>" d="M40.857 30.913L29.919 41.894a1.755 1.755 0 11-2.46-2.5l7.951-7.954H9.757a1.757 1.757 0 110-3.514H35.41l-7.995-7.995a1.77 1.77 0 112.5-2.5l10.942 10.978a1.75 1.75 0 010 2.504z" data-name="Thin Arrow" transform="translate(-8 -16.9)"/>
+                            </svg>
+                        </span>
+                    </div>
+                </footer>
+            </div>
+            <%_ }) -%>
+        </div>
+        <p class="ii__card__no-blogs hide" id="no__blogs">No Blogs!</p>
+    </section>
+    <section class="site__info-wcu">
+        <h2 class="wcu__heading">Why&nbsp;Choose&nbsp;Us</h2>
+        <div class="wcu__container">
+            <div class="wcu__card">
+                <img src="./assets/move_fast.svg" alt="Move Fast" class="wcu__card__img">
+                <h2 class="wcu__card__heading">Move Fast</h2>
+                <div class="wcu__card__pill"></div>
+                <p class="wcu__card__text">We use best practices from product analytics and lean management to help you learn early and iterate fast.</p>
+            </div>
+            <div class="wcu__card wcu__card--selected">
+                <img src="./assets/deploy_safe.svg" alt="Deploy Safe" class="wcu__card__img">
+                <h2 class="wcu__card__heading">Deploy Safe</h2>
+                <div class="wcu__card__pill"></div>
+                <p class="wcu__card__text">Our state-of-the-art continuous delivery setup can minimize your idea-to-market cycle time from months and weeks to minutes.</p>
+            </div>
+            <div class="wcu__card">
+                <img src="./assets/web_scale.svg" alt="Web Scale" class="wcu__card__img">
+                <h2 class="wcu__card__heading">Web Scale</h2>
+                <div class="wcu__card__pill"></div>
+                <p class="wcu__card__text">We specialize in building highly available zero-downtime elastic architectures that can scale out when demands increase to serve millions of users without any hiccups and scale in when you don’t need the compute resources anymore.</p>
+            </div>
+        </div>
+    </section>
+    <section class="site__info-mot">
+        <div class="mot__left-info">
+            <h2 class="mot__info__heading">Meet&nbsp;our&nbsp;Team</h2>
+            <div class="mot__info__wrapper">
+                <p class="mot__info__text">Led by an MIT, Stanford and Singularity alum we have the expertise to bring state-of-the-art in technology and product management to transform your idea into the next big thing.</p>
+                <div class="mot__info__btn">
+                    <span class="mot__info__btn-text">Meet the whole team</span>
+                    <span class="mot__info__btn-svg-wrapper">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="33.384" height="14.8" viewBox="0 0 33.384 25.521" class="mot__info__btn-svg">
+                            <path id="prefix__Thin_Arrow-15" d="M40.857 30.913L29.919 41.894a1.755 1.755 0 11-2.46-2.5l7.951-7.954H9.757a1.757 1.757 0 110-3.514H35.41l-7.995-7.995a1.77 1.77 0 112.5-2.5l10.942 10.978a1.75 1.75 0 010 2.504z" data-name="Thin Arrow" transform="translate(-8 -16.9)"/>
+                        </svg>
+                    </span>
+                </div>
+                <h4 class="mot__info__sub-heading">Interested to join us?</h4>
+                <div class="mot__info__btn">
+                    <span class="mot__info__btn-text">See current openings</span>
+                    <span class="mot__info__btn-svg-wrapper">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="33.384" height="14.8" viewBox="0 0 33.384 25.521" class="mot__info__btn-svg">
+                            <path id="prefix__Thin_Arrow-16" d="M40.857 30.913L29.919 41.894a1.755 1.755 0 11-2.46-2.5l7.951-7.954H9.757a1.757 1.757 0 110-3.514H35.41l-7.995-7.995a1.77 1.77 0 112.5-2.5l10.942 10.978a1.75 1.75 0 010 2.504z" data-name="Thin Arrow" transform="translate(-8 -16.9)"/>
+                        </svg>
+                    </span>
+                </div>
+            </div>
+        </div>
+        <div class="mot__cards__container">
+            <div class="mot__cards__wrapper" id="mot__cards__wrapper">
+                <div class="mot__cards mot__cards--front" id="mot__card-1">
+                    <header class="mot__cards__header">
+                        <img src="https://res.cloudinary.com/opscale/image/upload/q_auto/v1586871684/anub_vvo5ay.jpg" srcset="https://res.cloudinary.com/opscale/image/upload/q_auto/v1586871684/anub_vvo5ay.jpg 1x, https://res.cloudinary.com/opscale/image/upload/q_auto/v1586871684/anub_2x_bd3bge.jpg 2x, https://res.cloudinary.com/opscale/image/upload/q_auto/v1586871685/anub_3x_bphijh.jpg 3x" alt="Opscale Team Member" class="mot__cards__image">
+                    </header>
+                    <div class="mot__cards__body">
+                        <h3 class="mot__card--user-name">Name</h3>
+                        <p class="mot__card--user-designation">CEO</p>
+                        <div class="mot__card__pill"></div>
+                        <p class="mot__card--user-info">Running operations for a software company is hard. There are so many failure modes because of so many moving parts. How to build the code right and fast? …</p>
+                        <footer class="mot__cards__footer">
+                            <a href="#" class="mot__cards__footer--link">
+                                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" class="mot__cards__footer--icon">
+                                    <title>facebook</title>
+                                    <path d="M19 6h5v-6h-5c-3.86 0-7 3.14-7 7v3h-4v6h4v16h6v-16h5l1-6h-6v-3c0-0.542 0.458-1 1-1z"></path>
+                                </svg>
+                            </a>
+                            <a href="#" class="mot__cards__footer--link">
+                                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" class="mot__cards__footer--icon">
+                                    <title>twitter</title>
+                                    <path d="M32 7.075c-1.175 0.525-2.444 0.875-3.769 1.031 1.356-0.813 2.394-2.1 2.887-3.631-1.269 0.75-2.675 1.3-4.169 1.594-1.2-1.275-2.906-2.069-4.794-2.069-3.625 0-6.563 2.938-6.563 6.563 0 0.512 0.056 1.012 0.169 1.494-5.456-0.275-10.294-2.888-13.531-6.862-0.563 0.969-0.887 2.1-0.887 3.3 0 2.275 1.156 4.287 2.919 5.463-1.075-0.031-2.087-0.331-2.975-0.819 0 0.025 0 0.056 0 0.081 0 3.181 2.263 5.838 5.269 6.437-0.55 0.15-1.131 0.231-1.731 0.231-0.425 0-0.831-0.044-1.237-0.119 0.838 2.606 3.263 4.506 6.131 4.563-2.25 1.762-5.075 2.813-8.156 2.813-0.531 0-1.050-0.031-1.569-0.094 2.913 1.869 6.362 2.95 10.069 2.95 12.075 0 18.681-10.006 18.681-18.681 0-0.287-0.006-0.569-0.019-0.85 1.281-0.919 2.394-2.075 3.275-3.394z"></path>
+                                </svg>
+                            </a>
+                            <a href="#" class="mot__cards__footer--link">
+                                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" class="mot__cards__footer--icon">
+                                    <title>linkedin</title>
+                                    <path d="M12 12h5.535v2.837h0.079c0.77-1.381 2.655-2.837 5.464-2.837 5.842 0 6.922 3.637 6.922 8.367v9.633h-5.769v-8.54c0-2.037-0.042-4.657-3.001-4.657-3.005 0-3.463 2.218-3.463 4.509v8.688h-5.767v-18z"></path>
+                                    <path d="M2 12h6v18h-6v-18z"></path>
+                                    <path d="M8 7c0 1.657-1.343 3-3 3s-3-1.343-3-3c0-1.657 1.343-3 3-3s3 1.343 3 3z"></path>
+                                </svg>
+                            </a>
+                            <a href="#" class="mot__cards__footer--link">
+                                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" class="mot__cards__footer--icon">
+                                    <title>github</title>
+                                    <path d="M16 0.395c-8.836 0-16 7.163-16 16 0 7.069 4.585 13.067 10.942 15.182 0.8 0.148 1.094-0.347 1.094-0.77 0-0.381-0.015-1.642-0.022-2.979-4.452 0.968-5.391-1.888-5.391-1.888-0.728-1.849-1.776-2.341-1.776-2.341-1.452-0.993 0.11-0.973 0.11-0.973 1.606 0.113 2.452 1.649 2.452 1.649 1.427 2.446 3.743 1.739 4.656 1.33 0.143-1.034 0.558-1.74 1.016-2.14-3.554-0.404-7.29-1.777-7.29-7.907 0-1.747 0.625-3.174 1.649-4.295-0.166-0.403-0.714-2.030 0.155-4.234 0 0 1.344-0.43 4.401 1.64 1.276-0.355 2.645-0.532 4.005-0.539 1.359 0.006 2.729 0.184 4.008 0.539 3.054-2.070 4.395-1.64 4.395-1.64 0.871 2.204 0.323 3.831 0.157 4.234 1.026 1.12 1.647 2.548 1.647 4.295 0 6.145-3.743 7.498-7.306 7.895 0.574 0.497 1.085 1.47 1.085 2.963 0 2.141-0.019 3.864-0.019 4.391 0 0.426 0.288 0.925 1.099 0.768 6.354-2.118 10.933-8.113 10.933-15.18 0-8.837-7.164-16-16-16z"></path>
+                                </svg>
+                            </a>
+                        </footer>
+                    </div>
+                </div>
+                <div class="mot__cards mot__cards--next" id="mot__card-2">
+                    <header class="mot__cards__header">
+                        <img src="https://res.cloudinary.com/opscale/image/upload/q_auto/v1586871689/tm_fhii0z.jpg" srcset="https://res.cloudinary.com/opscale/image/upload/q_auto/v1586871689/tm_fhii0z.jpg 1x, https://res.cloudinary.com/opscale/image/upload/q_auto/v1586871689/tm_2x_sgqnn6.jpg 2x, https://res.cloudinary.com/opscale/image/upload/q_auto/v1586871689/tm_3x_dd5muv.jpg 3x" alt="Opscale Team Member" class="mot__cards__image">
+                    </header>
+                    <div class="mot__cards__body">
+                        <h3 class="mot__card--user-name">Name</h3>
+                        <p class="mot__card--user-designation">CEO</p>
+                        <div class="mot__card__pill"></div>
+                        <p class="mot__card--user-info">Running operations for a software company is hard. There are so many failure modes because of so many moving parts. How to build the code right and fast? …</p>
+                        <footer class="mot__cards__footer">
+                            <a href="#" class="mot__cards__footer--link">
+                                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" class="mot__cards__footer--icon">
+                                    <title>facebook</title>
+                                    <path d="M19 6h5v-6h-5c-3.86 0-7 3.14-7 7v3h-4v6h4v16h6v-16h5l1-6h-6v-3c0-0.542 0.458-1 1-1z"></path>
+                                </svg>
+                            </a>
+                            <a href="#" class="mot__cards__footer--link">
+                                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" class="mot__cards__footer--icon">
+                                    <title>twitter</title>
+                                    <path d="M32 7.075c-1.175 0.525-2.444 0.875-3.769 1.031 1.356-0.813 2.394-2.1 2.887-3.631-1.269 0.75-2.675 1.3-4.169 1.594-1.2-1.275-2.906-2.069-4.794-2.069-3.625 0-6.563 2.938-6.563 6.563 0 0.512 0.056 1.012 0.169 1.494-5.456-0.275-10.294-2.888-13.531-6.862-0.563 0.969-0.887 2.1-0.887 3.3 0 2.275 1.156 4.287 2.919 5.463-1.075-0.031-2.087-0.331-2.975-0.819 0 0.025 0 0.056 0 0.081 0 3.181 2.263 5.838 5.269 6.437-0.55 0.15-1.131 0.231-1.731 0.231-0.425 0-0.831-0.044-1.237-0.119 0.838 2.606 3.263 4.506 6.131 4.563-2.25 1.762-5.075 2.813-8.156 2.813-0.531 0-1.050-0.031-1.569-0.094 2.913 1.869 6.362 2.95 10.069 2.95 12.075 0 18.681-10.006 18.681-18.681 0-0.287-0.006-0.569-0.019-0.85 1.281-0.919 2.394-2.075 3.275-3.394z"></path>
+                                </svg>
+                            </a>
+                            <a href="#" class="mot__cards__footer--link">
+                                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" class="mot__cards__footer--icon">
+                                    <title>linkedin2</title>
+                                    <path d="M12 12h5.535v2.837h0.079c0.77-1.381 2.655-2.837 5.464-2.837 5.842 0 6.922 3.637 6.922 8.367v9.633h-5.769v-8.54c0-2.037-0.042-4.657-3.001-4.657-3.005 0-3.463 2.218-3.463 4.509v8.688h-5.767v-18z"></path>
+                                    <path d="M2 12h6v18h-6v-18z"></path>
+                                    <path d="M8 7c0 1.657-1.343 3-3 3s-3-1.343-3-3c0-1.657 1.343-3 3-3s3 1.343 3 3z"></path>
+                                </svg>
+                            </a>
+                            <a href="#" class="mot__cards__footer--link">
+                                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" class="mot__cards__footer--icon">
+                                    <title>github</title>
+                                    <path d="M16 0.395c-8.836 0-16 7.163-16 16 0 7.069 4.585 13.067 10.942 15.182 0.8 0.148 1.094-0.347 1.094-0.77 0-0.381-0.015-1.642-0.022-2.979-4.452 0.968-5.391-1.888-5.391-1.888-0.728-1.849-1.776-2.341-1.776-2.341-1.452-0.993 0.11-0.973 0.11-0.973 1.606 0.113 2.452 1.649 2.452 1.649 1.427 2.446 3.743 1.739 4.656 1.33 0.143-1.034 0.558-1.74 1.016-2.14-3.554-0.404-7.29-1.777-7.29-7.907 0-1.747 0.625-3.174 1.649-4.295-0.166-0.403-0.714-2.030 0.155-4.234 0 0 1.344-0.43 4.401 1.64 1.276-0.355 2.645-0.532 4.005-0.539 1.359 0.006 2.729 0.184 4.008 0.539 3.054-2.070 4.395-1.64 4.395-1.64 0.871 2.204 0.323 3.831 0.157 4.234 1.026 1.12 1.647 2.548 1.647 4.295 0 6.145-3.743 7.498-7.306 7.895 0.574 0.497 1.085 1.47 1.085 2.963 0 2.141-0.019 3.864-0.019 4.391 0 0.426 0.288 0.925 1.099 0.768 6.354-2.118 10.933-8.113 10.933-15.18 0-8.837-7.164-16-16-16z"></path>
+                                </svg>
+                            </a>
+                        </footer>
+                    </div>
+                    <div class="mot__disabled__card--overlay"></div>
+                </div>
+                <div class="mot__cards mot__cards--back" id="mot__card-3">
+                    <header class="mot__cards__header">
+                        <img src="https://res.cloudinary.com/opscale/image/upload/q_auto/v1586871689/tm_fhii0z.jpg" srcset="https://res.cloudinary.com/opscale/image/upload/q_auto/v1586871689/tm_fhii0z.jpg 1x, https://res.cloudinary.com/opscale/image/upload/q_auto/v1586871689/tm_2x_sgqnn6.jpg 2x, https://res.cloudinary.com/opscale/image/upload/q_auto/v1586871689/tm_3x_dd5muv.jpg 3x" alt="Opscale Team Member" class="mot__cards__image">
+                    </header>
+                    <div class="mot__cards__body">
+                        <h3 class="mot__card--user-name">Nameaaaaaa</h3>
+                        <p class="mot__card--user-designation">CEO</p>
+                        <div class="mot__card__pill"></div>
+                        <p class="mot__card--user-info">Running operations for a software company is hard. There are so many failure modes because of so many moving parts. How to build the code right and fast? …</p>
+                        <footer class="mot__cards__footer">
+                            <a href="#" class="mot__cards__footer--link">
+                                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" class="mot__cards__footer--icon">
+                                    <title>facebook</title>
+                                    <path d="M19 6h5v-6h-5c-3.86 0-7 3.14-7 7v3h-4v6h4v16h6v-16h5l1-6h-6v-3c0-0.542 0.458-1 1-1z"></path>
+                                </svg>
+                            </a>
+                            <a href="#" class="mot__cards__footer--link">
+                                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" class="mot__cards__footer--icon">
+                                    <title>twitter</title>
+                                    <path d="M32 7.075c-1.175 0.525-2.444 0.875-3.769 1.031 1.356-0.813 2.394-2.1 2.887-3.631-1.269 0.75-2.675 1.3-4.169 1.594-1.2-1.275-2.906-2.069-4.794-2.069-3.625 0-6.563 2.938-6.563 6.563 0 0.512 0.056 1.012 0.169 1.494-5.456-0.275-10.294-2.888-13.531-6.862-0.563 0.969-0.887 2.1-0.887 3.3 0 2.275 1.156 4.287 2.919 5.463-1.075-0.031-2.087-0.331-2.975-0.819 0 0.025 0 0.056 0 0.081 0 3.181 2.263 5.838 5.269 6.437-0.55 0.15-1.131 0.231-1.731 0.231-0.425 0-0.831-0.044-1.237-0.119 0.838 2.606 3.263 4.506 6.131 4.563-2.25 1.762-5.075 2.813-8.156 2.813-0.531 0-1.050-0.031-1.569-0.094 2.913 1.869 6.362 2.95 10.069 2.95 12.075 0 18.681-10.006 18.681-18.681 0-0.287-0.006-0.569-0.019-0.85 1.281-0.919 2.394-2.075 3.275-3.394z"></path>
+                                </svg>
+                            </a>
+                            <a href="#" class="mot__cards__footer--link">
+                                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" class="mot__cards__footer--icon">
+                                    <title>linkedin2</title>
+                                    <path d="M12 12h5.535v2.837h0.079c0.77-1.381 2.655-2.837 5.464-2.837 5.842 0 6.922 3.637 6.922 8.367v9.633h-5.769v-8.54c0-2.037-0.042-4.657-3.001-4.657-3.005 0-3.463 2.218-3.463 4.509v8.688h-5.767v-18z"></path>
+                                    <path d="M2 12h6v18h-6v-18z"></path>
+                                    <path d="M8 7c0 1.657-1.343 3-3 3s-3-1.343-3-3c0-1.657 1.343-3 3-3s3 1.343 3 3z"></path>
+                                </svg>
+                            </a>
+                            <a href="#" class="mot__cards__footer--link">
+                                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" class="mot__cards__footer--icon">
+                                    <title>github</title>
+                                    <path d="M16 0.395c-8.836 0-16 7.163-16 16 0 7.069 4.585 13.067 10.942 15.182 0.8 0.148 1.094-0.347 1.094-0.77 0-0.381-0.015-1.642-0.022-2.979-4.452 0.968-5.391-1.888-5.391-1.888-0.728-1.849-1.776-2.341-1.776-2.341-1.452-0.993 0.11-0.973 0.11-0.973 1.606 0.113 2.452 1.649 2.452 1.649 1.427 2.446 3.743 1.739 4.656 1.33 0.143-1.034 0.558-1.74 1.016-2.14-3.554-0.404-7.29-1.777-7.29-7.907 0-1.747 0.625-3.174 1.649-4.295-0.166-0.403-0.714-2.030 0.155-4.234 0 0 1.344-0.43 4.401 1.64 1.276-0.355 2.645-0.532 4.005-0.539 1.359 0.006 2.729 0.184 4.008 0.539 3.054-2.070 4.395-1.64 4.395-1.64 0.871 2.204 0.323 3.831 0.157 4.234 1.026 1.12 1.647 2.548 1.647 4.295 0 6.145-3.743 7.498-7.306 7.895 0.574 0.497 1.085 1.47 1.085 2.963 0 2.141-0.019 3.864-0.019 4.391 0 0.426 0.288 0.925 1.099 0.768 6.354-2.118 10.933-8.113 10.933-15.18 0-8.837-7.164-16-16-16z"></path>
+                                </svg>
+                            </a>
+                        </footer>
+                    </div>
+                    <div class="mot__disabled__card--overlay"></div>
+                </div>
+                <div class="mot__cards mot__cards--back" id="mot__card-4">
+                    <header class="mot__cards__header">
+                        <img src="https://res.cloudinary.com/opscale/image/upload/q_auto/v1586871689/tm_fhii0z.jpg" srcset="https://res.cloudinary.com/opscale/image/upload/q_auto/v1586871689/tm_fhii0z.jpg 1x, https://res.cloudinary.com/opscale/image/upload/q_auto/v1586871689/tm_2x_sgqnn6.jpg 2x, https://res.cloudinary.com/opscale/image/upload/q_auto/v1586871689/tm_3x_dd5muv.jpg 3x" alt="Opscale Team Member" class="mot__cards__image">
+                    </header>
+                    <div class="mot__cards__body">
+                        <h3 class="mot__card--user-name">Namebbbbb</h3>
+                        <p class="mot__card--user-designation">CEO</p>
+                        <div class="mot__card__pill"></div>
+                        <p class="mot__card--user-info">Running operations for a software company is hard. There are so many failure modes because of so many moving parts. How to build the code right and fast? …</p>
+                        <footer class="mot__cards__footer">
+                            <a href="#" class="mot__cards__footer--link">
+                                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" class="mot__cards__footer--icon">
+                                    <title>facebook</title>
+                                    <path d="M19 6h5v-6h-5c-3.86 0-7 3.14-7 7v3h-4v6h4v16h6v-16h5l1-6h-6v-3c0-0.542 0.458-1 1-1z"></path>
+                                </svg>
+                            </a>
+                            <a href="#" class="mot__cards__footer--link">
+                                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" class="mot__cards__footer--icon">
+                                    <title>twitter</title>
+                                    <path d="M32 7.075c-1.175 0.525-2.444 0.875-3.769 1.031 1.356-0.813 2.394-2.1 2.887-3.631-1.269 0.75-2.675 1.3-4.169 1.594-1.2-1.275-2.906-2.069-4.794-2.069-3.625 0-6.563 2.938-6.563 6.563 0 0.512 0.056 1.012 0.169 1.494-5.456-0.275-10.294-2.888-13.531-6.862-0.563 0.969-0.887 2.1-0.887 3.3 0 2.275 1.156 4.287 2.919 5.463-1.075-0.031-2.087-0.331-2.975-0.819 0 0.025 0 0.056 0 0.081 0 3.181 2.263 5.838 5.269 6.437-0.55 0.15-1.131 0.231-1.731 0.231-0.425 0-0.831-0.044-1.237-0.119 0.838 2.606 3.263 4.506 6.131 4.563-2.25 1.762-5.075 2.813-8.156 2.813-0.531 0-1.050-0.031-1.569-0.094 2.913 1.869 6.362 2.95 10.069 2.95 12.075 0 18.681-10.006 18.681-18.681 0-0.287-0.006-0.569-0.019-0.85 1.281-0.919 2.394-2.075 3.275-3.394z"></path>
+                                </svg>
+                            </a>
+                            <a href="#" class="mot__cards__footer--link">
+                                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" class="mot__cards__footer--icon">
+                                    <title>linkedin2</title>
+                                    <path d="M12 12h5.535v2.837h0.079c0.77-1.381 2.655-2.837 5.464-2.837 5.842 0 6.922 3.637 6.922 8.367v9.633h-5.769v-8.54c0-2.037-0.042-4.657-3.001-4.657-3.005 0-3.463 2.218-3.463 4.509v8.688h-5.767v-18z"></path>
+                                    <path d="M2 12h6v18h-6v-18z"></path>
+                                    <path d="M8 7c0 1.657-1.343 3-3 3s-3-1.343-3-3c0-1.657 1.343-3 3-3s3 1.343 3 3z"></path>
+                                </svg>
+                            </a>
+                            <a href="#" class="mot__cards__footer--link">
+                                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" class="mot__cards__footer--icon">
+                                    <title>github</title>
+                                    <path d="M16 0.395c-8.836 0-16 7.163-16 16 0 7.069 4.585 13.067 10.942 15.182 0.8 0.148 1.094-0.347 1.094-0.77 0-0.381-0.015-1.642-0.022-2.979-4.452 0.968-5.391-1.888-5.391-1.888-0.728-1.849-1.776-2.341-1.776-2.341-1.452-0.993 0.11-0.973 0.11-0.973 1.606 0.113 2.452 1.649 2.452 1.649 1.427 2.446 3.743 1.739 4.656 1.33 0.143-1.034 0.558-1.74 1.016-2.14-3.554-0.404-7.29-1.777-7.29-7.907 0-1.747 0.625-3.174 1.649-4.295-0.166-0.403-0.714-2.030 0.155-4.234 0 0 1.344-0.43 4.401 1.64 1.276-0.355 2.645-0.532 4.005-0.539 1.359 0.006 2.729 0.184 4.008 0.539 3.054-2.070 4.395-1.64 4.395-1.64 0.871 2.204 0.323 3.831 0.157 4.234 1.026 1.12 1.647 2.548 1.647 4.295 0 6.145-3.743 7.498-7.306 7.895 0.574 0.497 1.085 1.47 1.085 2.963 0 2.141-0.019 3.864-0.019 4.391 0 0.426 0.288 0.925 1.099 0.768 6.354-2.118 10.933-8.113 10.933-15.18 0-8.837-7.164-16-16-16z"></path>
+                                </svg>
+                            </a>
+                        </footer>
+                    </div>
+                    <div class="mot__disabled__card--overlay"></div>
+                </div>
+            </div>
+            <div class="mot__cards__paginator--wrapper">
+                <div class="mot__cards__paginator--box mot__cards__paginator-left mot__disabled-paginator" id="mot__card-bck">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="33.384" height="25.521" viewBox="0 0 33.384 25.521" class="mot__cards__paginator">
+                        <path id="prefix__Thin_Arrow-17" d="M8.527 30.913l10.938 10.981a1.755 1.755 0 002.46-2.5l-7.951-7.954h25.653a1.757 1.757 0 100-3.514H13.974l7.995-7.995a1.77 1.77 0 00-2.5-2.5L8.527 28.409a1.75 1.75 0 000 2.504z" data-name="Thin Arrow" transform="translate(-8 -16.9)"/>
+                    </svg>
+                </div>
+                <div class="mot__cards__paginator--box mot__cards__paginator-right" id="mot__card-fwd">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="33.384" height="25.521" viewBox="0 0 33.384 25.521" class="mot__cards__paginator">
+                        <path id="prefix__Thin_Arrow-18" d="M40.857 30.913L29.919 41.894a1.755 1.755 0 11-2.46-2.5l7.951-7.954H9.757a1.757 1.757 0 110-3.514H35.41l-7.995-7.995a1.77 1.77 0 112.5-2.5l10.942 10.978a1.75 1.75 0 010 2.504z" data-name="Thin Arrow" transform="translate(-8 -16.9)"/>
+                    </svg>
+                </div>
+            </div>
+            <div class="mobile-paginator-other mobile-paginator-left mobile-paginator-disabled" id="mot__mpaginator-bck">
+                <img src="./assets/arrow_right.svg" alt="left" class="mobile-paginator-other-icon">
+            </div>
+            <div class="mobile-paginator-other mobile-paginator-right" id="mot__mpaginator-fwd">
+                <img src="./assets/arrow_right.svg" alt="right" class="mobile-paginator-other-icon">
+            </div>
+        </div>
+    </section>
+    <section class="site__info-tod" id="contact">
+        <h2 class="tod__heading">Technology On Demand</h2>
+        <h3 class="tod__sub-heading">Have a Project in Mind?</h3>
+        <p class="tod__text">Let's Talk</p>
+        <form class="tod__form" id="tod__form">
+            <div class="tod__input-group">
+                <input type="text" class="tod__input" name="name" id="name" placeholder="Name" aria-label="name">
+                <input type="email" class="tod__input" name="email" id="email" placeholder="Email" aria-label="email">
+            </div>
+            <textarea class="tod__textarea" name="subject" id="subject" cols="30" rows="5" placeholder="Subject" aria-label="subject"></textarea>
+            <button class="tod__form__btn" type="button" id="tod__btn">Submit</button>
+        </form>
+    </section>
+    <div class="floating-icon invisible" id="floating__icon">
+        <svg xmlns="http://www.w3.org/2000/svg" width="30.822" height="30.822" viewBox="0 0 30.822 30.822" class="floating-icon-svg">
+            <path id="prefix__XMLID_933_" d="M50.322 35.2a2.606 2.606 0 01-2.622 2.619H37.237V47.7a2.617 2.617 0 01-5.237 0v-9.881h-9.883a2.617 2.617 0 010-5.234H32V22.117a2.617 2.617 0 015.234 0v10.468H47.7a2.606 2.606 0 012.622 2.615z" transform="translate(-19.5 -19.5)"/>
+        </svg>
+    </div>
+    <div class="site__footer-section" id="footer">
+        <div class="footer__company__contacts">
+            <div class="footer__company__contacts__img-box">
+                <img src="./assets/logo.png" srcset="./assets/logo.png 1x, ./assets/logo@2x.png 2x" alt="Opscale Logo" class="footer__company__contacts__img">
+            </div>
+            <ul class="footer__company__contacts__list">
+                <li class="footer__company__contacts__list-item">
+                    <span class="company__contacts__svg-box">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="13" height="22" viewBox="0 0 13 22" class="company__contacts__svg">
+                            <path id="prefix__cellphone-iphone_1_" d="M16 18H7V4h9m-4.5 18a1.5 1.5 0 111.5-1.5 1.5 1.5 0 01-1.5 1.5m4-21h-8A2.5 2.5 0 005 3.5v17A2.5 2.5 0 007.5 23h8a2.5 2.5 0 002.5-2.5v-17A2.5 2.5 0 0015.5 1z" data-name="cellphone-iphone (1)" transform="translate(-5 -1)" style="fill:#fff;opacity:.801"/>
+                        </svg>
+                    </span>
+                    <span class="company__contacts__info">+91 7760830496</span>
+                </li>
+                <li class="footer__company__contacts__list-item">
+                    <span class="company__contacts__svg-box">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="16" viewBox="0 0 20 16" class="company__contacts__svg">
+                            <path id="prefix__email" d="M20 8l-8 5-8-5V6l8 5 8-5m0-2H4a1.993 1.993 0 00-2 2v12a2 2 0 002 2h16a2 2 0 002-2V6a2 2 0 00-2-2z" transform="translate(-2 -4)" style="fill:#fff;opacity:.801"/>
+                        </svg>
+                    </span>
+                    <span class="company__contacts__info">support@opscale.io</span>
+                </li>
+                <li class="footer__company__contacts__list-item">
+                    <span class="company__contacts__svg-box company__contacts__svg-box-offset">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="20" viewBox="0 0 14 20" class="company__contacts__svg">
+                            <path id="prefix__map-marker" d="M12 11.5A2.5 2.5 0 1114.5 9a2.5 2.5 0 01-2.5 2.5M12 2a7 7 0 00-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 00-7-7z" transform="translate(-5 -2)" style="fill:#fff;opacity:.801"/>
+                        </svg>
+                    </span>
+                    <span class="company__contacts__info">Opscale, Indiqube, Tower-D Ground Floor, Subramanya Arcade, Bannerghatta Main Rd, OLd Gurappanapalya, BTM Layout, Bengaluru, Karnataka 560029</span>
+                </li>
+            </ul>
+        </div>
+        <div class="footer__site-sections__links__wrapper">
+            <ul class="footer__site-sections__container">
+                <li class="footer__site-sections__item"><a href="#wwd" class="footer__site-sections__links sections__links__highlighted">What we do</a></li>
+                <li class="footer__site-sections__item"><a href="#projects" class="footer__site-sections__links">Projects</a></li>
+                <li class="footer__site-sections__item"><a href="#hww" class="footer__site-sections__links">How we work</a></li>
+                <li class="footer__site-sections__item"><a href="#stories" class="footer__site-sections__links">Success Stories</a></li>
+            </ul>
+            <ul class="footer__site-sections__container">
+                <li class="footer__site-sections__item"><a href="/industry.html" class="footer__site-sections__links sections__links__highlighted">Industries</a></li>
+                <li class="footer__site-sections__item"><a href="/industry.html#info" class="footer__site-sections__links">Travel</a></li>
+                <li class="footer__site-sections__item"><a href="/industry.html#info" class="footer__site-sections__links">Energy</a></li>
+                <li class="footer__site-sections__item"><a href="/industry.html#info" class="footer__site-sections__links">Oil &amp; Gas</a></li>
+                <li class="footer__site-sections__item"><a href="/industry.html#info" class="footer__site-sections__links">Articificial Intelligence</a></li>
+                <li class="footer__site-sections__item"><a href="/industry.html#info" class="footer__site-sections__links">Agri-Tech</a></li>
+                <li class="footer__site-sections__item"><a href="/industry.html#info" class="footer__site-sections__links">E-Commerce</a></li>
+                <li class="footer__site-sections__item"><a href="/industry.html#info" class="footer__site-sections__links">Media &amp; Entertainment</a></li>
+                <li class="footer__site-sections__item"><a href="/industry.html#info" class="footer__site-sections__links">Healthcare</a></li>
+            </ul>
+            <ul class="footer__site-sections__container">
+                <li class="footer__site-sections__item"><a href="/blogs.html" class="footer__site-sections__links sections__links__highlighted">Insights</a></li>
+                <li class="footer__site-sections__item"><a href="/blogs.html?type=pm" class="footer__site-sections__links">Product Management</a></li>
+                <li class="footer__site-sections__item"><a href="/blogs.html?type=dev" class="footer__site-sections__links">DevOps &amp; SRE</a></li>
+                <li class="footer__site-sections__item"><a href="/blogs.html?type=per" class="footer__site-sections__links">Performance</a></li>
+                <li class="footer__site-sections__item"><a href="/blogs.html?type=ux" class="footer__site-sections__links">UX</a></li>
+                <li class="footer__site-sections__item"><a href="/blogs.html?type=app" class="footer__site-sections__links">Applications</a></li>
+                <li class="footer__site-sections__item"><a href="/blogs.html?type=sta" class="footer__site-sections__links">Startup</a></li>
+            </ul>
+            <ul class="footer__site-sections__container">
+                <li class="footer__site-sections__item"><a href="/about.html" class="footer__site-sections__links sections__links__highlighted">About Us</a></li>
+                <li class="footer__site-sections__item"><a href="/about.html#about-mission" class="footer__site-sections__links">Why choose us</a></li>
+                <li class="footer__site-sections__item"><a href="/about.html#about-mission" class="footer__site-sections__links">Our Mission</a></li>
+                <li class="footer__site-sections__item"><a href="/about.html#about-culture" class="footer__site-sections__links">Our Culture</a></li>
+                <li class="footer__site-sections__item"><a href="/about.html#meet-team" class="footer__site-sections__links">Meet the team</a></li>
+                <li class="footer__site-sections__item"><a href="/about.html#careers" class="footer__site-sections__links">Careers</a></li>
+            </ul>
+            <ul class="footer__site-sections__container footer__site-sections__container-social">
+                <li class="footer__site-sections__item"><div class="footer__site-sections__links sections__links__highlighted">Contact Us</div></li>
+                <li class="footer__site-sections__item contact__footer--box">
+                    <a href="#" class="footer__site-sections__links">
+                        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" class="contact__footer--icon">
+                            <title>facebook</title>
+                            <path d="M19 6h5v-6h-5c-3.86 0-7 3.14-7 7v3h-4v6h4v16h6v-16h5l1-6h-6v-3c0-0.542 0.458-1 1-1z"></path>
+                        </svg>
+                    </a>
+                </li>
+                <li class="footer__site-sections__item contact__footer--box">
+                    <a href="#" class="footer__site-sections__links">
+                        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" class="contact__footer--icon">
+                            <title>linkedin</title>
+                            <path d="M12 12h5.535v2.837h0.079c0.77-1.381 2.655-2.837 5.464-2.837 5.842 0 6.922 3.637 6.922 8.367v9.633h-5.769v-8.54c0-2.037-0.042-4.657-3.001-4.657-3.005 0-3.463 2.218-3.463 4.509v8.688h-5.767v-18z"></path>
+                            <path d="M2 12h6v18h-6v-18z"></path>
+                            <path d="M8 7c0 1.657-1.343 3-3 3s-3-1.343-3-3c0-1.657 1.343-3 3-3s3 1.343 3 3z"></path>
+                        </svg>
+                    </a>
+                </li>
+                <li class="footer__site-sections__item contact__footer--box">
+                    <a href="#" class="footer__site-sections__links">
+                        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" class="contact__footer--icon">
+                            <title>twitter</title>
+                            <path d="M32 7.075c-1.175 0.525-2.444 0.875-3.769 1.031 1.356-0.813 2.394-2.1 2.887-3.631-1.269 0.75-2.675 1.3-4.169 1.594-1.2-1.275-2.906-2.069-4.794-2.069-3.625 0-6.563 2.938-6.563 6.563 0 0.512 0.056 1.012 0.169 1.494-5.456-0.275-10.294-2.888-13.531-6.862-0.563 0.969-0.887 2.1-0.887 3.3 0 2.275 1.156 4.287 2.919 5.463-1.075-0.031-2.087-0.331-2.975-0.819 0 0.025 0 0.056 0 0.081 0 3.181 2.263 5.838 5.269 6.437-0.55 0.15-1.131 0.231-1.731 0.231-0.425 0-0.831-0.044-1.237-0.119 0.838 2.606 3.263 4.506 6.131 4.563-2.25 1.762-5.075 2.813-8.156 2.813-0.531 0-1.050-0.031-1.569-0.094 2.913 1.869 6.362 2.95 10.069 2.95 12.075 0 18.681-10.006 18.681-18.681 0-0.287-0.006-0.569-0.019-0.85 1.281-0.919 2.394-2.075 3.275-3.394z"></path>
+                        </svg>
+                    </a>
+                </li>
+                <li class="footer__site-sections__item contact__footer--box">
+                    <a href="#" class="footer__site-sections__links">
+                        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" class="contact__footer--icon">
+                            <title>github</title>
+                            <path d="M16 0.395c-8.836 0-16 7.163-16 16 0 7.069 4.585 13.067 10.942 15.182 0.8 0.148 1.094-0.347 1.094-0.77 0-0.381-0.015-1.642-0.022-2.979-4.452 0.968-5.391-1.888-5.391-1.888-0.728-1.849-1.776-2.341-1.776-2.341-1.452-0.993 0.11-0.973 0.11-0.973 1.606 0.113 2.452 1.649 2.452 1.649 1.427 2.446 3.743 1.739 4.656 1.33 0.143-1.034 0.558-1.74 1.016-2.14-3.554-0.404-7.29-1.777-7.29-7.907 0-1.747 0.625-3.174 1.649-4.295-0.166-0.403-0.714-2.030 0.155-4.234 0 0 1.344-0.43 4.401 1.64 1.276-0.355 2.645-0.532 4.005-0.539 1.359 0.006 2.729 0.184 4.008 0.539 3.054-2.070 4.395-1.64 4.395-1.64 0.871 2.204 0.323 3.831 0.157 4.234 1.026 1.12 1.647 2.548 1.647 4.295 0 6.145-3.743 7.498-7.306 7.895 0.574 0.497 1.085 1.47 1.085 2.963 0 2.141-0.019 3.864-0.019 4.391 0 0.426 0.288 0.925 1.099 0.768 6.354-2.118 10.933-8.113 10.933-15.18 0-8.837-7.164-16-16-16z"></path>
+                        </svg>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <footer class="footer__copyright">
+        <p class="footer__copyright__text">&copy; 2020 OPSCALE TECHNOLOGIES (OPC) PRIVATE LIMITED, INDIA</p>
+    </footer>
+</body>
+</html>
