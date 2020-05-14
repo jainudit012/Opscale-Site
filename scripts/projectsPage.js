@@ -4,6 +4,8 @@ const projectStoriesArray = []
 
 const projectCardSection = document.getElementById('project__cards__wrapper')
 
+const project404Section = document.getElementById('project-404')
+
 let gridColumnGap = 120
 
 function setCarouselGridValues(cards, wrapperWidth){
@@ -19,17 +21,21 @@ function setCarouselGridValues(cards, wrapperWidth){
 }
 
 
-function loadQueriedProjectDetail(projects){
+function loadQueriedProjectDetail(projects, projectsNotFound){
     const projectQuery = loadFromQuery()
+
+    if(!projectQuery.projNo || parseInt(projectQuery.projNo) < 1 || parseInt(projectQuery.projNo) > projects.length){
+        removeClass(projectsNotFound, 'hidden')
+    }else addClass(projectsNotFound, 'hidden');
 
     toggleClassOnDataSelect(projects, 'projectnumber', projectQuery['projNo'], 'block')
 }
 
-function loadProjectsFromHashChange(projects){
+function loadProjectsFromHashChange(projects, projectsNotFound){
     let projectPageHash = window.location.hash
     if(projectPageHash.indexOf('more') === -1){
         changeHashToQuery('projNo', '1')
-        loadQueriedProjectDetail(projects)
+        loadQueriedProjectDetail(projects, projectsNotFound)
     }
 }
 
@@ -39,7 +45,7 @@ try{
     const projectCardData = loadElementsToArray('project__card-', projectCardSection)
 
     if(projectDetailData.valid){
-        loadQueriedProjectDetail(projectDetailData.items)
+        loadQueriedProjectDetail(projectDetailData.items, project404Section)
 
         for(let i=0;i<projectDetailData.items.length;i++){
             projectStoriesArray.push(document.getElementById(`stories-project-${i+1}`))
@@ -85,7 +91,7 @@ try{
             }
         })
 
-        window.addEventListener('hashchange', () => loadProjectsFromHashChange(projectDetailData.items))
+        window.addEventListener('hashchange', () => loadProjectsFromHashChange(projectDetailData.items, project404Section))
     }
 
     let totalVisibleWidth = projectCardSection.clientWidth
