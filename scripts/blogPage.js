@@ -83,6 +83,7 @@ try{
             if (event.keyCode === 13) {
                 toggleClassOnDataSelect(blogFilterTabData, 'filtertag', 'all', 'blogs__nav__item--selected')
                 filterBlogs(searchInputLabel.children[1].value.toLowerCase(), allBlogData.items, 'searchtag', noBlogElement) // tags are all in lower case
+                if(blogArticleData.valid) addClassToMultiple(blogArticleData.items, 'hidden')
             }
             searchInputLabel.children[1].value = '' 
             addClass(searchInputLabel.children[1], 'hideabs')
