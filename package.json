@@ -1,35 +1,38 @@
 {
-  "name": "opscale-site",
+  "name": "opscale-web",
   "version": "1.0.0",
-  "description": "Opscale Website",
-  "main": "index.html",
+  "description": "opscale website",
+  "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "minify-css": "npx postcss ./css/*.css -d dest/css",
-    "autoprefix": "npx postcss ./css/*.css autoprefixer -d dest/css/",
-    "babel": "npx babel scripts --out-dir dest/scripts --presets=minify",
-    "build": "npm run minify-css && npm run babel && cp -r ./dest/* ../website/.",
-    "copyAllHtmls": "cp ./*.html ../website/.",
-    "copyAllCss": "cp ./css/*.css ../website/css/.",
-    "copyAllScripts": "cp ./scripts/*.js ../website/scripts/.",
-    "copy": "npm run copyAllHtmls && npm run copyAllCss && npm run copyAllScripts"
+    "copyAssets": "cp ./assets/* ./dist/assets",
+    "copyHtml": "cp ./*.html ./dist/",
+    "checkDistFolder": "node syncDistFolder.js",
+    "copyFiles":"cp ./*.html ./dist/ && cp ./css/*.css ./dist/css/ && cp ./assets/* ./dist/assets && cp ./scripts/*.js ./dist/scripts/",
+    "minifyCss": "postcss ./css/main.css > dist/css/main.css && postcss ./css/about.css > dist/css/about.css && postcss ./css/base.css > dist/css/base.css && postcss ./css/blogs.css > dist/css/blogs.css && postcss ./css/industry.css > dist/css/industry.css && postcss ./css/projects.css > dist/css/projects.css && postcss ./css/reset.css > dist/css/reset.css",
+    "minifyJs": "minify ./scripts/blogFilter.js --out-dir ./dist/scripts && minify ./scripts/blogPage.js --out-dir ./dist/scripts && minify ./scripts/carousel.js --out-dir ./dist/scripts && minify ./scripts/floatingIcon.js --out-dir ./dist/scripts && minify ./scripts/mastScroller.js --out-dir ./dist/scripts && minify ./scripts/motFlipper.js --out-dir ./dist/scripts && minify ./scripts/paginator.js --out-dir ./dist/scripts && minify ./scripts/projectListFilter.js --out-dir ./dist/scripts && minify ./scripts/projectsPage.js --out-dir ./dist/scripts && minify ./scripts/sideNav.js --out-dir ./dist/scripts && minify ./scripts/ssFlipper.js --out-dir ./dist/scripts && minify ./scripts/utility.js --out-dir ./dist/scripts && minify ./scripts/wwdCardSelector.js --out-dir ./dist/scripts",
+    "renderFromViews": "node index.js",
+    "build:prod": "npm run checkDistFolder && npm run copyAssets && npm run minifyCss && npm run minifyJs && npm run copyHtml && npm run renderFromViews",
+    "serve": "npm run checkDistFolder && npm run copyFiles && npm run renderFromViews && http-server ./dist -p 8000 -o"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/jainudit012/Opscale-Site.git"
+    "url": "git+https://github.com/opscaleindia/website.git"
   },
   "author": "Udit Jain",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/jainudit012/Opscale-Site/issues"
+    "url": "https://github.com/opscaleindia/website/issues"
   },
-  "homepage": "https://github.com/jainudit012/Opscale-Site#readme",
+  "homepage": "https://github.com/opscaleindia/website#readme",
+  "dependencies": {
+    "ejs": "^3.1.2",
+    "yamljs": "^0.3.0"
+  },
   "devDependencies": {
-    "@babel/cli": "^7.8.4",
-    "@babel/core": "^7.9.0",
-    "@babel/preset-env": "^7.9.5",
-    "autoprefixer": "^9.7.6",
+    "babel-minify": "^0.5.1",
     "babel-preset-minify": "^0.5.1",
-    "cssnano": "^4.1.10"
+    "cssnano": "^4.1.10",
+    "http-server": "^0.12.3",
+    "postcss-cli": "^7.1.1"
   }
 }
