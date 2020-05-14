@@ -1,0 +1,49 @@
+id: 3
+tag: per
+searchTags: 'performance high startup'
+imageUrl: 'https://res.cloudinary.com/opscale/image/upload/q_auto/v1586871687/phone_wh_dnxtsc.jpg'
+srcSetUrls: 'https://res.cloudinary.com/opscale/image/upload/q_auto/v1586871687/phone_wh_dnxtsc.jpg 1x, https://res.cloudinary.com/opscale/image/upload/q_auto/v1586871687/phone_wh_2x_fowmfc.jpg 2x, https://res.cloudinary.com/opscale/image/upload/q_auto/v1586871687/phone_wh_3x_vssx7h.jpg 3x'
+alt: phone
+readTime: '5 min'
+heading: 'High-performing startups'
+previewText: 'Do you want to be the next Google? or Netflix? or Amazon?What all these high-performing organizations have in common is that they all leverage...'
+featured: true
+post:
+  creator:
+      name: 'Anub Sinha'
+      designation: 'CEO @ Opscale, India.'
+      about: 'I like building stuff, creating magic and solving problems.'
+      email: ""
+      twitterUrl: ""
+      linkedInUrl: ""
+  createdOn: '3 Sep 2019'
+  entryPara: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti facilis officiis deserunt exercitationem debitis cumque, repellat labore tenetur earum ut sed consequatur excepturi consectetur fugit itaque iusto, animi necessitatibus maxime.'
+  quoteText: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium facere molestiae quo a reiciendis voluptatem asperiores eius dolores? Corporis dolores qui ea, dignissimos ut minima excepturi at atque a deserunt?'
+  content:
+      -
+        heading: 'Itaque his sapiens semper vacabit'
+        paras:
+            - 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt porro dolorem nesciunt cupiditate. Sunt quaerat maiores esse modi distinctio! Aspernatur iure mollitia necessitatibus sed aut assumenda laudantium voluptas incidunt doloremque.'
+            - 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis consectetur earum eaque dolores, reiciendis quasi minus corporis harum est perferendis deserunt alias mollitia et autem ducimus culpa eveniet a debitis.'
+            - 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione, temporibus odio? Neque vero ea mollitia nam iure nostrum alias cumque deserunt vitae suscipit minima, culpa voluptates recusandae laborum dolorem nobis.'
+      -
+        heading: 'Nihil opus est exemplis hoc facere'
+        paras:
+            - 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit consequatur voluptatibus, enim praesentium dignissimos eveniet nemo ab, cum deleniti quisquam atque perferendis dolorum expedita tenetur, assumenda consequuntur commodi aspernatur? Doloribus?'
+      -
+        heading: 'Nonne igitur tibi videntur, inquit, mala'
+        paras:
+            - 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Alias, ipsam quisquam at et provident similique, quod a quos dolorum consequuntur earum consequatur nihil sapiente tempore optio obcaecati, modi eaque. Soluta!'
+      -
+        heading: 'Duo Reges: constructio interrete.'
+        paras:
+            - 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptate accusantium aliquam reiciendis aut odio. Aliquid doloremque ad, placeat a nulla quos enim voluptatem culpa esse quas consequatur, recusandae, sapiente officiis?'
+      -
+        heading: 'Sed ea mala virtuti magnitudine obruebantur'
+        paras:
+            - 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint neque voluptatem non nisi et aliquam voluptatibus nulla optio ut, accusamus mollitia minus dolores maxime ea, adipisci deserunt iusto praesentium qui.'
+            - 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi alias omnis tempora, laudantium saepe ratione laborum! Aliquid saepe dolor nesciunt nostrum culpa animi omnis ipsam quos blanditiis doloribus! Mollitia, dolor?'
+            - 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempora ipsum, pariatur totam eveniet, ipsam temporibus cum velit inventore, autem tenetur maiores soluta a corrupti accusantium obcaecati nesciunt quisquam impedit ipsa.'
+            - 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptas tenetur modi quos quo facere amet adipisci deserunt debitis ducimus magnam saepe, rerum, architecto soluta molestias. Placeat officia architecto vel accusamus.'
+            - 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque tempore, deserunt in odit nesciunt pariatur perspiciatis, tempora consequatur nisi dicta molestiae laborum neque inventore magnam veniam asperiores eius ratione reiciendis!'
+            - 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Totam doloremque veniam inventore vel vitae sit explicabo quam ad a officia rem quis quibusdam, exercitationem voluptatem, aliquam ea omnis iste nisi.'

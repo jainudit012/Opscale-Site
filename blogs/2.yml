@@ -1,0 +1,49 @@
+id: 2
+tag: dev
+searchTags: 'dev ops sre ship software better faster'
+imageUrl: 'https://res.cloudinary.com/opscale/image/upload/q_auto/v1586871684/code_screen_jjkrvc.jpg'
+srcSetUrls: 'https://res.cloudinary.com/opscale/image/upload/q_auto/v1586871684/code_screen_jjkrvc.jpg 1x, https://res.cloudinary.com/opscale/image/upload/q_auto/v1586871685/code_screen_2x_rn93re.jpg 2x, https://res.cloudinary.com/opscale/image/upload/q_auto/v1586871685/code_screen_3x_x7qkdv.jpg 3x'
+alt: 'code screen'
+readTime: '5 min'
+heading: 'Ship better software faster'
+previewText: 'Not far in the past, containers were generally understood only by those equipped with a deep knowledge of the Linux kernel, or by those working at some...'
+featured: true
+post:
+  creator:
+      name: 'Anub Sinha'
+      designation: 'CEO @ Opscale, India.'
+      about: 'I like building stuff, creating magic and solving problems.'
+      email: ""
+      twitterUrl: ""
+      linkedInUrl: ""
+  createdOn: '3 Sep 2019'
+  entryPara: 'Not far in the past, containers were generally understood only by those equipped with a deep knowledge of the Linux kernel, or by those working at some of the tech giants like Sun or Google. Docker democratised the know-how of containers and is having a tremendous impact on software development across all industries.'
+  quoteText: 'Docker accelerates development cycles, reduces infrastructure costs and overhead, helps onboard new developers more quickly, and even lowers the wall between development and operations teams.'
+  content:
+      -
+        heading: 'Docker accelerates development cycles'
+        paras:
+            - 'Shipping software at the speed expected in today’s world is hard to do well, and as companies grow from one or two developers to many teams of developers, the burden of communication around shipping new releases becomes much heavier and harder to manage. Developers have to understand a lot of complexity about the environment they will be shipping software into, and production operations teams need to increasingly understand the internals of the software they ship. These are all generally good skills to work on because they lead to a better understanding of the environment as a whole and therefore encourage the designing of robust software, but these same skills are very difficult to scale effectively as an organization’s growth accelerates.'
+            - 'The details of each company’s environment often require a lot of communication that doesn’t directly build value for the teams involved. For example, requiring developers to ask an operations team for release 1.2.1 of a particular library slows them down and provides no direct business value to the company. If developers could simply upgrade the version of the library they use, write their code, test with the new version, and ship it, the delivery time would be measurably shortened and fewer risks would be involved in deploying the change. If operations engineers could upgrade software on the host system without having to coordinate with multiple teams of application developers, they could move faster. Docker helps to build a layer of isolation in software that reduces the burden of communication in the world of humans.'
+            - 'Beyond helping with communication issues, Docker is opinionated about software architecture in a way that encourages more robustly crafted applications. Its architectural philosophy centers on atomic or throwaway containers. During deployment, the whole running environment of the old application is thrown away with it. Nothing in the environment of the application will live longer than the application itself, and that’s a simple idea with big repercussions. It means that applications are not likely to accidentally rely on artifacts left by a previous release. It means that ephemeral debugging changes are less likely to live on in future releases that picked them up from the local filesystem. And it means that applications are highly portable between servers because all of the state has to be included directly into the deployment artifact and be immutable, or sent to an external dependency like a database, cache, or file server.All of this leads to applications that are not only more scalable but more reliable as well. Instances of the application container can come and go with little impact on the uptime of the frontend site. These are proven architectural choices that have been successful for non-Docker applications, but the design choices enforced by Docker mean that Docker-ized applications are required to follow these best practices. And that’s a good thing.'
+      -
+        heading: 'Reduces infrastructure costs and overhead'
+        paras:
+            - 'Traditional enterprise virtualization solutions like VMware are typically used when people need to create an abstraction layer between the physical hardware and the software applications that run on it, at the cost of resources. The hypervisors that manage the VMs and each VM’s running kernel use a percentage of the hardware system’s resources, which are then no longer available to the hosted applications. A container, on the other hand, is just another process that talks directly to the Linux kernel and therefore can utilize more resources, up until the system or quota-based limits are reached.'
+      -
+        heading: 'Onboard new developers more quickly'
+        paras:
+            - 'A docker-compose.yml file can take the role of an operating manual for the project. Developers who are getting started on your team or jumping into an open source project can become productive quickly so long as those files exist. In years past, getting a development environment running was often a multi-day task, but now we can replace this with simple, repeatable workflow: install Docker, clone the repository, and get running with docker-compose up.'
+      -
+        heading: 'Lowers the wall between development and operations teams'
+        paras:
+            - 'Using Docker allows developers to expand their operational responsibilities and take more ownership of what they build. It can remove silos in your organization by making details like dependencies a responsibility of the development team, not solely the operations team. Using a Dockerfile forces teams to create better artifacts that can serve as interesting points of documentation.'
+      -
+        heading: 'Helps turn your application stack into a cloud-native one, and cloud-provider agnostic as well'
+        paras:
+            - 'Truly understanding Docker is necessary in order to build and operate cloud-native applications—that is, applications that are scalable, highly available, and run on managed cloud infrastructures. Achieving this resiliency and scalability requires relying on containerization and eventually container orchestration technologies such as Kubernetes. Similar to the cloud-native ecosystem being additive, a lot of Docker’s own tools are additive, and mastering the basics will only help you be more successful later on.'
+            - 'Also, once your application is packaged as a Docker image, it’s very easy to migrate it from AWS to GCP to Azure whatever your need be, you save yourself from cloud provider level vendor lock-in. This makes your application cloud-provider agnostic.'
+            - 'Docker is a tool that promises to easily encapsulate the process of creating a distributable artifact for any application, deploying it at scale into any environment, and streamlining the workflow and responsiveness of agile software organizations. The way that you implement Docker within your organization requires some critical thought, but Docker is a good approach to solving some real-world organizational problems and helping enable companies to ship better software faster. Delivering a well-designed Docker workflow can lead to happier technical teams and real savings for the organization’s bottom line.'
+            - 'When Docker was first released, Linux containers had been around for quite a few years, and many of the other technologies that it is built on are not entirely new. However, Docker’s unique mix of strong architectural and workflow choices combine into a whole that is much more powerful than the sum of its parts. Docker finally makes Linux containers, which have been publicly available since 2008, approachable to the average technologist. It fits containers relatively easily into the existing workflow and processes of real companies. And the problems discussed earlier have been felt by so many people that interest in the Docker project has been accelerating faster than anyone could have reasonably expected.'
+            - 'From a standing start only a few years ago, Docker has seen rapid iteration and now has a huge feature set and is deployed in a vast number of production infrastructures across the planet. It is rapidly becoming one of the foundation layers for any modern distributed system. A large number of companies now leverage Docker as a solution to some of the serious complexity issues that they face in their application delivery processes.'
+            - 'But for all of its benefits, however, Docker isn’t always a simple tool. While Docker can help simplify and optimize your development practices, it’s a rich tool with several layers of complexity. At Opscale, we have worked for over four years building and operating production Docker platforms for multiple companies. We originally implemented Docker in production only months after its release and can help you with the experience we gained from evolving these production platforms since then.'
