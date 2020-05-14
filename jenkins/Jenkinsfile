@@ -1,0 +1,42 @@
+pipeline {
+  agent {
+    docker {
+      image 'node:latest'
+      args '-u 0'
+    }
+
+  }
+  stages {
+    stage('install') {
+      steps {
+        sh '''./install.sh'''
+      }
+    }
+
+    stage('build') {
+      steps {
+        sh '''./build.sh'''
+      }
+    }
+
+    stage('Deliver') {
+            options {
+              timeout(time: 120, unit: 'SECONDS')
+            }
+            steps {
+                sh '.scripts/deliver.sh'
+                input {
+                   message: 'Finished building the web site? (Click "Deploy" to update on FIREBASE)'
+                   ok: 'Deploy'
+                }
+                sh './scripts/exit.sh'
+            }
+      }
+
+      post {
+        aborted {
+          echo 'Website not updated on FIREBASE!!!'
+        }
+      }
+  }
+}
