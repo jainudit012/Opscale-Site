@@ -20,9 +20,6 @@ pipeline {
     }
 
     stage('Deliver') {
-      options {
-        timeout(time: 120, unit: 'SECONDS')
-      }
       steps {
         sh 'bash ./jenkins/deliver.sh'
         input(message: 'Finished building the web site? (Click "Deploy" to update on FIREBASE)', ok: 'Deploy')
