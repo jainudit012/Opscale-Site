@@ -25,10 +25,7 @@ pipeline {
             }
             steps {
                 sh '.scripts/deliver.sh'
-                input {
-                   message 'Finished building the web site? (Click "Deploy" to update on FIREBASE)'
-                   ok 'Deploy'
-                }
+                input message: 'Finished building the web site? (Click "Deploy" to update on FIREBASE)'
                 sh './scripts/exit.sh'
             }
       }
