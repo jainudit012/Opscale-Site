@@ -9,13 +9,13 @@ pipeline {
   stages {
     stage('install') {
       steps {
-        sh '''./install.sh'''
+        sh '''./scripts/install.sh'''
       }
     }
 
     stage('build') {
       steps {
-        sh '''./build.sh'''
+        sh '''./scripts/build.sh'''
       }
     }
 
