@@ -1,3 +1,3 @@
 #!/usr/bin/env sh
 
-# Aborted Deployment to FIREBASE.
+echo "Aborted Deployment to FIREBASE."
