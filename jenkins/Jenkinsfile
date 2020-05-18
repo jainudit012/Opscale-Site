@@ -29,11 +29,10 @@ pipeline {
                 sh './scripts/exit.sh'
             }
       }
-
-      post {
-        aborted {
-          echo 'Website not updated on FIREBASE!!!'
-        }
-      }
+  }
+  post {
+    aborted {
+      echo 'Website not updated on FIREBASE!!!'
+    }
   }
 }
