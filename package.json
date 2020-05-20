@@ -32,7 +32,6 @@
   "devDependencies": {
     "babel-minify": "^0.5.1",
     "babel-preset-minify": "^0.5.1",
-    "chmodr": "^1.2.0",
     "cssnano": "^4.1.10",
     "http-server": "^0.12.3",
     "postcss-cli": "^7.1.1"
