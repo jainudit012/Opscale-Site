@@ -7,13 +7,13 @@ pipeline {
 
   }
   stages {
-    stage('install') {
+    stage('Install') {
       steps {
         sh 'bash ./jenkins/install.sh'
       }
     }
 
-    stage('build') {
+    stage('Build') {
       steps {
         sh 'bash ./jenkins/build.sh'
       }
@@ -21,9 +21,13 @@ pipeline {
 
     stage('Deliver') {
       steps {
-        sh 'bash ./jenkins/deliver.sh'
         input(message: 'Finished building the web site? (Click "Deploy" to update on FIREBASE)', ok: 'Deploy')
-        sh 'bash ./jenkins/exit.sh'
+      }
+    }
+
+    stage('Deploy') {
+      steps {
+        sh 'bash ./jenkins/deploy.sh'
       }
     }
 
